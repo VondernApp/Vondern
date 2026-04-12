@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vondern For Creators Page</title>
+
+<link rel="stylesheet" href="styles.css"></head>
+
+<body>
+
+  <nav class="navbar">
+
+  <!-- Vondern Logo  -->
+  <a href="index.html" class="logo">
+    <img src="pics/vondernlogo.png" alt="Vondern Logo">
+  </a>
+
+   <button class="hamburger" onclick="toggleMenu()">
+    ☰
+  </button>
+
+  <!-- Navigation links -->
+  <ul class="nav-links">
+    <li><a href="vondernapp.html">VONDERN APP</a></li>
+    <li><a href="howitworks.html">HOW IT WORKS</a></li>
+    <li><a href="explore.html">EXPLORE</a></li>
+    <li><a href="forbusinesses.html">FOR BUSINESSES</a></li>
+    <li><a href="fortowns.html">FOR TOWNS</a></li>
+    <li><a href="forcreators.html">FOR CREATORS</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+
+    <a href="https://www.instagram.com/vondernapp/" target="_blank" class="ig-icon">
+    <img src="pics/instagramicon.png" alt="Instagram">
+    </a>
+
+</nav>
+
+<script>
+function toggleMenu() {
+  const menu = document.querySelector('.nav-links');
+  menu.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
