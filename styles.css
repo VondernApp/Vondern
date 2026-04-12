@@ -1,0 +1,135 @@
+/* CUSTON FONTS */
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/inter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Italiana';
+  src: url('./fonts/italiana.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* APPLYING CUSTOM FONTS */
+body {
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  background-color: white;
+}
+
+h1 {
+  font-family: 'Italiana', serif;
+}
+
+/* TOP NAVIGATION BAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+/* VONDERN LOGO */
+.logo img {
+  height: 50px; 
+}
+
+/* NAVIGATION LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+/* TOP NAVIGATION BAR */
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  margin: 0 auto; 
+}
+
+.hamburger {
+  display: none;
+  font-size: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* RESPONSIVE BROWSER MENU WHEN SCREEN IS SMALLER */
+@media (max-width: 1270px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* EACH NAVIGATION LINK IN A BAR */
+  .nav-links li {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1.3px solid #eee;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* LINK FILLS ENTIRE BAR */
+  .nav-links li a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .nav-links li a:hover {
+    background: #001037;
+    color: #ffffff;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.nav-links.active {
+  display: flex;
+  gap: 0px;
+}
+
+.ig-icon img {
+  width: 28px;
+  display: block;
+}
