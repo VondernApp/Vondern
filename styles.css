@@ -27,8 +27,15 @@ body {
 h1 {
   font-family: 'Inter-black', serif;
   text-decoration: none;
-  font-size: 50px;
-  color: white;
+  font-size: 60px;
+  color: black;
+}
+
+h2 {
+  font-family: 'Inter-black', serif;
+  text-decoration: none;
+  font-size: 40px;
+  color: black;
 }
 
 /* TOP NAVIGATION BAR */
@@ -165,6 +172,7 @@ h1 {
 /* IMAGE CONTAINER HEADING STYLE */
 .hero-content h1 {
   margin: 0 0 15px 0;
+  color: white;
 }
 
 /* IMAGE CONTAINER PARAPGRAPH STYLE */
@@ -188,3 +196,11 @@ h1 {
 .BUTTON:hover {
   background-color: #eaeaea;
 }
+
+.full-container {
+  width: 100%;
+  padding: 40px 20px; 
+  box-sizing: border-box; 
+  text-align: center; 
+}
+
