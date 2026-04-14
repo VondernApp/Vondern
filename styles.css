@@ -597,3 +597,256 @@ input {
     margin-bottom: 20px;
   }
 }
+
+/* Category Grid */
+.grid-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.box {
+    background-color: #666;
+    color: white;
+    height: 180px;
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* Trending Section */
+.trending-bg { background-color: #f2f2f2; }
+
+.trending-card-bg {
+    background-color: #666; /* The dark gray pillar color */
+    height: 500px; /* Tall height like the screenshot */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns the white box to the top */
+    padding: 0;
+    border-right: 1px solid #555; /* Subtle separation between pillars */
+}
+
+.grid-trending {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0; 
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.card-img-placeholder {
+    height: 150px;
+    background-color: #888;
+}
+
+.card-content {
+    background: white;
+    margin: 15px; /* Creates the "floating" look inside the pillar */
+    padding: 20px;
+    text-align: left;
+    min-height: 180px; /* Ensures all white boxes are the same height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h4 {
+    font-family: 'Inter-black', sans-serif;
+    font-size: 13px;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.card-content p {
+    font-size: 11px;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.tags {
+    font-size: 10px;
+    font-weight: bold;
+    color: #777;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+/* Social Feed */
+.grid-social {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.social-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.social-header { padding: 10px; display: flex; align-items: center; font-size: 0.75rem; }
+
+.avatar { 
+    width: 30px; height: 30px; 
+    background: #ccc; border-radius: 50%; margin-right: 10px; 
+}
+
+.social-img { height: 250px; background: #666; }
+
+.social-body { padding: 15px; font-size: 0.8rem; }
+
+/* Footer */
+.footer-bg { background-color: #999; color: white; }
+
+.cta-btn {
+    background: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.content-wrapper {
+    max-width: 1200px; /* Limits how wide the content can get */
+    margin: 0 auto;    /* This magic line centers the box */
+    padding: 0 20px;   /* Adds a little breathing room on mobile */
+}
+
+/* Update your existing .section or add this */
+.section {
+    padding: 80px 0;
+    text-align: center; 
+}
+
+/* Ensure the titles inside sections are centered */
+.section h2, .section h3, .section p {
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .grid-trending, .grid-social {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-trending, .grid-social, .grid-categories {
+        grid-template-columns: 1fr; /* 1 column on phones */
+    }
+}
+
+/* Follow Section Main */
+.follow-section {
+    background-color: #999;
+    color: white;
+    padding: 100px 0;
+}
+
+/* Centers the two elements as a single group */
+.follow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the items horizontally */
+    gap: 80px;               /* Space between text and card */
+    max-width: 900px;        /* Keeps them from spreading too far */
+    margin: 0 auto;          /* Centers the container itself */
+}
+
+.follow-text {
+    flex: 1;
+    text-align: left;
+}
+
+.follow-text h2 {
+    font-family: 'Inter-black', sans-serif;
+    font-size: 48px;
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+
+.follow-text p {
+    font-size: 16px;
+    margin-bottom: 35px;
+    text-align: left;
+    line-height: 1.4;
+}
+
+/* The Pill Follow Button */
+.pill-btn {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 14px 35px;
+    border-radius: 100px; /* Pill shape */
+    font-family: 'Inter-black', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.pill-btn:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
+
+/* The Instagram Card Mockup */
+.follow-mockup {
+    flex: 0 1 auto;
+}
+
+.insta-post-card {
+    background: white;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.post-header {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.mini-avatar {
+    width: 26px;
+    height: 26px;
+    background: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-image-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #555; /* Replace with background-image later */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 850px) {
+    .follow-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    .follow-text, .follow-text h2, .follow-text p {
+        text-align: center;
+    }
+}
