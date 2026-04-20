@@ -64,3 +64,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// Select all FAQ items
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const icon = item.querySelector('.toggle-icon');
+
+    question.addEventListener('click', () => {
+        // Toggle the 'active' class on the clicked item
+        item.classList.toggle('active');
+
+        // Change the icon based on whether the class is present
+        if (item.classList.contains('active')) {
+            icon.textContent = '−'; // Minus sign
+        } else {
+            icon.textContent = '+'; // Plus sign
+        }
+        
+        // Optional: Close other items when one is opened
+        /*
+        faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.toggle-icon').textContent = '+';
+            }
+        });
+        */
+    });
+});
