@@ -152,7 +152,7 @@ h3 {
 
 /* HERO IMAGE CONTAINER SET UP */
 .hero {
-  background-image: url('pics/indextop.png');
+  background-image: url('pics/hero.png');
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -191,7 +191,7 @@ h3 {
 
 /* IMAGE CONTAINER PARAPGRAPH STYLE */
 .hero-content p {
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   line-height: 1.5;
 }
 
@@ -1248,7 +1248,7 @@ input {
 
 .subscription-section {
   width: 100%;
-  background-color: #f2f2f1; 
+  background-color: #77b7b6; 
   color: white;
   padding: 80px 40px;
   box-sizing: border-box;
