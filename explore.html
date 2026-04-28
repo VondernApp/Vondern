@@ -41,60 +41,212 @@
   </section>
 
 
-  <section class="section">
+  <section class="section search-filter-section">
     <div class="content-wrapper">
-        <h3 class="section-label">Browse by Interest</h3>
-        <div class="grid-categories">
-            <div class="box gray">TOWNS</div>
-            <div class="box gray">OUTDOORS</div>
-            <div class="box gray">FOOD & DRINK</div>
-            <div class="box gray">SHOPS</div>
-            <div class="box gray">EXPERIENCES</div>
-            <div class="box gray">FAMILY</div>
-            <div class="box gray">DAY TRIPS</div>
-        </div>
-    </div>
-    </section>
-
-    <section class="section trending-bg">
-    <div class="content-wrapper">
-      <div class="trending-header">
-          <h2>Trending Right Now</h2>
-          <p>What people have been loving.</p>
+      <div class="search-container">
+        <input type="text" id="exploreSearch" placeholder="Search experiences, towns, or keywords...">
       </div>
-      
-      <div class="grid-trending">
-    <div class="trending-card-bg">
-        <div class="card-content">
-            <h4>NAME OF EXPERIENCE #1</h4>
-            <p>Here is a small description of the experience. Captivate users with this description so that they will click into it further.</p>
-            <div class="tags">Free | Scenic | Family Friendly</div>
-        </div>
-    </div>
-    <div class="trending-card-bg">
-        <div class="card-content">
-            <h4>NAME OF EXPERIENCE #2</h4>
-            <p>Here is a small description of the experience. Captivate users with this description so that they will click into it further.</p>
-            <div class="tags">Free | Scenic | Family Friendly</div>
-        </div>
-    </div>
-    <div class="trending-card-bg">
-        <div class="card-content">
-            <h4>NAME OF EXPERIENCE #3</h4>
-            <p>Here is a small description of the experience. Captivate users with this description so that they will click into it further.</p>
-            <div class="tags">Free | Scenic | Family Friendly</div>
-        </div>
-    </div>
-    <div class="trending-card-bg">
-        <div class="card-content">
-            <h4>NAME OF EXPERIENCE #4</h4>
-            <p>Here is a small description of the experience. Captivate users with this description so that they will click into it further.</p>
-            <div class="tags">Free | Scenic | Family Friendly</div>
-        </div>
-    </div>
-</div>
+      <div class="filter-tags">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="lancaster">Lancaster</button>
+        <button class="filter-btn" data-filter="delco">Delco</button>
+        <button class="filter-btn" data-filter="montco">Montgomery County</button>
+        <button class="filter-btn" data-filter="bucks">Bucks County</button>
+        <button class="filter-btn" data-filter="food-drink">Food & Drink</button>
+        <button class="filter-btn" data-filter="outdoors">Outdoors</button>
+        <button class="filter-btn" data-filter="family">Family</button>
+      </div>
     </div>
   </section>
+
+  <section class="section explore-results">
+    <div class="content-wrapper">
+      <div class="grid-explore" id="exploreGrid">
+        
+        <!-- Lancaster Content -->
+        <a href="https://www.discoverlancaster.com/plan-your-trip/experience-passes/brew-trail/" target="_blank" class="explore-card" data-tags="lancaster food-drink">
+          <img src="https://vondern.com/wp-content/uploads/2025/11/Your-paragraph-text-2.png" alt="Discover Lancaster's Breweries & Brew Trail">
+          <div class="card-content">
+            <h4>Discover Lancaster's Breweries & Brew Trail</h4>
+            <p>Discover Lancaster’s free Brew Trail passport to check in at 20+ breweries for deals and prizes.</p>
+          </div>
+        </a>
+
+        <a href="https://www.discoverlancaster.com/blog/fine-dining-lancaster-pa/" target="_blank" class="explore-card" data-tags="lancaster food-drink">
+          <img src="https://vondern.com/wp-content/uploads/2025/11/5.png" alt="Fine Dining Restaurant">
+          <div class="card-content">
+            <h4>Fine Dining Restaurant</h4>
+            <p>Lancaster’s fine-dining scene blends farm-fresh ingredients with modern technique. Here are 20+ top restaurants.</p>
+          </div>
+        </a>
+
+        <!-- Delco Content -->
+        <a href="https://visitdelco.com/blog/towns-main-streets/chill-out-in-delco/" target="_blank" class="explore-card" data-tags="delco family outdoors">
+          <img src="https://vondern.com/wp-content/uploads/2025/12/32.png" alt="Delco Winter">
+          <div class="card-content">
+            <h4>Delco Winter</h4>
+            <p>Winter adventures and warm cafés to help you embrace or escape the chill this season.</p>
+          </div>
+        </a>
+        
+        <a href="https://visitdelco.com/blog/history-tradition/discover-delcos-hidden-gems/" target="_blank" class="explore-card" data-tags="delco family outdoors food-drink">
+          <img src="https://vondern.com/wp-content/uploads/2025/12/27.png" alt="Things To Do in Delco">
+          <div class="card-content">
+            <h4>Things To Do in Delco</h4>
+            <p>A big, all-in-one guide to Delco’s top parks, must-try restaurants, scenic trails, and seasonal events.</p>
+          </div>
+        </a>
+
+        <!-- Montco Content -->
+        <a href="https://www.valleyforge.org/blog/post/beat-the-heat-this-summer-in-montco" target="_blank" class="explore-card" data-tags="montco outdoors family">
+          <img src="https://vondern.com/wp-content/uploads/2026/01/Blog-Titles-3.png" alt="Hot Day Getaways">
+          <div class="card-content">
+            <h4>Hot Day Getaways</h4>
+            <p>From breezy outdoor spots to refreshing local escapes, these places are perfect for beating the summer heat.</p>
+          </div>
+        </a>
+
+        <!-- Bucks County Content -->
+        <a href="https://www.visitbuckscounty.com/blog/stories/post/holiday-magic-at-shady-brook-farm/" target="_blank" class="explore-card" data-tags="bucks family">
+          <img src="https://vondern.com/wp-content/uploads/2026/02/59.png" alt="Shady Brook Farm Holiday">
+          <div class="card-content">
+            <h4>Shady Brook Farm Holiday</h4>
+            <p>Experience dazzling light displays, festive attractions, and seasonal treats at one of Bucks County’s most beloved holiday traditions.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .search-filter-section {
+        text-align: center;
+        padding: 2rem 0;
+    }
+    .search-container input {
+        width: 100%;
+        max-width: 600px;
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        font-family: inherit;
+    }
+    .search-container input:focus {
+        outline: none;
+        border-color: #333;
+    }
+    .filter-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        border: 1px solid #ddd;
+        background: #fff;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #333;
+        transition: all 0.2s ease;
+    }
+    .filter-btn.active, .filter-btn:hover {
+        background: #333;
+        color: #fff;
+        border-color: #333;
+    }
+    .grid-explore {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+    .explore-card {
+        text-decoration: none;
+        color: inherit;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+    }
+    .explore-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+    .explore-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .explore-card .card-content {
+        padding: 1.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .explore-card h4 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
+        color: #222;
+    }
+    .explore-card p {
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('exploreSearch');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.explore-card');
+
+        function filterCards() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const activeFilterBtn = document.querySelector('.filter-btn.active');
+            const activeFilter = activeFilterBtn ? activeFilterBtn.getAttribute('data-filter') : 'all';
+
+            cards.forEach(card => {
+                const title = card.querySelector('h4').textContent.toLowerCase();
+                const desc = card.querySelector('p').textContent.toLowerCase();
+                const tags = card.getAttribute('data-tags') || '';
+                
+                const matchesSearch = title.includes(searchTerm) || desc.includes(searchTerm);
+                const matchesFilter = activeFilter === 'all' || tags.includes(activeFilter);
+
+                if (matchesSearch && matchesFilter) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        if(searchInput) {
+            searchInput.addEventListener('input', filterCards);
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                filterCards();
+            });
+        });
+    });
+  </script>
 
   <section class="section">
     <div class="content-wrapper">
