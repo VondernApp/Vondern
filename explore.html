@@ -47,14 +47,24 @@
         <input type="text" id="exploreSearch" placeholder="Search experiences, towns, or keywords...">
       </div>
       <div class="filter-tags">
+        <!-- Default -->
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="lancaster">Lancaster</button>
-        <button class="filter-btn" data-filter="delco">Delco</button>
+
+        <!-- Filter by Area -->
+        <button class="filter-btn" data-filter="bucks">Bucks County & River Towns</button>
+        <button class="filter-btn" data-filter="delco">Delaware County</button>
+        <button class="filter-btn" data-filter="lancaster">Lancaster & Amish Country</button>
         <button class="filter-btn" data-filter="montco">Montgomery County</button>
-        <button class="filter-btn" data-filter="bucks">Bucks County</button>
+
+        <!-- Filter by Category -->
+        <button class="filter-btn" data-filter="arts-history">Arts & History</button>
+        <button class="filter-btn" data-filter="breweries-wineries">Breweries & Wineries</button>
+        <button class="filter-btn" data-filter="date-night">Date Night</button>
+        <button class="filter-btn" data-filter="family-fun">Family Fun</button>
         <button class="filter-btn" data-filter="food-drink">Food & Drink</button>
-        <button class="filter-btn" data-filter="outdoors">Outdoors</button>
-        <button class="filter-btn" data-filter="family">Family</button>
+        <button class="filter-btn" data-filter="outdoors-nature">Outdoors & Nature</button>
+        <button class="filter-btn" data-filter="seasonal-holiday">Seasonal & Holiday</button>
+        <button class="filter-btn" data-filter="tours-experiences">Tours & Experiences</button>
       </div>
     </div>
   </section>
@@ -62,59 +72,7 @@
   <section class="section explore-results">
     <div class="content-wrapper">
       <div class="grid-explore" id="exploreGrid">
-        
-        <!-- Lancaster Content -->
-        <a href="https://www.discoverlancaster.com/plan-your-trip/experience-passes/brew-trail/" target="_blank" class="explore-card" data-tags="lancaster food-drink">
-          <img src="https://vondern.com/wp-content/uploads/2025/11/Your-paragraph-text-2.png" alt="Discover Lancaster's Breweries & Brew Trail">
-          <div class="card-content">
-            <h4>Discover Lancaster's Breweries & Brew Trail</h4>
-            <p>Discover Lancaster’s free Brew Trail passport to check in at 20+ breweries for deals and prizes.</p>
-          </div>
-        </a>
-
-        <a href="https://www.discoverlancaster.com/blog/fine-dining-lancaster-pa/" target="_blank" class="explore-card" data-tags="lancaster food-drink">
-          <img src="https://vondern.com/wp-content/uploads/2025/11/5.png" alt="Fine Dining Restaurant">
-          <div class="card-content">
-            <h4>Fine Dining Restaurant</h4>
-            <p>Lancaster’s fine-dining scene blends farm-fresh ingredients with modern technique. Here are 20+ top restaurants.</p>
-          </div>
-        </a>
-
-        <!-- Delco Content -->
-        <a href="https://visitdelco.com/blog/towns-main-streets/chill-out-in-delco/" target="_blank" class="explore-card" data-tags="delco family outdoors">
-          <img src="https://vondern.com/wp-content/uploads/2025/12/32.png" alt="Delco Winter">
-          <div class="card-content">
-            <h4>Delco Winter</h4>
-            <p>Winter adventures and warm cafés to help you embrace or escape the chill this season.</p>
-          </div>
-        </a>
-        
-        <a href="https://visitdelco.com/blog/history-tradition/discover-delcos-hidden-gems/" target="_blank" class="explore-card" data-tags="delco family outdoors food-drink">
-          <img src="https://vondern.com/wp-content/uploads/2025/12/27.png" alt="Things To Do in Delco">
-          <div class="card-content">
-            <h4>Things To Do in Delco</h4>
-            <p>A big, all-in-one guide to Delco’s top parks, must-try restaurants, scenic trails, and seasonal events.</p>
-          </div>
-        </a>
-
-        <!-- Montco Content -->
-        <a href="https://www.valleyforge.org/blog/post/beat-the-heat-this-summer-in-montco" target="_blank" class="explore-card" data-tags="montco outdoors family">
-          <img src="https://vondern.com/wp-content/uploads/2026/01/Blog-Titles-3.png" alt="Hot Day Getaways">
-          <div class="card-content">
-            <h4>Hot Day Getaways</h4>
-            <p>From breezy outdoor spots to refreshing local escapes, these places are perfect for beating the summer heat.</p>
-          </div>
-        </a>
-
-        <!-- Bucks County Content -->
-        <a href="https://www.visitbuckscounty.com/blog/stories/post/holiday-magic-at-shady-brook-farm/" target="_blank" class="explore-card" data-tags="bucks family">
-          <img src="https://vondern.com/wp-content/uploads/2026/02/59.png" alt="Shady Brook Farm Holiday">
-          <div class="card-content">
-            <h4>Shady Brook Farm Holiday</h4>
-            <p>Experience dazzling light displays, festive attractions, and seasonal treats at one of Bucks County’s most beloved holiday traditions.</p>
-          </div>
-        </a>
-
+        <!-- Cards will be populated by explore-data.js -->
       </div>
     </div>
   </section>
@@ -207,16 +165,47 @@
     }
   </style>
 
+  <script src="explore-data.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
         const searchInput = document.getElementById('exploreSearch');
         const filterBtns = document.querySelectorAll('.filter-btn');
-        const cards = document.querySelectorAll('.explore-card');
+        const grid = document.getElementById('exploreGrid');
+
+        // Function to render cards based on exploreData
+        function renderCards() {
+            grid.innerHTML = '';
+            
+            exploreData.forEach(item => {
+                const card = document.createElement('a');
+                card.href = item.link;
+                card.target = '_blank';
+                card.className = 'explore-card';
+                card.setAttribute('data-tags', item.tags);
+
+                card.innerHTML = `
+                  <img src="${item.img}" alt="${item.title}">
+                  <div class="card-content">
+                    <h4>${item.title}</h4>
+                    <p>${item.desc}</p>
+                  </div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+        
+        // Initial render
+        if (typeof exploreData !== 'undefined') {
+            renderCards();
+        }
 
         function filterCards() {
             const searchTerm = searchInput.value.toLowerCase();
-            const activeFilterBtn = document.querySelector('.filter-btn.active');
-            const activeFilter = activeFilterBtn ? activeFilterBtn.getAttribute('data-filter') : 'all';
+            const activeFilterBtns = document.querySelectorAll('.filter-btn.active');
+            const activeFilters = Array.from(activeFilterBtns).map(btn => btn.getAttribute('data-filter'));
+            
+            const cards = document.querySelectorAll('.explore-card');
 
             cards.forEach(card => {
                 const title = card.querySelector('h4').textContent.toLowerCase();
@@ -224,7 +213,8 @@
                 const tags = card.getAttribute('data-tags') || '';
                 
                 const matchesSearch = title.includes(searchTerm) || desc.includes(searchTerm);
-                const matchesFilter = activeFilter === 'all' || tags.includes(activeFilter);
+                // Requires ALL active filters to be present in the tags (narrowing down)
+                const matchesFilter = activeFilters.includes('all') || activeFilters.every(f => tags.includes(f));
 
                 if (matchesSearch && matchesFilter) {
                     card.style.display = 'flex';
@@ -238,10 +228,32 @@
             searchInput.addEventListener('input', filterCards);
         }
 
+        const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+
         filterBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                e.target.classList.add('active');
+                const clickedFilter = e.target.getAttribute('data-filter');
+                
+                if (clickedFilter === 'all') {
+                    // Turn on 'All', turn off others
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                } else {
+                    // Toggle the clicked button
+                    e.target.classList.toggle('active');
+                    
+                    // Always turn off 'All' when another is clicked
+                    if (allBtn) {
+                        allBtn.classList.remove('active');
+                    }
+                    
+                    // If zero filters are active, turn 'All' back on
+                    if (document.querySelectorAll('.filter-btn.active').length === 0) {
+                        if (allBtn) {
+                            allBtn.classList.add('active');
+                        }
+                    }
+                }
                 filterCards();
             });
         });
