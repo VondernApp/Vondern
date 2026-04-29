@@ -1236,6 +1236,26 @@ input {
   background-color: #444
 }
 
+.contact-field-error {
+  display: block;
+  color: #c0392b;
+  font-size: 0.78rem;
+  margin-top: 4px;
+}
+
+.contact-form-error {
+  color: #c0392b;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.contact-form-success {
+  text-align: center;
+  padding: 24px 0;
+  font-size: 1rem;
+  color: #2d6a4f;
+}
+
 @media (max-width:850px) {
   .contact-container {
     flex-direction: column;

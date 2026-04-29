@@ -57,32 +57,32 @@
 
         <div class="creator-form-column">
             <div class="creator-card-wrapper">
-                <form>
+                <form id="creators-form" action="https://formspree.io/f/xzdopdde" method="POST">
                     <p class="creator-form-title">For further questions, please fill in these fields.</p>
                     
                     <div class="creator-input-group">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="Enter here">
+                        <label for="creator-name">Full Name</label>
+                        <input type="text" id="creator-name" name="name" placeholder="Enter here">
                     </div>
 
                     <div class="creator-input-group">
-                        <label>Phone Number</label>
-                        <input type="tel" placeholder="Enter here">
+                        <label for="creator-phone">Phone Number</label>
+                        <input type="tel" id="creator-phone" name="phone" placeholder="Enter here">
                     </div>
 
                     <div class="creator-input-group">
-                        <label>Email</label>
-                        <input type="email" placeholder="Enter here">
+                        <label for="creator-email">Email</label>
+                        <input type="email" id="creator-email" name="email" placeholder="Enter here">
                     </div>
 
                     <div class="creator-input-group">
-                        <label>Instagram Username and Details</label>
-                        <textarea placeholder="Enter here"></textarea>
+                        <label for="creator-instagram">Instagram Username and Details</label>
+                        <textarea id="creator-instagram" name="instagram_details" placeholder="Enter here"></textarea>
                     </div>
 
                     <div class="creator-form-footer">
                         <label class="creator-checkbox-label">
-                            <input type="checkbox">
+                            <input type="checkbox" name="newsletter" value="yes">
                             Get Weekly Newsletters
                         </label>
                         <button type="submit" class="creator-submit-btn">JOIN AS A CREATOR</button>
@@ -133,6 +133,5 @@
 </footer>
 
 <script src="app.js"></script>
-
 </body>
 </html>

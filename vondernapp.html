@@ -80,13 +80,13 @@
     <div class="form-box">
       <h2>Get notified when the app comes out!</h2>
       <p>Input your information down below to be notified...</p>
-      <form>
+      <form id="app-notify-form" action="https://formspree.io/f/xzdopdde" method="POST">
         <div class="form-row">
-          <input type="text" placeholder="First name...">
-          <input type="text" placeholder="Last name...">
+          <input type="text" name="first_name" placeholder="First name...">
+          <input type="text" name="last_name" placeholder="Last name...">
         </div>
-        <input type="email" placeholder="Email...">
-        <input type="tel" placeholder="Phone number...">
+        <input type="email" name="email" placeholder="Email...">
+        <input type="tel" name="phone" placeholder="Phone number...">
         <button type="submit" class="btn-submit">SUBMIT</button>
       </form>
     </div>
