@@ -1097,6 +1097,7 @@ input {
   background-color: #444
 }
 
+/*RESPONSIVE MEDIA QUIERIES FORMS MOBILE */
 @media (max-width:850px) {
   .town-container {
     flex-direction: column;
@@ -1108,13 +1109,96 @@ input {
   }
 }
 
+@media (max-width: 900px) {
+  .town-form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .town-submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .town-card-wrapper {
+    padding: 20px;
+  }
+}
+
+/*RESPONSIVE MEDIA QUIERIES FORMS MOBILE 2 */
+@media (max-width:850px) {
+  .business-container {
+    flex-direction: column;
+    gap: 40px
+  }
+
+  .business-info-column {
+    text-align: center
+  }
+}
+
+@media (max-width: 900px) {
+  .business-form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .business-submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .business-card-wrapper {
+    padding: 20px;
+  }
+}
+
+/*RESPONSIVE MEDIA QUIERIES FORMS MOBILE 2 */
+@media (max-width:850px) {
+  .creator-container {
+    flex-direction: column;
+    gap: 40px
+  }
+
+  .creator-info-column {
+    text-align: center
+  }
+}
+
+@media (max-width: 900px) {
+  .creator-form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .creator-submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .creator-card-wrapper {
+    padding: 20px;
+  }
+}
+
 .contact-us-section {
-  background-color: #83ae44;
+  background-image: url("pics/contactus.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 100px 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh
+  align-items: center
 }
 
 .contact-social-buttons {
@@ -1248,6 +1332,37 @@ input {
 
   .contact-main-heading {
     font-size: 40px
+  }
+}
+
+/*RESPONSIVE MEDIA QUIERIES FORMS MOBILE 2 */
+@media (max-width:850px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 40px
+  }
+
+  .contact-info-column {
+    text-align: center
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .contact-submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-card-wrapper {
+    padding: 20px;
   }
 }
 
