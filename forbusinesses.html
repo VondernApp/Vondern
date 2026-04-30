@@ -72,33 +72,33 @@
 
         <div class="business-form-column">
             <div class="business-card-wrapper">
-                <form>
+                <form id="business-form" action="https://formspree.io/f/xzdopdde" method="POST">
                     <p class="business-form-title">For further questions, 
                       please fill in these fields.</p>
                     
                     <div class="business-input-group">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="Enter here">
+                        <label for="business-name">Full Name</label>
+                        <input type="text" id="business-name" name="name" placeholder="Enter here">
                     </div>
 
                     <div class="business-input-group">
-                        <label>Phone Number</label>
-                        <input type="tel" placeholder="Enter here">
+                        <label for="business-phone">Phone Number</label>
+                        <input type="tel" id="business-phone" name="phone" placeholder="Enter here">
                     </div>
 
                     <div class="business-input-group">
-                        <label>Email</label>
-                        <input type="email" placeholder="Enter here">
+                        <label for="business-email">Email</label>
+                        <input type="email" id="business-email" name="email" placeholder="Enter here">
                     </div>
 
                     <div class="business-input-group">
-                        <label>Business Name and Description</label>
-                        <textarea placeholder="Enter here"></textarea>
+                        <label for="business-description">Business Name and Description</label>
+                        <textarea id="business-description" name="business_description" placeholder="Enter here"></textarea>
                     </div>
 
                     <div class="business-form-footer">
                         <label class="business-checkbox-label">
-                            <input type="checkbox">
+                            <input type="checkbox" name="newsletter" value="yes">
                             Get Weekly Newsletters
                         </label>
                         <button type="submit" class="business-submit-btn">JOIN AS A BUSINESS</button>
@@ -258,6 +258,5 @@
 </footer>
 
 <script src="app.js"></script>
-
 </body>
 </html>

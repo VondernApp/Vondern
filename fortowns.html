@@ -90,32 +90,32 @@
 
         <div class="town-form-column">
             <div class="town-card-wrapper">
-                <form>
+                <form id="towns-form" action="https://formspree.io/f/xzdopdde" method="POST">
                     <p class="town-form-title">For further questions, please fill in these fields.</p>
                     
                     <div class="town-input-group">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="Enter here">
+                        <label for="town-name">Full Name</label>
+                        <input type="text" id="town-name" name="name" placeholder="Enter here">
                     </div>
 
                     <div class="town-input-group">
-                        <label>Phone Number</label>
-                        <input type="tel" placeholder="Enter here">
+                        <label for="town-phone">Phone Number</label>
+                        <input type="tel" id="town-phone" name="phone" placeholder="Enter here">
                     </div>
 
                     <div class="town-input-group">
-                        <label>Email</label>
-                        <input type="email" placeholder="Enter here">
+                        <label for="town-email">Email</label>
+                        <input type="email" id="town-email" name="email" placeholder="Enter here">
                     </div>
 
                     <div class="town-input-group">
-                        <label>Town Name and Description</label>
-                        <textarea placeholder="Enter here"></textarea>
+                        <label for="town-description">Town Name and Description</label>
+                        <textarea id="town-description" name="town_description" placeholder="Enter here"></textarea>
                     </div>
 
                     <div class="town-form-footer">
                         <label class="town-checkbox-label">
-                            <input type="checkbox">
+                            <input type="checkbox" name="newsletter" value="yes">
                             Get Weekly Newsletters
                         </label>
                         <button type="submit" class="town-submit-btn">BECOME A PARTNER</button>
@@ -271,6 +271,5 @@ Now is the time to make sure visitors discover more than the expected.</p>
 </footer>
 
 <script src="app.js"></script>
-
 </body>
 </html>
