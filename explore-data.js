@@ -1,5 +1,6 @@
 const exploreData = [
   {
+    // OLD BLOGS //
     "title": "Discover Lancaster's Breweries & Brew Trail",
     "img": "pics/explore/2025_11_Your-paragraph-text-2.webp",
     "link": "https://www.discoverlancaster.com/plan-your-trip/experience-passes/brew-trail/",
@@ -370,4 +371,8 @@ const exploreData = [
     "desc": "Your ultimate guide to the coziest cafes and coffee shops serving up fall\u2019s favorite flavor across Bucks County.",
     "tags": "bucks food-drink seasonal-holiday"
   }
+
+// NEW BLOGS //
+
 ];
+
