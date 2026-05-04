@@ -971,7 +971,7 @@ input {
 }
 
 .follow-section {
-  background-color: #999;
+  background-color: #93b52e;
   color: #fff;
   padding: 100px 0;
 }
@@ -1060,6 +1060,7 @@ input {
   height: 100%;
   object-fit: cover;
   cursor: pointer;
+  display: block;
 }
 
 .post-image:hover img {
