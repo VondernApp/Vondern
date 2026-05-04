@@ -200,9 +200,7 @@ h3 {
 }
 
 .hero {
-  background-image: url('pics/hero.webp');
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
   height: 500px;
   display: flex;
   align-items: center;
@@ -210,14 +208,18 @@ h3 {
   position: relative;
 }
 
-.hero-img {
+.hero img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  z-index: -1;
+  filter: brightness(50%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask-mode: alpha;
 }
 
 .hero-content {
@@ -510,7 +512,7 @@ h3 {
 
 .cta-section {
   padding: 100px 20px;
-  background-color: #b4b4b4;
+  background-color: #ffffff;
 }
 
 .cta-section .container {
@@ -544,7 +546,7 @@ h3 {
 }
 
 .btn-dark {
-  background: #1a1a1a;
+  background: #1b99af;
   color: #fff;
   padding: 15px 35px;
   border: none;
@@ -554,16 +556,15 @@ h3 {
 }
 
 .btn-dark:hover {
-  background-color: #333;
+  background-color: #17acc6;
   transform: scale(1.05);
 }
 
 .btn-dark:active {
-  background-color: #111;
+  background-color: #0e747f;
 }
 
 .form-box {
-  max-width: 500px;
   text-align: left;
 }
 
@@ -577,13 +578,13 @@ input {
   padding: 15px;
   margin-bottom: 12px;
   border: none;
-  background: #fff;
+  background: #ecffc1;
   font-family: Inter-medium, sans-serif;
   box-sizing: border-box;
 }
 
 .btn-submit {
-  background: #777;
+  background: #0c879f;
   color: #fff;
   padding: 12px 45px;
   border: none;
@@ -594,12 +595,12 @@ input {
 }
 
 .btn-submit:hover {
-  background-color: #333;
+  background-color: #12a4a9;
   transform: scale(1.05);
 }
 
 .btn-submit:active {
-  background-color: #111;
+  background-color: #0b5b60;
 }
 
 .main-footer {
@@ -1598,17 +1599,17 @@ li {
   margin-right: auto;
   margin-top: 50px;
   margin-bottom: 80px;
-  background: #ededf0;
+  background: #78d4dc;
   padding: 50px;
   border-radius: 50px;
 }
 
 .faq-container h3 {
-  color: #099ea6;
+  color: #ffffff;
 }
 
 .faq-item {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #00234b;
 }
 
 .faq-question {
