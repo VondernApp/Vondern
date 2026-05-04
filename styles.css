@@ -642,10 +642,17 @@ input {
   margin-bottom: 80px;
 }
 
+/*
 .social-placeholder {
   width: 30px;
   height: 30px;
   background-color: #fff;
+} */
+
+.social-icon {
+  width: 30px;  
+  height: auto;
+  cursor: pointer;
 }
 
 .footer-legal {
@@ -998,10 +1005,10 @@ input {
 }
 
 .follow-text p {
-  font-size: 16px;
   margin-bottom: 35px;
   text-align: left;
   line-height: 1.4;
+  color:#000;
 }
 
 .pill-btn {
