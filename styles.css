@@ -386,14 +386,15 @@ h3 {
   flex: 0 0 calc(33.33% - 10px);
   max-width: 800px;
   height: 400px;
-  scroll-snap-align: start;
   border-radius: 15px;
+  box-shadow: hsl(0, 0%, 0%, 0.2) 0px 4px 12px;
 }
 
 .app-card img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: fill;
+  border-radius: 15px;
 }
 
 .nav-btn {
@@ -474,7 +475,7 @@ h3 {
 
 .cta-section {
   padding: 100px 20px;
-  background-color: #c4c4c4;
+  background-color: #b4b4b4;
 }
 
 .cta-section .container {
@@ -493,12 +494,18 @@ h3 {
   margin-bottom: 20px;
 }
 
-.app-icon-placeholder {
+.appstore-icon img {
   width: 220px;
   height: 220px;
-  background-color: #d9d9d9;
+  object-fit: cover;
   border-radius: 45px;
   margin: 0 auto 25px;
+  transition: transform .3s ease;
+  cursor: pointer;;
+}
+
+.appstore-icon img:hover {
+  transform: scale(1.05);
 }
 
 .btn-dark {
@@ -705,7 +712,7 @@ input {
   flex: 1;
   display: flex;
   justify-content: center;
-  border-radius: 12px;
+  padding-left: 80px;
 }
 
 .right img {
@@ -714,13 +721,6 @@ input {
   height: auto;
   padding: 15px;
   margin-top: 30px;
-  border-radius: 12px;
-}
-
-@media (max-width:1000px) {
-  .two-column {
-    flex-direction: column;
-  }
 }
 
 @media (max-width: 1000px) {
@@ -971,7 +971,7 @@ input {
 }
 
 .follow-section {
-  background-color: #999;
+  background-color: #93b52e;
   color: #fff;
   padding: 100px 0;
 }
@@ -1043,18 +1043,47 @@ input {
   font-size: 13px
 }
 
-.mini-avatar {
-  width: 26px;
-  height: 26px;
-  background: #ccc;
+.mini-avatar img {
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  margin-right: 10px
+  margin-right: 10px;
+  padding-top: 5px;
 }
 
-.post-image-placeholder {
-  width: 100%;
-  height: 300px;
-  background-color: #555
+.post-image {
+  position: relative;
+}
+
+.post-image img {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  display: block;
+}
+
+.post-image:hover img {
+  filter: brightness(50%);
+}
+
+.post-image:hover .post-link {
+  display: block;
+}
+
+.post-link {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(67, 201, 250);
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 1000;
+  font-size: 16px;
 }
 
 @media (max-width:850px) {
