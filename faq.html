@@ -10,18 +10,14 @@
 
 <body>
 
-  <nav class="navbar">
+ <nav class="navbar">
 
   <!-- Vondern Logo  -->
   <a href="index.html" class="logo">
     <img src="pics/vondernlogo.webp" alt="Vondern Logo">
   </a>
 
-   <button class="hamburger" onclick="toggleMenu()">
-    ☰
-  </button>
-
-  <!-- Navigation links -->
+  <!-- Navigation links (Hidden on mobile) -->
   <ul class="nav-links">
     <li><a href="vondernapp.html">VONDERN APP</a></li>
     <li><a href="howitworks.html">HOW IT WORKS</a></li>
@@ -33,9 +29,15 @@
     <li><a href="contact.html">CONTACT</a></li>
   </ul>
 
+  <!-- Grouped Icons for Right Side -->
+  <div class="nav-actions">
     <a href="https://www.instagram.com/vondernapp/" target="_blank" class="ig-icon">
-    <img src="pics/instagramicon.webp" alt="Instagram">
+      <img src="pics/instagramicon.webp" alt="Instagram">
     </a>
+    <button class="hamburger" onclick="toggleMenu()">
+      ☰
+    </button>
+  </div>
 
 </nav>
 

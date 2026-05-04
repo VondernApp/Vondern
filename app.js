@@ -43,11 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function scrollCarousel(direction) {
   const track = document.getElementById('carousel');
-  const cardWidth = track.querySelector('.app-card').offsetWidth + 20;
+  const cardWidth = 280; 
+  const gap = 40;        
   
-  track.style.scrollBehavior = 'smooth'; 
   track.scrollBy({
-    left: direction * cardWidth,
+    left: direction * (cardWidth + gap),
     behavior: 'smooth'
   });
 }
