@@ -31,6 +31,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install minification tools
+        run: npm install --no-save clean-css-cli terser
+
+      - name: Minify CSS
+        run: npx clean-css-cli styles.css -o styles.css
+
+      - name: Minify JavaScript
+        run: npx terser app.js -o app.js --compress --mangle
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

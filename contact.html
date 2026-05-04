@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with the Vondern team.">
   <title>Vondern Contact Page</title>
 
 <link rel="stylesheet" href="styles.css"></head>
@@ -12,7 +14,7 @@
 
   <!-- Vondern Logo  -->
   <a href="index.html" class="logo">
-    <img src="pics/vondernlogo.png" alt="Vondern Logo">
+    <img src="pics/vondernlogo.webp" alt="Vondern Logo">
   </a>
 
    <button class="hamburger" onclick="toggleMenu()">
@@ -27,13 +29,12 @@
     <li><a href="forbusinesses.html">BUSINESSES</a></li>
     <li><a href="fortowns.html">TOWNS</a></li>
     <li><a href="forcreators.html">CREATORS</a></li>
-    <li><a href="blog.html">BLOG</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">CONTACT</a></li>
   </ul>
 
     <a href="https://www.instagram.com/vondernapp/" target="_blank" class="ig-icon">
-    <img src="pics/instagramicon.png" alt="Instagram">
+    <img src="pics/instagramicon.webp" alt="Instagram">
     </a>
 </nav>
 
@@ -55,32 +56,32 @@
 
         <div class="contact-form-column">
             <div class="contact-card-wrapper">
-                <form class="contact-form">
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/xzdopdde" method="POST">
                     <p class="contact-form-title">Please Fill In These Fields</p>
                     
                     <div class="contact-input-group">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="Enter here">
+                        <label for="contact-name">Full Name</label>
+                        <input type="text" id="contact-name" name="name" placeholder="Enter here">
                     </div>
 
                     <div class="contact-input-group">
-                        <label>Phone Number</label>
-                        <input type="tel" placeholder="Enter here">
+                        <label for="contact-phone">Phone Number</label>
+                        <input type="tel" id="contact-phone" name="phone" placeholder="Enter here">
                     </div>
 
                     <div class="contact-input-group">
-                        <label>Email</label>
-                        <input type="email" placeholder="Enter here">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" placeholder="Enter here">
                     </div>
 
                     <div class="contact-input-group">
-                        <label>Message</label>
-                        <textarea placeholder="Enter here"></textarea>
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" placeholder="Enter here"></textarea>
                     </div>
 
                     <div class="contact-form-footer">
                         <label class="contact-checkbox-label">
-                            <input type="checkbox">
+                            <input type="checkbox" name="newsletter" value="yes">
                             <span class="contact-checkmark"></span>
                             Get Weekly Newsletters
                         </label>
@@ -107,7 +108,7 @@
     </div>
 
     <div class="footer-section footer-center">
-      <img src="pics/footerlogo.png" alt="Vondern Logo" class="logo-image">
+      <img src="pics/footerlogo.webp" alt="Vondern Logo" class="logo-image">
       <h2>Scroll Less. Explore More.</h2>
       <p>Your next favorite place is closer than you think</p>
     </div>
@@ -131,6 +132,5 @@
 </footer>
 
 <script src="app.js"></script>
-
 </body>
 </html>

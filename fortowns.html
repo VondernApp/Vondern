@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Partner with Vondern to help your town attract visitors and showcase its hidden gems.">
   <title>Vondern For Towns Page</title>
 
 <link rel="stylesheet" href="styles.css"></head>
@@ -12,7 +14,7 @@
 
   <!-- Vondern Logo  -->
   <a href="index.html" class="logo">
-    <img src="pics/vondernlogo.png" alt="Vondern Logo">
+    <img src="pics/vondernlogo.webp" alt="Vondern Logo">
   </a>
 
    <button class="hamburger" onclick="toggleMenu()">
@@ -27,13 +29,12 @@
     <li><a href="forbusinesses.html">BUSINESSES</a></li>
     <li><a href="fortowns.html">TOWNS</a></li>
     <li><a href="forcreators.html">CREATORS</a></li>
-    <li><a href="blog.html">BLOG</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">CONTACT</a></li>
   </ul>
 
     <a href="https://www.instagram.com/vondernapp/" target="_blank" class="ig-icon">
-    <img src="pics/instagramicon.png" alt="Instagram">
+    <img src="pics/instagramicon.webp" alt="Instagram">
     </a>
 
 </nav>
@@ -88,32 +89,32 @@
 
         <div class="town-form-column">
             <div class="town-card-wrapper">
-                <form>
+                <form id="towns-form" action="https://formspree.io/f/xzdopdde" method="POST">
                     <p class="town-form-title">For further questions, please fill in these fields.</p>
                     
                     <div class="town-input-group">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="Enter here">
+                        <label for="town-name">Full Name</label>
+                        <input type="text" id="town-name" name="name" placeholder="Enter here">
                     </div>
 
                     <div class="town-input-group">
-                        <label>Phone Number</label>
-                        <input type="tel" placeholder="Enter here">
+                        <label for="town-phone">Phone Number</label>
+                        <input type="tel" id="town-phone" name="phone" placeholder="Enter here">
                     </div>
 
                     <div class="town-input-group">
-                        <label>Email</label>
-                        <input type="email" placeholder="Enter here">
+                        <label for="town-email">Email</label>
+                        <input type="email" id="town-email" name="email" placeholder="Enter here">
                     </div>
 
                     <div class="town-input-group">
-                        <label>Town Name and Description</label>
-                        <textarea placeholder="Enter here"></textarea>
+                        <label for="town-description">Town Name and Description</label>
+                        <textarea id="town-description" name="town_description" placeholder="Enter here"></textarea>
                     </div>
 
                     <div class="town-form-footer">
                         <label class="town-checkbox-label">
-                            <input type="checkbox">
+                            <input type="checkbox" name="newsletter" value="yes">
                             Get Weekly Newsletters
                         </label>
                         <button type="submit" class="town-submit-btn">BECOME A PARTNER</button>
@@ -141,7 +142,7 @@ Now is the time to make sure visitors discover more than the expected.</p>
   </div>
 
   <div class="whynowright">
-    <img src="pics/whynowT.png" alt="Town">
+    <img src="pics/whynowT.webp" alt="Town">
     
   </div>
 </div>
@@ -149,6 +150,85 @@ Now is the time to make sure visitors discover more than the expected.</p>
 </div>
   </div>
 </div>
+
+
+<!-- FAQ -->
+<div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>What types of businesses are on Vondern?</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p> Vondern features small towns and experience-based 
+                  businesses — from restaurants and coffee shops 
+                  to boutiques, breweries, farms, outdoor adventures, 
+                  museums, markets, and local events. If it gives 
+                  people a reason to get out and go somewhere, it 
+                  belongs here. And NO CHAINS!.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Why focus on smaller towns?</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Because they're often overlooked. 
+                  Vondern helps bring attention to communities 
+                  and businesses that don't always have the 
+                  resources to compete for visibility.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Is this just another listing site?</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p> No. Vondern is built around experience-based discovery. 
+                  It's visual, interest-driven, and designed to 
+                  move people from “that looks cool” to actually going.</p>
+            </div>
+        </div>
+
+      <div class="faq-item">
+            <div class="faq-question">
+                <h3>What does a listing include?</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Photos, a description, key details, and placement 
+                  within relevant interest categories so the right 
+                  audience finds you.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Do I need to manage it myself?</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p> You can — or we can help. Add-on services include social 
+                  support, photography, and content assistance.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>How much does it cost?</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Please check out our rates on our site.</p>
+            </div>
+        </div>
+    </div>
 
  <!--FOOTER-->
 <footer class="main-footer">
@@ -165,7 +245,7 @@ Now is the time to make sure visitors discover more than the expected.</p>
     </div>
 
     <div class="footer-section footer-center">
-      <img src="pics/footerlogo.png" alt="Vondern Logo" class="logo-image">
+      <img src="pics/footerlogo.webp" alt="Vondern Logo" class="logo-image">
       <h2>Scroll Less. Explore More.</h2>
       <p>Your next favorite place is closer than you think</p>
     </div>
@@ -189,6 +269,5 @@ Now is the time to make sure visitors discover more than the expected.</p>
 </footer>
 
 <script src="app.js"></script>
-
 </body>
 </html>

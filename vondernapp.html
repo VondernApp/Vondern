@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Download the Vondern app to discover local experiences, explore nearby towns, and find hidden gems.">
   <title>Vondern App Page</title>
 
 <link rel="stylesheet" href="styles.css"></head>
@@ -12,7 +14,7 @@
 
   <!-- Vondern Logo  -->
   <a href="index.html" class="logo">
-    <img src="pics/vondernlogo.png" alt="Vondern Logo">
+    <img src="pics/vondernlogo.webp" alt="Vondern Logo">
   </a>
 
    <button class="hamburger" onclick="toggleMenu()">
@@ -27,25 +29,26 @@
     <li><a href="forbusinesses.html">BUSINESSES</a></li>
     <li><a href="fortowns.html">TOWNS</a></li>
     <li><a href="forcreators.html">CREATORS</a></li>
-    <li><a href="blog.html">BLOG</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">CONTACT</a></li>
   </ul>
 
     <a href="https://www.instagram.com/vondernapp/" target="_blank" class="ig-icon">
-    <img src="pics/instagramicon.png" alt="Instagram">
+    <img src="pics/instagramicon.webp" alt="Instagram">
     </a>
 
 </nav>
+
 <section class="hero">
   <div class="hero-content">
-    <h1>Get the Vondern App</h1>
-    <p>Best for quickly finding a place to explore</p>
+    <h1>Get The Vondern App</h1>
+    <p>Find hidden gems worth exploring,
+       right when you need them.</p>
   </div>
 </section>
 
 <div class="full-container">
-  <h3>Coming Soon</h3>
+  <h2>Coming To The App Store Soon</h2>
 </div>
   
   <div class="carousel-wrapper">
@@ -53,12 +56,12 @@
     <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
 
     <div class="carousel-track" id="carousel">
-      <div class="app-card"><img src="pics/experiences.png" alt="1"></div>
-      <div class="app-card"><img src="pics/experiences_map.png" alt="2"></div>
-      <div class="app-card"><img src="pics/interests.png" alt="3"></div>
-      <div class="app-card"><img src="pics/profile.png" alt="4"></div>
-      <div class="app-card"><img src="pics/profile_business.png" alt="5"></div>
-      <div class="app-card"><img src="pics/saved.png" alt="6"></div>
+      <div class="app-card"><img src="pics/experiences.webp" alt="1"></div>
+      <div class="app-card"><img src="pics/experiences_map.webp" alt="2"></div>
+      <div class="app-card"><img src="pics/Interests.webp" alt="3"></div>
+      <div class="app-card"><img src="pics/profile.webp" alt="4"></div>
+      <div class="app-card"><img src="pics/profile_business.webp" alt="5"></div>
+      <div class="app-card"><img src="pics/saved.webp" alt="6"></div>
     </div>
   </div>
 
@@ -78,13 +81,13 @@
     <div class="form-box">
       <h2>Get notified when the app comes out!</h2>
       <p>Input your information down below to be notified...</p>
-      <form>
+      <form id="app-notify-form" action="https://formspree.io/f/xzdopdde" method="POST">
         <div class="form-row">
-          <input type="text" placeholder="First name...">
-          <input type="text" placeholder="Last name...">
+          <input type="text" name="first_name" placeholder="First name...">
+          <input type="text" name="last_name" placeholder="Last name...">
         </div>
-        <input type="email" placeholder="Email...">
-        <input type="tel" placeholder="Phone number...">
+        <input type="email" name="email" placeholder="Email...">
+        <input type="tel" name="phone" placeholder="Phone number...">
         <button type="submit" class="btn-submit">SUBMIT</button>
       </form>
     </div>
@@ -106,7 +109,7 @@
     </div>
 
     <div class="footer-section footer-center">
-      <img src="pics/footerlogo.png" alt="Vondern Logo" class="logo-image">
+      <img src="pics/footerlogo.webp" alt="Vondern Logo" class="logo-image">
       <h2>Scroll Less. Explore More.</h2>
       <p>Your next favorite place is closer than you think</p>
     </div>

@@ -7,6 +7,7 @@ function toggleMenu() {
 //carousel
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.getElementById('carousel');
+  if (!track) return;
   const cards = Array.from(track.children);
   
   

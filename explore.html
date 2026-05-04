@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore towns, local spots, and experiences in Bucks County, Montgomery County, Lancaster, and beyond. Discover hidden gems worth getting out for.">
   <title>Vondern Explore Page</title>
+  <link rel="preload" as="image" href="pics/hero.webp">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <nav class="navbar">
     <a href="index.html" class="logo">
-      <img src="pics/vondernlogo.png" alt="Vondern Logo">
+      <img src="pics/vondernlogo.webp" alt="Vondern Logo" width="291" height="70">
     </a>
 
     <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -23,147 +25,247 @@
     <li><a href="forbusinesses.html">BUSINESSES</a></li>
     <li><a href="fortowns.html">TOWNS</a></li>
     <li><a href="forcreators.html">CREATORS</a></li>
-    <li><a href="blog.html">BLOG</a></li>
+
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">CONTACT</a></li>
   </ul>
 
     <a href="https://www.instagram.com/vondernapp/" target="_blank" class="ig-icon">
-      <img src="pics/instagramicon.png" alt="Instagram">
+      <img src="pics/instagramicon.webp" alt="Instagram" width="28" height="31">
     </a>
   </nav>
 
   <section class="hero">
     <div class="hero-content">
-      <h1>Explore What's Around You.</h1>
-      <p>Discover towns, local spots, and experiences worth getting out for.</p>
+      <h1>Latest Stories</h1>
+      <h3>Explore inspiring stories, local adventures, and travel 
+        tips from our community of explorers.</h3>
     </div>
   </section>
 
-
-  <section class="section">
-    <div class="content-wrapper">
-        <h3 class="section-label">Browse by Interest</h3>
-        <div class="grid-categories">
-            <div class="box gray">TOWNS</div>
-            <div class="box gray">OUTDOORS</div>
-            <div class="box gray">FOOD & DRINK</div>
-            <div class="box gray">SHOPS</div>
-            <div class="box gray">EXPERIENCES</div>
-            <div class="box gray">FAMILY</div>
-            <div class="box gray">DAY TRIPS</div>
-        </div>
-    </div>
-    </section>
-
-    <section class="section trending-bg">
-    <div class="content-wrapper">
-      <div class="trending-header">
-          <h2>Trending Right Now</h2>
-          <p>What people have been loving.</p>
-      </div>
-      
-      <div class="grid-trending">
-    <div class="trending-card-bg">
-        <div class="card-content">
-            <h4>NAME OF EXPERIENCE #1</h4>
-            <p>Here is a small description of the experience. Captivate users with this description so that they will click into it further.</p>
-            <div class="tags">Free | Scenic | Family Friendly</div>
-        </div>
-    </div>
-    <div class="trending-card-bg">
-        <div class="card-content">
-            <h4>NAME OF EXPERIENCE #2</h4>
-            <p>Here is a small description of the experience. Captivate users with this description so that they will click into it further.</p>
-            <div class="tags">Free | Scenic | Family Friendly</div>
-        </div>
-    </div>
-    <div class="trending-card-bg">
-        <div class="card-content">
-            <h4>NAME OF EXPERIENCE #3</h4>
-            <p>Here is a small description of the experience. Captivate users with this description so that they will click into it further.</p>
-            <div class="tags">Free | Scenic | Family Friendly</div>
-        </div>
-    </div>
-    <div class="trending-card-bg">
-        <div class="card-content">
-            <h4>NAME OF EXPERIENCE #4</h4>
-            <p>Here is a small description of the experience. Captivate users with this description so that they will click into it further.</p>
-            <div class="tags">Free | Scenic | Family Friendly</div>
-        </div>
-    </div>
+<div class="full-container">
+   <h3>Discover towns, local spots, and experiences worth getting out for.</h3>
 </div>
+
+
+  <section class="section search-filter-section">
+    <div class="content-wrapper">
+      <div class="search-container">
+        <input type="text" id="exploreSearch" placeholder="Search experiences, towns, or keywords...">
+      </div>
+      <div class="filter-tags">
+        <!-- Default -->
+        <button class="filter-btn active" data-filter="all">All</button>
+
+        <!-- Filter by Area -->
+        <button class="filter-btn" data-filter="bucks">Bucks County & River Towns</button>
+        <button class="filter-btn" data-filter="delco">Delaware County</button>
+        <button class="filter-btn" data-filter="lancaster">Lancaster & Amish Country</button>
+        <button class="filter-btn" data-filter="montco">Montgomery County</button>
+
+        <!-- Filter by Category -->
+        <button class="filter-btn" data-filter="arts-history">Arts & History</button>
+        <button class="filter-btn" data-filter="breweries-wineries">Breweries & Wineries</button>
+        <button class="filter-btn" data-filter="date-night">Date Night</button>
+        <button class="filter-btn" data-filter="family-fun">Family Fun</button>
+        <button class="filter-btn" data-filter="food-drink">Food & Drink</button>
+        <button class="filter-btn" data-filter="outdoors-nature">Outdoors & Nature</button>
+        <button class="filter-btn" data-filter="seasonal-holiday">Seasonal & Holiday</button>
+        <button class="filter-btn" data-filter="tours-experiences">Tours & Experiences</button>
+      </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section explore-results">
     <div class="content-wrapper">
-        <div class="centered-header">
-            <h2>What Local Creators Are Saying</h2>
-            <p>Real recommendations from people who explore it first</p>
-        </div>
-
-        <div class="grid-social"> 
-            
-            <div class="social-card">
-                <div class="social-header">
-                    <div class="avatar"></div> instagramusername
-                </div>
-                <div class="social-img"></div>
-                <div class="social-body">
-                    <p><strong>instagramusername</strong> This is the description of the post...</p>
-                    <span class="date">DATE POSTED</span>
-                </div>
-            </div>
-
-            <div class="social-card">
-                <div class="social-header">
-                    <div class="avatar"></div> instagramusername
-                </div>
-                <div class="social-img"></div>
-                <div class="social-body">
-                    <p><strong>instagramusername</strong> This is the description of the post...</p>
-                    <span class="date">DATE POSTED</span>
-                </div>
-            </div>
-
-            <div class="social-card">
-                <div class="social-header">
-                    <div class="avatar"></div> instagramusername
-                </div>
-                <div class="social-img"></div>
-                <div class="social-body">
-                    <p><strong>instagramusername</strong> This is the description of the post...</p>
-                    <span class="date">DATE POSTED</span>
-                </div>
-            </div>
-
-        </div> </div>
-</section>
-
-<section class="section follow-section">
-  <div class="content-wrapper">
-    <div class="follow-container">
-      
-      <div class="follow-text">
-        <h2>Follow Vondern</h2>
-        <p>Follow along for new towns, local spots, and experiences you won't find on a list.</p>
-        <a href="https://www.instagram.com/vondernapp/" target="_blank" class="pill-btn">FOLLOW @VONDERN</a>
+      <div class="grid-explore" id="exploreGrid">
+        <!-- Cards will be populated by explore-data.js -->
       </div>
-
-      <div class="follow-mockup">
-        <div class="insta-post-card">
-          <div class="post-header">
-            <div class="mini-avatar"></div>
-            <span>vondernapp</span>
-          </div>
-          <div class="post-image-placeholder"></div>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
+
+  <style>
+    .search-filter-section {
+        text-align: center;
+        padding: 2rem 0;
+    }
+    .search-container input {
+        width: 100%;
+        max-width: 600px;
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        font-family: inherit;
+    }
+    .search-container input:focus {
+        outline: none;
+        border-color: #333;
+    }
+    .filter-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        border: 1px solid #ddd;
+        background: #fff;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #333;
+        transition: all 0.2s ease;
+    }
+    .filter-btn.active, .filter-btn:hover {
+        background: #333;
+        color: #fff;
+        border-color: #333;
+    }
+    .grid-explore {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+    .explore-card {
+        text-decoration: none;
+        color: inherit;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+    }
+    .explore-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+    .explore-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .explore-card .card-content {
+        padding: 1.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .explore-card h4 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
+        color: #222;
+    }
+    .explore-card p {
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+  </style>
+
+  <script src="explore-data.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('exploreSearch');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const grid = document.getElementById('exploreGrid');
+
+        // Function to render cards based on exploreData
+        function renderCards() {
+            grid.innerHTML = '';
+            
+            exploreData.forEach(item => {
+                const card = document.createElement('a');
+                card.href = item.link;
+                card.target = '_blank';
+                card.className = 'explore-card';
+                card.setAttribute('data-tags', item.tags);
+
+                card.innerHTML = `
+                  <img src="${item.img}" alt="${item.title}" loading="lazy" width="300" height="200">
+                  <div class="card-content">
+                    <h4>${item.title}</h4>
+                    <p>${item.desc}</p>
+                  </div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+        
+        // Initial render
+        if (typeof exploreData !== 'undefined') {
+            renderCards();
+        }
+
+        function filterCards() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const activeFilterBtns = document.querySelectorAll('.filter-btn.active');
+            const activeFilters = Array.from(activeFilterBtns).map(btn => btn.getAttribute('data-filter'));
+            
+            const cards = document.querySelectorAll('.explore-card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('h4').textContent.toLowerCase();
+                const desc = card.querySelector('p').textContent.toLowerCase();
+                const tags = card.getAttribute('data-tags') || '';
+                
+                const matchesSearch = title.includes(searchTerm) || desc.includes(searchTerm);
+                // Requires ALL active filters to be present in the tags (narrowing down)
+                const matchesFilter = activeFilters.includes('all') || activeFilters.every(f => tags.includes(f));
+
+                if (matchesSearch && matchesFilter) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        if(searchInput) {
+            searchInput.addEventListener('input', filterCards);
+        }
+
+        const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const clickedFilter = e.target.getAttribute('data-filter');
+                
+                if (clickedFilter === 'all') {
+                    // Turn on 'All', turn off others
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                } else {
+                    // Toggle the clicked button
+                    e.target.classList.toggle('active');
+                    
+                    // Always turn off 'All' when another is clicked
+                    if (allBtn) {
+                        allBtn.classList.remove('active');
+                    }
+                    
+                    // If zero filters are active, turn 'All' back on
+                    if (document.querySelectorAll('.filter-btn.active').length === 0) {
+                        if (allBtn) {
+                            allBtn.classList.add('active');
+                        }
+                    }
+                }
+                filterCards();
+            });
+        });
+    });
+  </script>
 
 <!--FOOTER-->
 <footer class="main-footer">
@@ -180,7 +282,7 @@
     </div>
 
     <div class="footer-section footer-center">
-      <img src="pics/footerlogo.png" alt="Vondern Logo" class="logo-image">
+      <img src="pics/footerlogo.webp" alt="Vondern Logo" class="logo-image" width="263" height="60" loading="lazy">
       <h2>Scroll Less. Explore More.</h2>
       <p>Your next favorite place is closer than you think</p>
     </div>
@@ -203,6 +305,6 @@
   </div>
 </footer>
 
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
 </body>
 </html>

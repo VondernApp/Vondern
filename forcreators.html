@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join Vondern as a local creator and share your favorite spots with explorers in your community.">
   <title>Vondern For Creators Page</title>
 
 <link rel="stylesheet" href="styles.css"></head>
@@ -12,7 +14,7 @@
 
   <!-- Vondern Logo  -->
   <a href="index.html" class="logo">
-    <img src="pics/vondernlogo.png" alt="Vondern Logo">
+    <img src="pics/vondernlogo.webp" alt="Vondern Logo">
   </a>
 
    <button class="hamburger" onclick="toggleMenu()">
@@ -27,13 +29,12 @@
     <li><a href="forbusinesses.html">BUSINESSES</a></li>
     <li><a href="fortowns.html">TOWNS</a></li>
     <li><a href="forcreators.html">CREATORS</a></li>
-    <li><a href="blog.html">BLOG</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">CONTACT</a></li>
   </ul>
 
     <a href="https://www.instagram.com/vondernapp/" target="_blank" class="ig-icon">
-    <img src="pics/instagramicon.png" alt="Instagram">
+    <img src="pics/instagramicon.webp" alt="Instagram">
     </a>
 
 </nav>
@@ -55,32 +56,32 @@
 
         <div class="creator-form-column">
             <div class="creator-card-wrapper">
-                <form>
+                <form id="creators-form" action="https://formspree.io/f/xzdopdde" method="POST">
                     <p class="creator-form-title">For further questions, please fill in these fields.</p>
                     
                     <div class="creator-input-group">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="Enter here">
+                        <label for="creator-name">Full Name</label>
+                        <input type="text" id="creator-name" name="name" placeholder="Enter here">
                     </div>
 
                     <div class="creator-input-group">
-                        <label>Phone Number</label>
-                        <input type="tel" placeholder="Enter here">
+                        <label for="creator-phone">Phone Number</label>
+                        <input type="tel" id="creator-phone" name="phone" placeholder="Enter here">
                     </div>
 
                     <div class="creator-input-group">
-                        <label>Email</label>
-                        <input type="email" placeholder="Enter here">
+                        <label for="creator-email">Email</label>
+                        <input type="email" id="creator-email" name="email" placeholder="Enter here">
                     </div>
 
                     <div class="creator-input-group">
-                        <label>Instagram Username and Details</label>
-                        <textarea placeholder="Enter here"></textarea>
+                        <label for="creator-instagram">Instagram Username and Details</label>
+                        <textarea id="creator-instagram" name="instagram_details" placeholder="Enter here"></textarea>
                     </div>
 
                     <div class="creator-form-footer">
                         <label class="creator-checkbox-label">
-                            <input type="checkbox">
+                            <input type="checkbox" name="newsletter" value="yes">
                             Get Weekly Newsletters
                         </label>
                         <button type="submit" class="creator-submit-btn">JOIN AS A CREATOR</button>
@@ -91,6 +92,45 @@
     </div>
 </section>
 
+<!-- FAQ -->
+<div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Who can join the Creator Directory?</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Local creators who highlight towns, travel, food, 
+                  outdoor adventures, family activities, 
+                  or community experiences.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>How does Vondern help creators?</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Your content lives in a searchable directory and 
+                  helps drive real-world traffic — not just saves and likes.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Do creators get paid?</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p> We offer revenue-sharing opportunities and business 
+                  referral incentives for creators who actively help 
+                  grow the platform.</p>
+            </div>
+        </div>
+      </div>
 
 <!--FOOTER-->
 <footer class="main-footer">
@@ -107,7 +147,7 @@
     </div>
 
     <div class="footer-section footer-center">
-      <img src="pics/footerlogo.png" alt="Vondern Logo" class="logo-image">
+      <img src="pics/footerlogo.webp" alt="Vondern Logo" class="logo-image">
       <h2>Scroll Less. Explore More.</h2>
       <p>Your next favorite place is closer than you think</p>
     </div>
@@ -131,6 +171,5 @@
 </footer>
 
 <script src="app.js"></script>
-
 </body>
 </html>
