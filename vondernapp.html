@@ -83,22 +83,23 @@
       <button class="btn-dark">LINK TO APPSTORE</button>
     </div>
 
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNCkksjM7bp81vcJnpvOTTe27G6EWePbSNg08OKOd_McCEbw/viewform?embedded=true" width="640" height="1280" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  <section class="form">
-    <div class="form-box">
-      <h2>Get notified when the app comes out!</h2>
-      <p>Input your information down below to be notified...</p>
-      <form id="app-notify-form" action="https://formspree.io/f/xzdopdde" method="POST">
-        <div class="form-row">
-          <input type="text" name="first_name" placeholder="First name...">
-          <input type="text" name="last_name" placeholder="Last name...">
-        </div>
-        <input type="email" name="email" placeholder="Email...">
-        <input type="tel" name="phone" placeholder="Phone number...">
-        <button type="submit" class="btn-submit">SUBMIT</button>
-      </form>
-    </div>
-  </section>
+    <div id="form-wrapper">
+    <iframe 
+      id="google-form"
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdNCkksjM7bp81vcJnpvOTTe27G6EWePbSNg08OKOd_McCEbw/viewform?embedded=true" 
+      width="100%" 
+      height="1280" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0">
+      Loading…
+    </iframe>
+</div>
+
+<div id="success-message" style="display:none; text-align:center; padding: 40px; background: #f9f9f9; border-radius: 8px;">
+    <h2>Thank you!</h2>
+    <p>We have received your information and will be in touch soon.</p>
+</div>
   </div>
 </section>
 

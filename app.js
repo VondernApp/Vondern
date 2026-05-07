@@ -95,3 +95,28 @@ faqItems.forEach(item => {
         */
     });
 });
+
+// google form shrink //
+window.addEventListener('DOMContentLoaded', () => {
+    const formIframe = document.getElementById('google-form');
+    let userClickedForm = false;
+
+    // Detect if the user clicked inside the iframe
+    window.addEventListener('blur', () => {
+        if (document.activeElement === formIframe) {
+            userClickedForm = true;
+            console.log("User is interacting with the form...");
+        }
+    });
+
+    if (formIframe) {
+        formIframe.onload = function() {
+            // If the user interacted AND the iframe reloads, they submitted it.
+            if (userClickedForm) {
+                console.log("Form submitted! Shrinking now...");
+                formIframe.style.setProperty('height', '300px', 'important');
+                formIframe.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+    }
+});

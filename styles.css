@@ -1155,7 +1155,8 @@ input {
 }
 
 .town-form-column {
-  flex: 1
+  flex: 1;
+  align-self: flex-start;
 }
 
 .town-card-wrapper {
@@ -1708,6 +1709,7 @@ li {
 
 .business-form-column {
   flex: 1;
+  align-self: flex-start;
 }
 
 .business-card-wrapper {
@@ -1977,4 +1979,8 @@ li {
   .whynowright img {
     max-width: 90%;
   }
+}
+
+#google-form {
+    transition: height 0.5s ease;
 }
