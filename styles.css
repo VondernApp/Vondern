@@ -894,16 +894,16 @@ flex: 0 0 280px;
 
 .two-columnn {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  max-width: 1200px;
-  margin: 50px auto 0 auto;
-  padding: 20px clamp(20px, 6vw, 100px);
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 60px auto;
+  padding: 0 5%;
+  gap: 30px;
 }
 
 .leftt {
-  flex: 1;
+  flex: 0.8;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -912,17 +912,37 @@ flex: 0 0 280px;
 
 .leftt p {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  line-height: 1.4rem;
+  color: #444;
   max-width: 600px
 }
 
 .leftt h2 {
   margin-top: 0;
-  margin-bottom: 30px
+  margin-bottom: 20px;
+  color: var(--blue);
 }
 
 .leftt h3 {
-  margin: 0
+  margin-bottom: 5px;
+  margin-bottom: 2px;
+  color: var(--aqua);
+  font-size: 1.3rem;
+}
+
+.rightt {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+}
+
+.rightt img {
+  width: 100%;
+  max-width: 650px; 
+  height: auto;
+  border-radius: 40px; 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
 }
 
 @media (max-width:1000px) {
@@ -1236,14 +1256,8 @@ flex: 0 0 280px;
 }
 
 .town-partner-section {
-  background-image: url("pics/backgroundT.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 100px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center
+  background: var(--light-bg);
+  padding: 80px 0;
 }
 
 .town-form-column {
@@ -1332,6 +1346,38 @@ flex: 0 0 280px;
   background-color: #444
 }
 
+.intro-text {
+    font-size: 1.1rem;
+    color: var(--blue);
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.pricing-card.accent-card {
+    background: var(--aqua);
+}
+
+.check-list-small {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.check-list-small li {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
 /*RESPONSIVE MEDIA QUIERIES FORMS MOBILE */
 @media (max-width:850px) {
   .town-container {
@@ -1342,6 +1388,12 @@ flex: 0 0 280px;
   .town-info-column {
     text-align: center
   }
+}
+
+@media (max-width: 600px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 900px) {
@@ -1820,6 +1872,7 @@ li {
     padding: 40px;
     border-radius: 30px;
     text-align: center;
+    margin-top: 30px;
 }
 
 .pricing-card h3 { color: var(--aqua-light); margin-top: 0; }
@@ -1990,14 +2043,8 @@ li {
 }
 
 .creator-partner-section {
-  background-image: url("pics/backgroundC.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 100px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: var(--light-bg);
+  padding: 80px 0;
 }
 
 .creator-form-column {
