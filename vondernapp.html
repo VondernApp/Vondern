@@ -42,11 +42,12 @@
   </div>
 </section>
 
-<div class="full-container">
-  <h2>Coming To The App Store Soon</h2>
-</div>
-  
-<div class="carousel-wrapper">
+<section class="app-preview">
+  <div class="container">
+    <h2>Coming To The App Store Soon</h2>
+  </div>
+
+  <div class="carousel-wrapper">
     <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
     <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
 
@@ -64,14 +65,30 @@
   <div class="container">
     <div class="download-box">
       <div class="appstore-icon">
-          <img src="pics/appstore.png" alt="App Store Icon" width="200">
+        <img src="pics/appstore.png" alt="App Store Icon">
       </div>
       <h2>Ready for an adventure?</h2>
       <p>Sign up to be the first to know when Vondern launches on the App Store!</p>
     </div>
+  </div>
+</section>
 
-    <div id="form-wrapper">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNCkksjM7bp81vcJnpvOTTe27G6EWePbSNg08OKOd_McCEbw/viewform?embedded=true" width="100%" height="800" frameborder="0">Loading…</iframe>
+<section class="form-section">
+  <div class="container">
+    <iframe 
+      id="google-form"
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdNCkksjM7bp81vcJnpvOTTe27G6EWePbSNg08OKOd_McCEbw/viewform?embedded=true" 
+      width="100%" 
+      height="1280" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0">
+      Loading…
+    </iframe>
+
+    <div id="success-message" style="display:none; text-align:center; padding: 40px; background: #f9f9f9; border-radius: 8px;">
+      <h2>Thank you!</h2>
+      <p>We have received your information and will be in touch soon.</p>
     </div>
   </div>
 </section>
