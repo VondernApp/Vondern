@@ -22,6 +22,15 @@
   font-display: swap;
 }
 
+:root {
+  --aqua: #2196a8;   
+  --aqua-light: #66eafb;    
+  --blue: #0a2948;       
+  --green: #a4c24a;
+  --white: #ffffff;
+  --light-bg: #f4f7f5;
+}
+
 body {
   font-family: Inter-medium, sans-serif;
   text-decoration: none;
@@ -60,33 +69,39 @@ h3 {
 
 .navbar {
   display: flex;
-  align-items: center;
-  padding: 20px 40px;
-  position: relative;
-  z-index: 1000;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  font-family: BlinkMacSystemFont;
 }
 
 .logo img {
-  height: 70px;
+  height: 45px;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-  margin-left: auto;
+  list-style: none;
+  gap: 20px;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #000;
-  font-size: 14px;
-  font-weight: 700;
-  white-space: nowrap;
-}
+      text-decoration: none;
+      color: var(--blue);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+
+.nav-links a:hover { 
+  color: var(--aqua); }
 
 .nav-actions {
   display: flex;
@@ -200,11 +215,12 @@ h3 {
 }
 
 .hero {
-  overflow: hidden;
-  height: 500px;
+  height: 65vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+  text-align: center;
   position: relative;
 }
 
@@ -216,10 +232,7 @@ h3 {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(50%);
-  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-  mask-mode: alpha;
+  filter: brightness(60%);
 }
 
 .hero-content {
@@ -233,7 +246,9 @@ h3 {
 }
 
 .hero-content h1 {
-  margin: 0 0 15px 0;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .hero-content h3 {
@@ -392,17 +407,22 @@ h3 {
 
 .carousel-wrapper {
   position: relative;
-  max-width: 900px;
-  margin: 40px auto;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 40px 0;
 }
 
 .carousel-track {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 40px 20px;
-  scroll-snap-type: x mandatory;
+  padding: 40px 5vw;
+  scrollbar-width: none;
+  scroll-snap-type: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .carousel-track::-webkit-scrollbar {
@@ -410,15 +430,12 @@ h3 {
 }
 
 .app-card {
-  flex: 0 0 280px;
-  aspect-ratio: 9 / 19.5;
-  scroll-snap-align: center;
-  height: auto;
-  border-radius: 35px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: transform .3s ease, box-shadow .3s ease;
+flex: 0 0 280px;
+  border-radius: 40px; 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   background: #000;
-  overflow: hidden;
+  border: 4px solid #fff; 
 }
 
 .app-card img {
@@ -431,28 +448,35 @@ h3 {
 
 .app-card:hover {
   transform: translateY(-15px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
 }
 
 .nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 60px;
-  height: 60px;
+  width: 55px; height: 55px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, .8);
-  border: none;
+  background: rgba(10, 176, 217, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);;
   cursor: pointer;
-  z-index: 10;
-  font-size: 24px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
-  transition: transform .2s ease, box-shadow .2s ease;
+  z-index: 100; 
+  font-size: 1.2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .nav-btn:hover {
+  background: rgba(164, 194, 74, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, .2);
 }
 
 .nav-btn:active {
@@ -460,11 +484,11 @@ h3 {
 }
 
 .prev {
-  left: -30px;
+  left: 20px;
 }
 
 .next {
-  right: -30px;
+  right: 20px;
 }
 
 .modal {
@@ -511,8 +535,10 @@ h3 {
 }
 
 .cta-section {
-  padding: 100px 20px;
-  background-color: #ffffff;
+  padding: 100px 5%;
+  background: var(--blue);
+  color: white;
+  text-align: center;
 }
 
 .cta-section .container {
@@ -524,11 +550,15 @@ h3 {
   margin: 0 auto;
 }
 
-.cta-title {
-  font-family: Inter-black, sans-serif;
-  font-size: 32px;
-  color: #000;
-  margin-bottom: 20px;
+.download-box h2{
+  color: var(--aqua-light);
+}
+
+.download-box p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  max-width: 600px;
+  color: #fff;
 }
 
 .appstore-icon img {
@@ -545,24 +575,29 @@ h3 {
   transform: scale(1.05);
 }
 
-.btn-dark {
-  background: #1b99af;
-  color: #fff;
-  padding: 15px 35px;
+/* .btn-dark {
+  background: var(--aqua);
+  color: #000000;
+  padding: 18px 40px;
   border: none;
-  border-radius: 8px;
+  border-radius: 100px;
+  font-family: Inter-black, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
   cursor: pointer;
-  transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), background-color .3s ease;
+  transition: transform .3s ease, background-color .3s ease;
 }
 
 .btn-dark:hover {
-  background-color: #17acc6;
+  background-color: var(--aqua-light);
   transform: scale(1.05);
 }
 
 .btn-dark:active {
   background-color: #0e747f;
 }
+
+*/
 
 .form-box {
   text-align: left;
@@ -573,7 +608,16 @@ h3 {
   gap: 10px;
 }
 
-input {
+#form-wrapper {
+  background: white;
+  border-radius: 30px;
+  padding: 15px;
+  max-width: 850px;
+  margin: 60px auto 0;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+}
+
+.input {
   width: 100%;
   padding: 15px;
   margin-bottom: 12px;
@@ -1641,7 +1685,7 @@ li {
 
 .faq-answer p {
   padding-bottom: 15px;
-  color: #666;
+  color: #04344b;
   line-height: 1.6;
   margin: 0;
 }

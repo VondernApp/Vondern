@@ -8,11 +8,12 @@ function toggleMenu() {
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.getElementById('carousel');
   if (!track) return;
+
   const cards = Array.from(track.children);
-  
-  
+  if (cards.length === 0) return;
+
+  // 1. CLONING LOGIC
   const itemsToClone = 3;
-  
   for (let i = 0; i < itemsToClone; i++) {
     const startClone = cards[i].cloneNode(true);
     const endClone = cards[cards.length - 1 - i].cloneNode(true);
@@ -20,32 +21,50 @@ document.addEventListener('DOMContentLoaded', () => {
     track.prepend(endClone);  
   }
 
+  // 2. MATH CALCULATIONS
+  const getLayout = () => {
+    const firstCard = track.querySelector('.app-card');
+    const cardWidth = firstCard.offsetWidth;
+    const gap = parseInt(window.getComputedStyle(track).gap) || 30;
+    return cardWidth + gap;
+  };
 
-  const cardWidth = cards[0].offsetWidth + 20;
-  track.scrollLeft = cardWidth * itemsToClone;
+  let stepSize = getLayout();
+  
+  // Set initial position instantly
+  track.style.scrollBehavior = 'auto';
+  track.scrollLeft = stepSize * itemsToClone;
 
-
+  // 3. INFINITE SCROLL JUMP
   track.addEventListener('scroll', () => {
     const maxScroll = track.scrollWidth - track.clientWidth;
-    
 
-    if (track.scrollLeft <= 0) {
+    if (track.scrollLeft <= 5) {
       track.style.scrollBehavior = 'auto'; 
-      track.scrollLeft = maxScroll - (cardWidth * itemsToClone);
+      track.scrollLeft = maxScroll - (stepSize * itemsToClone);
     } 
-
-    else if (track.scrollLeft >= maxScroll - 1) {
+    else if (track.scrollLeft >= maxScroll - 5) {
       track.style.scrollBehavior = 'auto'; 
-      track.scrollLeft = cardWidth * itemsToClone;
+      track.scrollLeft = stepSize * itemsToClone;
     }
+  });
+
+  window.addEventListener('resize', () => {
+    stepSize = getLayout();
   });
 });
 
+// 4. BUTTON CLICK SCROLLING
 function scrollCarousel(direction) {
   const track = document.getElementById('carousel');
-  const cardWidth = 280; 
-  const gap = 40;        
-  
+  if (!track) return;
+
+  const firstCard = track.querySelector('.app-card');
+  const cardWidth = firstCard.offsetWidth;
+  const gap = parseInt(window.getComputedStyle(track).gap) || 30;
+
+  // Re-enable smooth for clicks
+  track.style.scrollBehavior = 'smooth';
   track.scrollBy({
     left: direction * (cardWidth + gap),
     behavior: 'smooth'
@@ -94,29 +113,4 @@ faqItems.forEach(item => {
         });
         */
     });
-});
-
-// google form shrink //
-window.addEventListener('DOMContentLoaded', () => {
-    const formIframe = document.getElementById('google-form');
-    let userClickedForm = false;
-
-    // Detect if the user clicked inside the iframe
-    window.addEventListener('blur', () => {
-        if (document.activeElement === formIframe) {
-            userClickedForm = true;
-            console.log("User is interacting with the form...");
-        }
-    });
-
-    if (formIframe) {
-        formIframe.onload = function() {
-            // If the user interacted AND the iframe reloads, they submitted it.
-            if (userClickedForm) {
-                console.log("Form submitted! Shrinking now...");
-                formIframe.style.setProperty('height', '300px', 'important');
-                formIframe.scrollIntoView({ behavior: 'smooth' });
-            }
-        };
-    }
 });
