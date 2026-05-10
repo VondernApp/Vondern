@@ -1692,9 +1692,13 @@ li {
   margin-right: auto;
   margin-top: 50px;
   margin-bottom: 80px;
-  background: #78d4dc;
+  background: linear-gradient(135deg, var(--aqua-light) 0%, var(--green) 100%);
   padding: 50px;
   border-radius: 50px;
+}
+
+.faq-container h2 {
+  color: #ffffff;
 }
 
 .faq-container h3 {
@@ -1716,7 +1720,7 @@ li {
 .faq-question h3 {
   margin: 0;
   font-size: 1.1rem;
-  color: #000;
+  color: var(--blue);
 }
 
 .toggle-icon {
@@ -1733,7 +1737,7 @@ li {
 
 .faq-answer p {
   padding-bottom: 15px;
-  color: #04344b;
+  color: #054461;
   line-height: 1.6;
   margin: 0;
 }
@@ -1747,34 +1751,123 @@ li {
 }
 
 .business-partner-section {
-  background-image: url("pics/backgroundB.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 100px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: var(--light-bg);
+  padding: 80px 0;
 }
 
 .business-container {
   display: flex;
-  max-width: 1100px;
-  width: 100%;
-  gap: 60px;
-  align-items: flex-start;
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-.business-info-column {
-  background: #fff;
-  padding: 40px;
-  border-radius: 20px;
+  gap: 60px;
+  padding: 0 40px;
 }
 
 .business-info-column {
   flex: 1;
+}
+
+/*.business-info-column {
+  flex: 1;
   color: #000;
+} */
+
+ .header-group h1 {
+    color: var(--blue);
+    font-size: 70px;
+    margin: 0;
+}
+
+.header-group h2 {
+    color: var(--aqua);
+    margin-top: 0;
+    font-size: 32px;
+}
+
+.info-block {
+    margin-bottom: 40px;
+}
+
+.check-list {
+    list-style: none;
+    padding: 0;
+}
+
+.check-list li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: var(--blue);
+}
+
+.accent-block {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.creative-note {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* PRICING CARD */
+.pricing-card {
+    background: var(--blue);
+    color: var(--white);
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.pricing-card h3 { color: var(--aqua-light); margin-top: 0; }
+
+.pricing-card .price {
+    font-family: Inter-black, sans-serif;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.pricing-card .price span { font-size: 16px; opacity: 0.8; }
+
+.savings-tag {
+    background: var(--green);
+    color: var(--blue);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.future-price { font-size: 0.9rem; opacity: 0.7; margin-bottom: 0; }
+.lock-in { font-weight: bold; color: var(--aqua-light); }
+
+/* FORM COLUMN */
+.business-form-column {
+    flex: 0.9;
+}
+
+.form-sticky-wrapper {
+    position: sticky;
+    top: 120px;
+    background: white;
+    border-radius: 35px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .business-container {
+        flex-direction: column;
+    }
+    .form-sticky-wrapper {
+        position: static;
+    }
+    .header-group h1 { font-size: 50px; }
 }
 
 .business-info-column h1 {
