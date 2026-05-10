@@ -1901,6 +1901,7 @@ li {
 }
 
 .form-sticky-wrapper {
+    max-width: 1000px;
     position: sticky;
     top: 120px;
     background: white;
