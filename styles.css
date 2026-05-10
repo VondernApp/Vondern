@@ -1620,9 +1620,6 @@ flex: 0 0 280px;
   }
 }
 
-
-
-
 .subscription-section {
   width: 100%;
   background: linear-gradient(135deg, var(--aqua-light) 0%, var(--green) 100%);
@@ -2168,4 +2165,18 @@ li {
 
 #google-form {
     transition: height 0.5s ease;
+}
+
+.app-preview {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.form-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.form-section .container {
+  max-width: 1100px;
 }
