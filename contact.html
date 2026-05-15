@@ -61,24 +61,66 @@
         </div>
       </div>
 
-      <div class="business-form-column">
-        <div class="form-column-horizontal">
-          <div class="form-sticky-wrapper">
-            <iframe 
-              id="google-form"
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdNCkksjM7bp81vcJnpvOTTe27G6EWePbSNg08OKOd_McCEbw/viewform?embedded=true" 
-              width="100%" 
-              height="450" 
-              frameborder="0"
-              marginheight="0" 
-              marginwidth="0">
-              Loading…
-            </iframe>
-          </div>
-          <p class="form-privacy-note">We respect your privacy. No spam, ever.</p>
-        </div>
-      </div>
+      <div class="vondern-brevo-form">
+        <div id="sib-form-container" class="brevo-container">
+            
+            <div id="error-message" class="brevo-message-error" style="display:none;">
+            Your submission could not be saved. Please try again.
+            </div>
+            <div id="success-message" class="brevo-message-success" style="display:none;">
+            Welcome to the inner circle! Check your email soon.
+            </div>
 
+            <form id="sib-form" method="POST" action="https://3d59fc52.sibforms.com/serve/..." class="brevo-styled-form">
+            
+            <div class="brevo-input-row">
+                <div class="brevo-field">
+                <label class="brevo-label">Full Name</label>
+                <input type="text" id="FULL_NAME" name="FULL_NAME" placeholder="Name..." required class="brevo-input">
+                </div>
+
+                <div class="brevo-field">
+                <label class="brevo-label">Email Address</label>
+                <input type="email" id="EMAIL" name="EMAIL" placeholder="abc@example.com" required class="brevo-input">
+                </div>
+            </div>
+
+            <div class="brevo-field">
+                <label class="brevo-label">How are you interested in Vondern?</label>
+                <div class="brevo-select-wrapper">
+                <select name="USER_TYPE" required class="brevo-select">
+                    <option value="" disabled selected>Select an option...</option>
+                    <option value="1">General User (Discover Gems)</option>
+                    <option value="2">Vondern Bus Trips</option>
+                    <option value="3">Business Owner / Representative</option>
+                    <option value="4">Town / Tourism Organization</option>
+                    <option value="5">Content Creator / Influencer</option>
+                    <option value="6">Sponsorships / Partnerships</option>
+                </select>
+                </div>
+            </div>
+
+            <div class="brevo-field">
+                <label class="brevo-label">Tell us about your goals</label>
+                <textarea id="BIO" name="BIO" rows="3" placeholder="Business name, social handles, or partnership ideas..." required class="brevo-textarea"></textarea>
+            </div>
+
+            <div class="brevo-footer">
+                <label class="brevo-checkbox-container">
+                <input type="checkbox" id="RECIEVE_NEWSLETTER" name="RECIEVE_NEWSLETTER" value="1" required>
+                <span class="brevo-checkmark"></span>
+                Keep me in the loop with updates
+                </label>
+                
+                <button type="submit" class="brevo-submit-button">
+                SUBMIT
+                </button>
+            </div>
+
+            <input type="text" name="email_address_check" value="" class="brevo-hidden">
+            <input type="hidden" name="locale" value="en">
+            </form>
+        </div>
     </div>
   </section>
 
