@@ -1,116 +1,101 @@
-//hamburger dropdown menu
+// Toggle Hamburger Menu for Mobile
 function toggleMenu() {
   const menu = document.querySelector('.nav-links');
-  menu.classList.toggle('active');
-}
-
-//carousel
-document.addEventListener('DOMContentLoaded', () => {
-  const track = document.getElementById('carousel');
-  if (!track) return;
-
-  const cards = Array.from(track.children);
-  if (cards.length === 0) return;
-
-  // 1. CLONING LOGIC
-  const itemsToClone = 3;
-  for (let i = 0; i < itemsToClone; i++) {
-    const startClone = cards[i].cloneNode(true);
-    const endClone = cards[cards.length - 1 - i].cloneNode(true);
-    track.appendChild(startClone); 
-    track.prepend(endClone);  
+  if (menu) {
+    menu.classList.toggle('active');
   }
-
-  // 2. MATH CALCULATIONS
-  const getLayout = () => {
-    const firstCard = track.querySelector('.app-card');
-    const cardWidth = firstCard.offsetWidth;
-    const gap = parseInt(window.getComputedStyle(track).gap) || 30;
-    return cardWidth + gap;
-  };
-
-  let stepSize = getLayout();
-  
-  // Set initial position instantly
-  track.style.scrollBehavior = 'auto';
-  track.scrollLeft = stepSize * itemsToClone;
-
-  // 3. INFINITE SCROLL JUMP
-  track.addEventListener('scroll', () => {
-    const maxScroll = track.scrollWidth - track.clientWidth;
-
-    if (track.scrollLeft <= 5) {
-      track.style.scrollBehavior = 'auto'; 
-      track.scrollLeft = maxScroll - (stepSize * itemsToClone);
-    } 
-    else if (track.scrollLeft >= maxScroll - 5) {
-      track.style.scrollBehavior = 'auto'; 
-      track.scrollLeft = stepSize * itemsToClone;
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    stepSize = getLayout();
-  });
-});
-
-// 4. BUTTON CLICK SCROLLING
-function scrollCarousel(direction) {
-  const track = document.getElementById('carousel');
-  if (!track) return;
-
-  const firstCard = track.querySelector('.app-card');
-  const cardWidth = firstCard.offsetWidth;
-  const gap = parseInt(window.getComputedStyle(track).gap) || 30;
-
-  // Re-enable smooth for clicks
-  track.style.scrollBehavior = 'smooth';
-  track.scrollBy({
-    left: direction * (cardWidth + gap),
-    behavior: 'smooth'
-  });
 }
 
-//zoom in modal
 document.addEventListener('DOMContentLoaded', () => {
+  const track = document.getElementById('carousel');
+  const dots = document.querySelectorAll('.dot');
+  const cards = document.querySelectorAll('.app-card');
   const modal = document.getElementById('imageModal');
   const modalImg = document.getElementById('imgFull');
-  const carouselImages = document.querySelectorAll('.app-card img');
 
-  carouselImages.forEach(img => {
-    img.onclick = function() {
+  // If elements are missing, stop the script to avoid errors
+  if (!track || cards.length === 0) return;
+
+  // --- CONFIGURATION ---
+  // These must match your CSS exactly
+  let currentIndex = 0;
+  const cardWidth = 250; 
+  const gap = 30;        
+
+  /**
+   * updateCarousel: The single source of truth for the carousel state.
+   * It handles the visual highlighting and the physical scroll movement.
+   */
+  function updateCarousel(index) {
+    // 1. Manage Active Classes for the "Center Highlight" effect
+    cards.forEach(c => c.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    
+    if (cards[index]) cards[index].classList.add('active');
+    if (dots[index]) dots[index].classList.add('active');
+
+    // 2. Calculate Exact Scroll Position
+    // We calculate based on index to ensure it never "lands" between pictures
+    track.scrollTo({
+      left: index * (cardWidth + gap),
+      behavior: 'smooth'
+    });
+  }
+
+  // --- 1. NAVIGATION BUTTONS (One-by-One with Looping) ---
+  window.scrollCarousel = function(direction) {
+    currentIndex += direction;
+
+    // LOOPING LOGIC: Checks if we've gone past the ends of the array
+    if (currentIndex >= cards.length) {
+      currentIndex = 0; // Loop back to the first picture
+    } else if (currentIndex < 0) {
+      currentIndex = cards.length - 1; // Loop back to the last picture
+    }
+
+    updateCarousel(currentIndex);
+  };
+
+  // --- 2. DOT NAVIGATION ---
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      currentIndex = i;
+      updateCarousel(currentIndex);
+    });
+  });
+
+  // --- 3. MODAL LOGIC (Zoom) ---
+  track.addEventListener('click', (e) => {
+    const clickedImg = e.target.closest('img');
+    if (clickedImg) {
       modal.style.display = "flex";
-      modalImg.src = this.src;
+      modalImg.src = clickedImg.src;
     }
   });
+
+  if (modal) {
+    modal.onclick = () => {
+      modal.style.display = "none";
+    };
+  }
+
+  // --- 4. INITIALIZATION ---
+  // Forces the carousel to start at the first picture on every page load
+  updateCarousel(0);
 });
 
-// Select all FAQ items
-const faqItems = document.querySelectorAll('.faq-item');
-
-faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    const icon = item.querySelector('.toggle-icon');
-
-    question.addEventListener('click', () => {
-        // Toggle the 'active' class on the clicked item
-        item.classList.toggle('active');
-
-        // Change the icon based on whether the class is present
-        if (item.classList.contains('active')) {
-            icon.textContent = '−'; // Minus sign
-        } else {
-            icon.textContent = '+'; // Plus sign
-        }
-        
-        // Optional: Close other items when one is opened
-        /*
-        faqItems.forEach(otherItem => {
-            if (otherItem !== item) {
-                otherItem.classList.remove('active');
-                otherItem.querySelector('.toggle-icon').textContent = '+';
-            }
-        });
-        */
-    });
+// --- 5. FAQ TOGGLE LOGIC ---
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+    const item = question.parentElement;
+    const icon = question.querySelector('.toggle-icon');
+    
+    item.classList.toggle('active');
+    
+    if (item.classList.contains('active')) {
+      icon.textContent = '−'; 
+    } else {
+      icon.textContent = '+'; 
+    }
+  });
 });
