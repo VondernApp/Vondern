@@ -12,30 +12,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.app-card');
   const modal = document.getElementById('imageModal');
   const modalImg = document.getElementById('imgFull');
+  const navbar = document.querySelector('.navbar'); // Added for hiding logic
 
   // If elements are missing, stop the script to avoid errors
   if (!track || cards.length === 0) return;
 
   // --- CONFIGURATION ---
-  // These must match your CSS exactly
   let currentIndex = 0;
   const cardWidth = 250; 
   const gap = 30;        
 
   /**
-   * updateCarousel: The single source of truth for the carousel state.
-   * It handles the visual highlighting and the physical scroll movement.
+   * updateCarousel: Highlights active cards and moves scroll position
    */
   function updateCarousel(index) {
-    // 1. Manage Active Classes for the "Center Highlight" effect
     cards.forEach(c => c.classList.remove('active'));
     dots.forEach(d => d.classList.remove('active'));
     
     if (cards[index]) cards[index].classList.add('active');
     if (dots[index]) dots[index].classList.add('active');
 
-    // 2. Calculate Exact Scroll Position
-    // We calculate based on index to ensure it never "lands" between pictures
     track.scrollTo({
       left: index * (cardWidth + gap),
       behavior: 'smooth'
@@ -46,11 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
   window.scrollCarousel = function(direction) {
     currentIndex += direction;
 
-    // LOOPING LOGIC: Checks if we've gone past the ends of the array
     if (currentIndex >= cards.length) {
-      currentIndex = 0; // Loop back to the first picture
+      currentIndex = 0; 
     } else if (currentIndex < 0) {
-      currentIndex = cards.length - 1; // Loop back to the last picture
+      currentIndex = cards.length - 1; 
     }
 
     updateCarousel(currentIndex);
@@ -70,17 +65,28 @@ document.addEventListener('DOMContentLoaded', () => {
     if (clickedImg) {
       modal.style.display = "flex";
       modalImg.src = clickedImg.src;
+
+      // HIDE NAVBAR on zoom
+      if (navbar) {
+        navbar.style.opacity = "0";
+        navbar.style.pointerEvents = "none";
+      }
     }
   });
 
   if (modal) {
     modal.onclick = () => {
       modal.style.display = "none";
+
+      // SHOW NAVBAR on close
+      if (navbar) {
+        navbar.style.opacity = "1";
+        navbar.style.pointerEvents = "auto";
+      }
     };
   }
 
   // --- 4. INITIALIZATION ---
-  // Forces the carousel to start at the first picture on every page load
   updateCarousel(0);
 });
 
