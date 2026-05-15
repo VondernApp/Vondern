@@ -93,6 +93,7 @@ h3 {
   z-index: 8000;
   border-bottom: 1px solid rgba(0,0,0,0.05);
   font-family: BlinkMacSystemFont;
+  transition: opacity 0.4s ease;
 }
 
 .logo img {
@@ -454,7 +455,7 @@ h3 {
 
 .vondern-features {
   padding: 100px 0;
-  background-color: var(--aqua);
+  background-color: var(--aqua-soft);
   text-align: center;
 }
 
@@ -722,7 +723,7 @@ h3 {
 .modal {
   display: none;
   position: fixed;
-  z-index: 2000;
+  z-index: 9999;
   left: 0;
   top: 0;
   width: 100%;
@@ -1694,14 +1695,147 @@ h3 {
 }
 
 .contact-us-section {
-  background-image: url("pics/contactus.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 100px 20px;
+  position: relative;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-image: linear-gradient(rgba(10, 41, 72, 0.7), rgba(10, 41, 72, 0.7)), url('pics/lighthouse.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* --- CONTAINER --- */
+.contact-us-section .business-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 80px;
+  z-index: 2;
+}
+
+/* --- LEFT COLUMN: TEXT --- */
+.contact-us-section .business-info-column {
+  flex: 1;
+}
+
+.contact-us-section .business-info-column h1 {
+  font-family: Inter-black, sans-serif;
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  line-height: 0.9;
+  margin-bottom: 30px;
+  letter-spacing: -3px;
+  color: #ffffff;
+}
+
+.contact-us-section .business-info-column p {
+  font-family: Inter-medium, sans-serif;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* --- INFO BLOCKS --- */
+.contact-us-section .info-block {
+  margin-bottom: 30px;
+}
+
+.contact-us-section .info-block h3 {
+  color: var(--aqua-light);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+/* --- SOCIAL BUTTONS --- */
+.contact-social-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.contact-social-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: Inter-bold, sans-serif;
+  font-size: 0.75rem;
+  transition: var(--transition);
+}
+
+.contact-social-btn:hover {
+  background-color: #ffffff;
+  color: var(--blue);
+  transform: translateY(-3px);
+}
+
+/* --- RIGHT COLUMN: FORM --- */
+.contact-us-section .business-form-column {
+  flex: 1;
+}
+
+.contact-us-section .form-sticky-wrapper {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.contact-us-section .form-privacy-note {
+  font-size: 11px;
+  opacity: 0.8;
+  margin-top: 15px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 1000px) {
+  .contact-us-section .business-container {
+    flex-direction: column;
+  }
+
+  .contact-us-section .business-container {
+    text-align: center;
+  }
+
+  .contact-us-section .business-container {
+    gap: 50px;
+  }
+
+  .contact-us-section .business-info-column h1 {
+    font-size: 4rem;
+  }
+
+  .contact-social-buttons {
+    justify-content: center;
+  }
 }
 
 .contact-social-buttons {
