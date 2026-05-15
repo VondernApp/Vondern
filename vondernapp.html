@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vondern App Page</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Discover local towns, hidden gems, and experiences worth getting out for. Vondern helps you scroll less and explore more.">
+  <title>Vondern Homepage</title>
+
+<link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="image" href="pics/hero.webp">
 </head>
 <body class="app-page">
 
 <nav class="navbar">
-  <a href="index.html" class="logo">
+  <a href="vondernapp.html" class="logo">
     <img src="pics/vondernlogo.webp" alt="Vondern Logo">
   </a>
   <ul class="nav-links">
+    <li><a href="info.html">WHAT IS VONDERN</a></li>
     <li><a href="vondernapp.html">VONDERN APP</a></li>
-    <li><a href="howitworks.html">HOW IT WORKS</a></li>
     <li><a href="explore.html">EXPLORE</a></li>
     <li><a href="forbusinesses.html">BUSINESSES</a></li>
     <li><a href="fortowns.html">TOWNS</a></li>
     <li><a href="forcreators.html">CREATORS</a></li>
+    <li><a href="bustrips.html">TRIPS</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">CONTACT</a></li>
   </ul>
@@ -33,77 +37,97 @@
   </div>
 </nav>
 
-<section class="hero">
-  <img src="pics/rocks.jpg" alt="Vondern Hero" class="hero-image">
-  <div class="hero-content">
-    <h1>Get The Vondern App</h1>
-    <p>Find hidden gems worth exploring.</p>
-  </div>
-</section>
-
-<section class="app-preview">
-  <div class="container">
-    <h2>Coming To The App Store Soon</h2>
-  </div>
-
-  <div class="carousel-wrapper">
-    <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
-    <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
-
-    <div class="carousel-track" id="carousel">
-      <div class="app-card"><img src="pics/experiences.webp" alt="1"></div>
-      <div class="app-card"><img src="pics/experiences_map.webp" alt="2"></div>
-      <div class="app-card"><img src="pics/Interests.webp" alt="3"></div>
-      <div class="app-card"><img src="pics/profile.webp" alt="4"></div>
-      <div class="app-card"><img src="pics/profile_business.webp" alt="5"></div>
-      <div class="app-card"><img src="pics/saved.webp" alt="6"></div>
+<main>
+  <section class="hero">
+    <img src="pics/rocks.jpg" alt="Vondern Hero" class="hero-image">
+    <div class="hero-content">
+      <h1>Get The Vondern App</h1>
+      <p>Find hidden gems worth exploring.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="cta-section">
-  <div class="container">
-    <div class="download-box">
-      <div class="appstore-icon">
-        <img src="pics/appstore.png" alt="App Store Icon">
-      </div>
-      <h2>Ready for an adventure?</h2>
-      <p>Sign up to be the first to know when Vondern launches on the App Store!</p>
+  <section class="app-preview">
+    <div class="container">
+      <h2>Coming To The App Store Soon</h2>
     </div>
 
-    <div class="business-form-column">
-      <div class="form-sticky-wrapper">
-        <iframe 
-          id="google-form"
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdNCkksjM7bp81vcJnpvOTTe27G6EWePbSNg08OKOd_McCEbw/viewform?embedded=true" 
-          width="100%" 
-          height="1280" 
-          frameborder="0">
-          Loading…
-        </iframe>
+    <div class="carousel-wrapper">
+      <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
+      <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
+
+      <div class="carousel-track" id="carousel">
+        <div class="app-card"><img src="pics/experiences.webp" alt="1"></div>
+        <div class="app-card"><img src="pics/experiences_map.webp" alt="2"></div>
+        <div class="app-card"><img src="pics/Interests.webp" alt="3"></div>
+        <div class="app-card"><img src="pics/profile.webp" alt="4"></div>
+        <div class="app-card"><img src="pics/profile_business.webp" alt="5"></div>
+        <div class="app-card"><img src="pics/saved.webp" alt="6"></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="leftt">
+          <h2>How It Works</h2>
+          <h3>1. Pick Your Interests </h3>
+          <p>Choose what you want to explore.</p>
+          <h3>2. Discover Experiences</h3>
+          <p>Browse towns, shops, and things to do.</p>
+          <h3>3. Find Something New</h3>
+          <p>Save what catches your eye.</p>
+          <h3>4. Support Local</h3>
+          <p>Discover businesses that make communities special.</p>
+          <h3>5. Share Your Find </h3>
+          <p>Inspire others by sharing places you loved.</p>
+          <h3>6. Follow & Discover </h3>
+          <p>Follow creators, businesses, and other Vonderners for new updates.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="download-box">
+        <div class="appstore-icon">
+          <img src="pics/appstore.png" alt="App Store Icon">
+        </div>
+        <h2>Ready for an adventure?</h2>
+        <p>Sign up to be the first to know when Vondern launches on the App Store!</p>
+      </div>
+
+      <div class="business-form-column">
+        <div class="form-sticky-wrapper">
+          <iframe 
+            id="google-form"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdNCkksjM7bp81vcJnpvOTTe27G6EWePbSNg08OKOd_McCEbw/viewform?embedded=true" 
+            width="100%" 
+            height="1280" 
+            frameborder="0">
+            Loading…
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer class="main-footer">
   <div class="footer-container">
     <div class="footer-section footer-left">
       <nav class="footer-links">
-        <a href="vondernapp.html">GET THE APP</a>
+        <a href="info.html.html">GET THE APP</a>
         <a href="howitworks.html">HOW IT WORKS</a>
         <a href="explore.html">EXPLORE</a>
         <a href="faq.html">FAQ</a>
         <a href="contact.html">CONTACT</a>
       </nav>
     </div>
-
     <div class="footer-section footer-center">
       <img src="pics/footerlogo.webp" alt="Vondern Logo" class="logo-image" width="263" height="60">
       <h2>Scroll Less. Explore More.</h2>
       <p>Your next favorite place is closer than you think</p>
     </div>
-
     <div class="footer-section footer-right">
       <div class="social-box">
         <a href="https://www.instagram.com/vondern" target="_blank">
@@ -116,9 +140,8 @@
       </nav>
     </div>
   </div>
-
   <div class="footer-legal">
-    <p>@2026 Vondern | Privacy Policy | Terms</p>
+    <p>@2026 Vondern | Privacy Policy | Termss</p>
   </div>
 </footer>
 

@@ -3,35 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover local towns, hidden gems, and experiences worth getting out for. Vondern helps you scroll less and explore more.">
-  <title>Vondern Homepage</title>
-
-<link rel="stylesheet" href="styles.css">
-  <link rel="preload" as="image" href="pics/hero.webp">
+  <title>Vondern App Page</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body class="app-page">
 
-<body>
-
-<!-- TOP NAVIGATION BAR  -->
- <nav class="navbar">
+<nav class="navbar">
   <a href="index.html" class="logo">
     <img src="pics/vondernlogo.webp" alt="Vondern Logo">
   </a>
   <ul class="nav-links">
-    <li><a href="vondernapp.html">VONDERN APP</a></li>
-    <li><a href="howitworks.html">HOW IT WORKS</a></li>
+   <li><a href="info.html">WHAT IS VONDERN</a></li>
     <li><a href="explore.html">EXPLORE</a></li>
     <li><a href="forbusinesses.html">BUSINESSES</a></li>
     <li><a href="fortowns.html">TOWNS</a></li>
     <li><a href="forcreators.html">CREATORS</a></li>
+    <li><a href="bustrips.html">TRIPS</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">CONTACT</a></li>
   </ul>
 
-  <!-- Grouped Icons for Right Side -->
   <div class="nav-actions">
     <a href="https://www.instagram.com/vondernapp/" target="_blank" class="ig-icon">
-      <img src="pics/instagramicon.webp" alt="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
     </a>
     <button class="hamburger" onclick="toggleMenu()">
       ☰
@@ -39,17 +37,18 @@
   </div>
 </nav>
 
-<main>
-<!-- HERO IMAGE CONTAINER  -->
 <section class="hero">
-  <img src="pics/sunbathe.jpg" alt="Vondern Hero Image" class="hero-image">
+  <img src="pics/hero.png" alt="Vondern Hero Image" class="hero-image">
   <div class="hero-content">
     <h1>Scroll less. Explore more.</h1>
     <p>Discover towns, local spots, and experiences worth getting out for.</p>
-<a href="vondernapp.html" class="pill-btn">GET THE APP</a>
+<a href="info.html" class="pill-btn">GET THE APP</a>
+<a href="forbusinesses.html" class="pill-btn">VONDERN FOR BUSINESSES</a>
+<a href="fortowns.html" class="pill-btn">VONDERN FOR TOURISM</a>
   </div>
 
 </section>
+
 
 <div class="section">
   <div class="container">
@@ -91,6 +90,55 @@
     </div>
   </div>
 </section>
+
+<div class="subscription-section">
+
+  <h2>How Vondern Helps You Grow</h2>
+  <br></br>
+
+  <div class="card-container">
+
+    <div class="subcard">
+      <h2>Businesses</h2>
+  
+      <p>✓ $77/month for consistent visibility</p>
+      <p>✓ Priority placement during traffic periods</p>
+      <p>✓ Featured in newsletters and social posts</p>
+      <p>✓ Discounted access to creative support </p>
+      <p>✓ Reach local audiences actively exploring</p>
+        <br></br>
+          <a href="forbusinesses.html" class="contact-social-btn">LEARN MORE</a>
+    </div>
+
+    <div class="subcard">
+      <h2>Towns & Tourism</h2>
+
+      <p>✓ $1,200/year for Towns, Chambers & Associations</p>
+      <p>✓ $2,500/year for Tourism Bureaus/DMOS</p>
+      <p>✓ Boost visibility and foot traffic</p>
+      <p>✓ Highlight events, traditions, and attractions</p>
+      <p>✓ Showcase local businesses and experiences</p>
+      <p>✓ Drive traffic to your site and partners</p>
+      <br></br>
+          <a href="fortowns.html" class="contact-social-btn">LEARN MORE</a>
+    </div>
+
+
+      <div class="subcard">
+      <h2>Creators</h2>
+
+      <p>✓ Grow your reach and showcase your work</p>
+      <p>✓ Featured in local discovery guides and experiences</p>
+      <p>✓ Collaborate with towns and businesses</p>
+      <p>✓ Build your presence through storytelling</p>
+      <p>✓ Gain visibility via features and social</p>
+      <br></br>
+
+      
+         <a href="forcreators.html" class="contact-social-btn">LEARN MORE</a>
+    </div>
+  </div>
+</div>
 
 <!-- WHY IT MATTERS -->
 <div class="split-container">
@@ -143,6 +191,8 @@
     </div>
   </div>
 </div>
+
+
 <!--
 <section class="section">
     <div class="content-wrapper">
@@ -223,38 +273,32 @@
 <!--FOOTER-->
 <footer class="main-footer">
   <div class="footer-container">
-    
     <div class="footer-section footer-left">
       <nav class="footer-links">
-        <a href="vondernapp.html">GET THE APP</a>
+        <a href="info.html">GET THE APP</a>
         <a href="howitworks.html">HOW IT WORKS</a>
         <a href="explore.html">EXPLORE</a>
         <a href="faq.html">FAQ</a>
         <a href="contact.html">CONTACT</a>
       </nav>
     </div>
-
     <div class="footer-section footer-center">
       <img src="pics/footerlogo.webp" alt="Vondern Logo" class="logo-image" width="263" height="60">
       <h2>Scroll Less. Explore More.</h2>
       <p>Your next favorite place is closer than you think</p>
     </div>
-   
-
     <div class="footer-section footer-right">
       <div class="social-box">
-      <a href="https://www.instagram.com/vondern" target="_blank">
-      <img src="pics/whiteinstalogo.webp" alt="Instagram" class="social-icon">
-      </a>
-    </div>
-
-    <nav class="footer-links-alt">
+        <a href="https://www.instagram.com/vondernapp" target="_blank">
+          <img src="pics/whiteinstalogo.webp" alt="Instagram" class="social-icon">
+        </a>
+      </div>
+      <nav class="footer-links-alt">
         <a href="#">GET THE VONDERN APP</a>
         <a href="#">JOIN OUR NEWSLETTER</a>
       </nav>
     </div>
   </div>
-
   <div class="footer-legal">
     <p>@2026 Vondern | Privacy Policy | Terms</p>
   </div>
