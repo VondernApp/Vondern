@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <script>
+        // Capture the path that triggered the 404
+        var pathSegments = location.pathname.split('/').filter(Boolean);
+        
+        // Get the requested page (last segment without extension)
+        var requestedPage = pathSegments[pathSegments.length - 1];
+        
+        // Map of possible pages
+        var pages = [
+            'index',
+            'app',
+            'vondernapp',
+            'howitworks',
+            'explore',
+            'forbusinesses',
+            'fortowns',
+            'forcreators',
+            'faq',
+            'contact'
+        ];
+        
+        // Check if the requested page is valid
+        if (requestedPage && pages.includes(requestedPage)) {
+            // Redirect to the page with .html extension
+            location.href = '/' + requestedPage + '.html';
+        } else {
+            // Default to home page
+            location.href = '/';
+        }
+    </script>
+</body>
+</html>
