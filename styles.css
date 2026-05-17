@@ -35,7 +35,7 @@
   --faq-color: #58c0d5;  
   --blue: #0a2948;       
   --green: #a4c24a;
-  --green-light: rgb(170, 255, 0);
+  --green-light: rgb(191, 230, 113);
   --white: #ffffff;
   --light-bg: #f8faf9;
   --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -864,11 +864,21 @@ h3 {
 }
 
 /* --- BREVO FORM STYLING --- */
-
 .brevo-container {
   width: 100%;
   max-width: 550px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.563); 
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.4);
+  border-radius: 35px;
+  padding: 40px;
+  box-shadow: 0 30px 60px rgba(10, 41, 72, 0.15);
+  box-sizing: border-box;
 }
 
 .brevo-styled-form {
@@ -892,7 +902,7 @@ h3 {
 .brevo-label {
   font-family: Inter-bold, sans-serif;
   font-size: 0.85rem;
-  color: var(--white);
+  color: var(--blue);
   margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -946,7 +956,7 @@ h3 {
   align-items: center;
   gap: 10px;
   font-size: 0.85rem;
-  color: var(--white);
+  color: var(--blue);
   cursor: pointer;
   font-weight: 600;
 }
@@ -1521,10 +1531,13 @@ h3 {
 .pill-btn {
   display: inline-block;
   background-color: var(--green-light);
+  opacity: 0.9;
+  blur: 4px;
   color: #000;
   text-decoration: none;
   padding: 14px 35px;
   border-radius: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.538);
   font-family: Inter-black, sans-serif;
   font-size: 12px;
   letter-spacing: 1px;
