@@ -869,7 +869,7 @@ h3 {
   max-width: 550px;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(255, 255, 255, 0.563); 
+  background-color: rgba(255, 255, 255, 0.896); 
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-width: 1px;
@@ -884,7 +884,7 @@ h3 {
 .brevo-styled-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0px;
 }
 
 .brevo-input-row {
@@ -897,6 +897,11 @@ h3 {
   display: flex;
   flex-direction: column;
   text-align: left;
+  margin-bottom: 12px;
+}
+
+.brevo-field:last-of-type {
+  margin-bottom: 0px;
 }
 
 .brevo-label {
@@ -945,20 +950,41 @@ h3 {
 }
 
 .brevo-footer {
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 4px;
+}
+
+.brevo-footer-title {
+  font-family: Inter-bold, sans-serif;
+  font-size: 16px;
+  color: var(--blue);
+  margin-bottom: 0px;
   margin-top: 10px;
 }
 
-.brevo-checkbox-container {
+.brevo-footer-text {
+  font-family: Inter-medium, sans-serif;
+  font-size: 13px;
+  color: var(--blue);
+  line-height: 1.5;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.brevo-checkbox-wrapper {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.85rem;
-  color: var(--blue);
   cursor: pointer;
-  font-weight: 600;
+  padding: 5px 0;
+}
+
+.brevo-checkbox-label {
+  font-family: Inter-bold, sans-serif;
+  font-size: 13px;
+  color: var(--blue);
 }
 
 .brevo-submit-button {
