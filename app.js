@@ -105,3 +105,71 @@ document.querySelectorAll('.faq-question').forEach(question => {
     }
   });
 });
+
+  // Configuration for Brevo
+  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank.";
+  window.EMAIL_INVALID_MESSAGE = "Please enter a valid email address.";
+  window.GENERIC_INVALID_MESSAGE = "Something went wrong. Please try again.";
+  window.translation = { common: { selectedList: '{quantity} list selected', selectedLists: '{quantity} lists selected' } };
+  var AUTOHIDE = Boolean(0);
+
+  const form = document.getElementById('sib-form');
+  const formFields = form.querySelectorAll('input:not([type="hidden"]), select, textarea');
+
+  // 1. Function to save data to localStorage
+  const saveFormData = () => {
+    const data = {};
+    formFields.forEach(field => {
+      if (field.type === 'checkbox') {
+        data[field.name] = field.checked;
+      } else {
+        data[field.name] = field.value;
+      }
+    });
+    localStorage.setItem('vondern_form_draft', JSON.stringify(data));
+  };
+
+  // 2. Function to load data from localStorage
+  const loadFormData = () => {
+    const savedData = localStorage.getItem('vondern_form_draft');
+    if (savedData) {
+      const data = JSON.parse(savedData);
+      formFields.forEach(field => {
+        if (data[field.name] !== undefined) {
+          if (field.type === 'checkbox') {
+            field.checked = data[field.name];
+          } else {
+            field.value = data[field.name];
+          }
+        }
+      });
+    }
+  };
+
+  // 3. Event Listeners
+  formFields.forEach(field => {
+    field.addEventListener('input', saveFormData);
+  });
+
+  // Load data when page opens
+  window.addEventListener('load', loadFormData);
+
+  // 4. Handle visibility and Clear storage on success
+  form.addEventListener('submit', function() {
+    const successMsg = document.getElementById('success-message');
+    const errorMsg = document.getElementById('error-message');
+    const formLayout = document.querySelector('.brevo-styled-form');
+
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.target.style.display !== 'none' || !mutation.target.classList.contains('brevo-hidden')) {
+           // Success! Hide form and clear the saved draft
+           formLayout.style.display = 'none';
+           localStorage.removeItem('vondern_form_draft');
+        }
+      });
+    });
+
+    observer.observe(successMsg, { attributes: true, attributeFilter: ['style', 'class'] });
+    observer.observe(errorMsg, { attributes: true, attributeFilter: ['style', 'class'] });
+  });
