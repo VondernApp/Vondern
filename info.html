@@ -112,12 +112,12 @@
     <div class="form-column-horizontal" id="sib-container">
         <div id="sib-form-container" class="brevo-container">
             
-            <div id="success-message" style="display:none; margin-bottom: 20px;">
+            <div id="success-message" class="brevo-hidden" style="margin-bottom: 20px;">
                 <h3 style="color: var(--aqua); text-align: center;">Welcome to the inner circle!</h3>
                 <p style="text-align: center; color: var(--blue);">Check your email soon for your first adventure.</p>
             </div>
             
-            <div id="error-message" style="display:none; margin-bottom: 20px; color: #f44336; text-align: center;">
+            <div id="error-message" class="brevo-hidden" style="margin-bottom: 20px; color: #f44336; text-align: center;">
                 <p>Something went wrong. Please check your details and try again.</p>
             </div>
 
@@ -186,11 +186,30 @@
 </footer>
 
 <script>
+  // Configuration for Brevo
   window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank.";
   window.EMAIL_INVALID_MESSAGE = "Please enter a valid email address.";
   window.GENERIC_INVALID_MESSAGE = "Something went wrong. Please try again.";
   window.translation = { common: { selectedList: '{quantity} list selected', selectedLists: '{quantity} lists selected' } };
   var AUTOHIDE = Boolean(0);
+
+  // Added Logic to handle displaying success/error messages
+  document.getElementById('sib-form').addEventListener('submit', function() {
+    const successMsg = document.getElementById('success-message');
+    const errorMsg = document.getElementById('error-message');
+    const form = document.querySelector('.brevo-styled-form');
+
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.target.style.display !== 'none' || !mutation.target.classList.contains('brevo-hidden')) {
+           form.style.display = 'none'; // Hide form fields when message appears
+        }
+      });
+    });
+
+    observer.observe(successMsg, { attributes: true, attributeFilter: ['style', 'class'] });
+    observer.observe(errorMsg, { attributes: true, attributeFilter: ['style', 'class'] });
+  });
 </script>
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 <script src="app.js"></script>
