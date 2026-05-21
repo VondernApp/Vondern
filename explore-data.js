@@ -370,9 +370,81 @@ const exploreData = [
     "link": "https://www.visitbuckscounty.com/blog/stories/post/10-places-for-pumpkin-spiced-lattes-in-bucks-county/",
     "desc": "Your ultimate guide to the coziest cafes and coffee shops serving up fall\u2019s favorite flavor across Bucks County.",
     "tags": "bucks food-drink seasonal-holiday"
-  }
+  },
+
+   {
+    "title": "South Jersey Family Fun",
+    "img": "pics/southjersey1.png",
+    "link": "https://njmom.com/things-to-do-in-south-jersey-for-families/",
+    "desc": "Discover an array of kid friendly attractions that are fun for thw whole family",
+    "tags": "southjersey family-fun tours-experiences"
+  },
+
+  {
+    "title": "Jersey Shore Fun",
+    "img": "pics/southjersey2.png",
+    "link": "https://www.shoretodo.com/",
+    "desc": "A local hub for shore towns with events, food spots, and hidden gems along the South Jersey coast.",
+    "tags": "southjersey family-fun tours-experiences outdoors-nature date-night"
+  },
+
+   {
+    "title": "21 Family & Friendly Things In South Jersey",
+    "img": "pics/southjersey3.png",
+    "link": "https://karta.com/blog/things-to-do-in-south-jersey/",
+    "desc": "A broad roundup of activities covering outdoors, dining, and underrated local attractions.",
+    "tags": "southjersey family-fun tours-experiences outdoors-nature date-night"
+  },
+
+
+   {
+    "title": "South Jersey Mom Bucket List",
+    "img": "pics/southjersey4.png",
+    "link": "https://njmom.com/sj-mom-bucket-list/",
+    "desc": "A curated bucket list of must-do South Jersey experiences for families and young parents.",
+    "tags": "southjersey family-fun tours-experiences outdoors-nature date-night"
+  },
+
+  {
+    "title": "Main Line Area Weekend Trip Ideas",
+    "img": "pics/phillysubs1.png",
+    "link": "https://mainlinetoday.com/",
+    "desc": "Upscale local magazine covering food, events, and lifestyle across the Main Line.",
+    "tags": "phillysubs food-drink tours-experiences outdoors-nature arts-history"
+  },
+
+  {
+    "title": "Walkable Towns In The Philadelphia Suburbs",
+    "img": "pics/phillysubs2.png",
+    "link": "https://suburbanjunglegroup.com/12-walkable-downtowns-in-the-philadelphia-suburbs/",
+    "desc": "Highlights charming walkable towns perfect for day trips and exploring.",
+    "tags": "phillysubs tours-experiences outdoors-nature"
+  },
+
+    {
+    "title": "Kid Friendly Activities in DC",
+    "img": "pics/maryland1.png",
+    "link": "https://www.kidfriendlydc.com/",
+    "desc": " Family-centered guide covering DC + Maryland kid-friendly outings.",
+    "tags": "maryland family-fun tours-experiences outdoors-nature"
+  },
+
+  {
+    "title": "Guide With Maryland Activities, Experiences, Nature, & Food",
+    "img": "pics/maryland2.png",
+    "link": "https://www.onlyinyourstate.com/maryland",
+    "desc": "Popular discovery-style site featuring unique and unusual Maryland places.",
+    "tags": "maryland family-fun tours-experiences outdoors-nature"
+  },
+
+    {
+    "title": "Discover An array of Weekend Advwnture's in Lehigh Valley",
+    "img": "pics/lehigh1.png",
+    "link": "https://www.discoverlehighvalley.com/",
+    "desc": "Official guide to events, dining, and attractions in the Lehigh Valley.",
+    "tags": "lehigh family-fun tours-experiences outdoors-nature arts-history date-night"
+  },
 
 // NEW BLOGS //
 
 ];
-
