@@ -98,7 +98,6 @@
 
 <section class="cta-section">
   <div class="container horizontal-cta">
-    
     <div class="download-box">
       <h2>Ready for an adventure?</h2>
       <p>Sign up to be the first to know when Vondern launches!</p>
@@ -109,67 +108,67 @@
       </div>
     </div>
 
-    <div class="form-column-horizontal" id="sib-container">
-        <div id="sib-form-container" class="brevo-container">
-            
-            <div id="success-message" class="brevo-hidden" style="margin-bottom: 20px;">
-                <h3 style="color: var(--aqua); text-align: center;">Welcome to the inner circle!</h3>
-                <p style="text-align: center; color: var(--blue);">Check your email soon for your first adventure.</p>
-            </div>
-            
-            <div id="error-message" class="brevo-hidden" style="margin-bottom: 20px; color: #f44336; text-align: center;">
-                <p>Something went wrong. Please check your details and try again.</p>
-            </div>
-
-            <form id="sib-form" method="POST" action="https://3d59fc52.sibforms.com/serve/MUIFAK2BJ3g3jAoQj354u1-SG7BF_5C4K1tQKGbKxq6WMepic24HPW9IuTkhFIguecfiq0Tkg-aLwvH_lHFnyYPWTNZAvQ7z0eDYx7vcrWrRG5rxHfRcgzWe2zpdh1Rp5MSaDzl3nNZPUOaibVYy3uQ5xaLec-5zfmzfAfyUlOaIk1x_kUHcQldE8_lWHFJNcdwC_w8M8mTyGXNOWQ==" class="brevo-styled-form">
-                
-                <div class="brevo-input-row">
-                    <div class="brevo-field">
-                        <label class="brevo-label">Full Name</label>
-                        <input type="text" name="FULL_NAME" placeholder="Name..." required class="brevo-input">
-                    </div>
-                    <div class="brevo-field">
-                        <label class="brevo-label">Email Address</label>
-                        <input type="email" name="EMAIL" placeholder="abc@example.com" required class="brevo-input">
-                    </div>
-                </div>
-
-                <div class="brevo-input-row">
-                    <div class="brevo-field">
-                        <label class="brevo-label">Phone <span class="brevo-optional">(Optional)</span></label>
-                        <input type="text" name="SMS" placeholder="+1..." class="brevo-input">
-                    </div>
-                    <div class="brevo-field">
-                        <label class="brevo-label">I am a...</label>
-                        <select name="USER_TYPE" required class="brevo-select">
-                            <option value="" disabled selected>Select...</option>
-                            <option value="1">General User</option>
-                            <option value="3">Business Owner</option>
-                            <option value="4">Town/Tourism</option>
-                            <option value="5">Content Creator</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="brevo-field">
-                    <label class="brevo-label">Tell us about you <span class="brevo-optional">(Optional)</span></label>
-                    <textarea name="BIO" rows="2" placeholder="Business name or interests..." class="brevo-textarea"></textarea>
-                </div>
-
-                <div class="brevo-footer">
-                    <h3 class="brevo-footer-title" style="color: var(--blue);">Stay in the loop</h3>
-                    <p class="brevo-footer-text" style="color: #666;">Get local adventure ideas, app updates, and more!</p>
-                    <label class="brevo-checkbox-wrapper">
-                        <input type="checkbox" name="OPT_IN" value="1" required>
-                        <span class="brevo-checkbox-label" style="color: var(--blue);">Yes, keep me in the loop.</span>
-                    </label>
-                    <button type="submit" class="brevo-submit-button">JOIN THE ADVENTURE</button>
-                </div>
-
-                <input type="text" name="email_address_check" value="" class="brevo-hidden">
-                <input type="hidden" name="locale" value="en">
-            </form>
+    <div id="sib-form-container" class="sib-form-container">
+      <div id="sib-container" class="sib-container">
+        
+        <div id="success-message" class="brevo-hidden" style="display:none;">
+            <h3 style="color: var(--aqua); text-align: center;">Welcome to the inner circle!</h3>
+            <p style="text-align: center; color: var(--blue);">Check your email soon for your first adventure.</p>
         </div>
+        
+        <div id="error-message" class="brevo-hidden" style="display:none; color: #f44336; text-align: center;">
+            <p id="error-message-text">Something went wrong. Please check your details.</p>
+        </div>
+
+        <form id="sib-form" method="POST" action="https://3d59fc52.sibforms.com/serve/MUIFAK2BJ3g3jAoQj354u1-SG7BF_5C4K1tQKGbKxq6WMepic24HPW9IuTkhFIguecfiq0Tkg-aLwvH_lHFnyYPWTNZAvQ7z0eDYx7vcrWrRG5rxHfRcgzWe2zpdh1Rp5MSaDzl3nNZPUOaibVYy3uQ5xaLec-5zfmzfAfyUlOaIk1x_kUHcQldE8_lWHFJNcdwC_w8M8mTyGXNOWQ==" class="sib-form">
+            
+            <div class="brevo-input-row">
+                <div class="brevo-field">
+                    <label class="brevo-label">Full Name</label>
+                    <input type="text" name="FULL_NAME" placeholder="Name..." required class="brevo-input">
+                </div>
+                <div class="brevo-field">
+                    <label class="brevo-label">Email Address</label>
+                    <input type="email" name="EMAIL" placeholder="abc@example.com" required class="brevo-input">
+                </div>
+            </div>
+
+            <div class="brevo-input-row">
+                <div class="brevo-field">
+                    <label class="brevo-label">Phone <span class="brevo-optional">(Optional)</span></label>
+                    <input type="text" name="SMS" placeholder="+1..." class="brevo-input">
+                </div>
+                <div class="brevo-field">
+                    <label class="brevo-label">I am a...</label>
+                    <select name="USER_TYPE" required class="brevo-select">
+                        <option value="" disabled selected>Select...</option>
+                        <option value="1">General User</option>
+                        <option value="3">Business Owner</option>
+                        <option value="4">Town/Tourism</option>
+                        <option value="5">Content Creator</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="brevo-field">
+                <label class="brevo-label">Tell us about you <span class="brevo-optional">(Optional)</span></label>
+                <textarea name="BIO" rows="2" placeholder="Business name or interests..." class="brevo-textarea"></textarea>
+            </div>
+
+            <div class="brevo-footer">
+                <h3 class="brevo-footer-title" style="color: var(--blue);">Stay in the loop</h3>
+                <label class="brevo-checkbox-wrapper">
+                    <input type="checkbox" name="OPT_IN" value="1" required>
+                    <span class="brevo-checkbox-label" style="color: var(--blue);">Yes, keep me in the loop.</span>
+                </label>
+                <button type="submit" class="brevo-submit-button">JOIN THE ADVENTURE</button>
+            </div>
+
+            <div id="sib-captcha-container" class="sib-captcha-container"></div>
+            <input type="text" name="email_address_check" value="" style="display:none;">
+            <input type="hidden" name="locale" value="en">
+        </form>
+      </div>
     </div>
   </div>
 </section>
@@ -186,31 +185,69 @@
 </footer>
 
 <script>
-  // Configuration for Brevo
+  // 1. Brevo Global Configuration
   window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank.";
   window.EMAIL_INVALID_MESSAGE = "Please enter a valid email address.";
   window.GENERIC_INVALID_MESSAGE = "Something went wrong. Please try again.";
-  window.translation = { common: { selectedList: '{quantity} list selected', selectedLists: '{quantity} lists selected' } };
+  window.translation = { 
+    common: { 
+      selectedList: '{quantity} list selected', 
+      selectedLists: '{quantity} lists selected' 
+    } 
+  };
+  
+  window.COMPLETION_TARGET = "success-message"; 
   var AUTOHIDE = Boolean(0);
 
-  // Added Logic to handle displaying success/error messages
-  document.getElementById('sib-form').addEventListener('submit', function() {
-    const successMsg = document.getElementById('success-message');
-    const errorMsg = document.getElementById('error-message');
-    const form = document.querySelector('.brevo-styled-form');
+  // 2. Draft Saving + Form Observer
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('sib-form');
+    const container = document.getElementById('sib-form-container');
+    if (!form) return;
 
-    const observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        if (mutation.target.style.display !== 'none' || !mutation.target.classList.contains('brevo-hidden')) {
-           form.style.display = 'none'; // Hide form fields when message appears
+    const formFields = form.querySelectorAll('input:not([type="hidden"]), select, textarea');
+
+    // --- Part A: Load saved data ---
+    const savedData = localStorage.getItem('vondern_form_draft');
+    if (savedData) {
+      const data = JSON.parse(savedData);
+      formFields.forEach(field => {
+        if (data[field.name] !== undefined) {
+          if (field.type === 'checkbox') {
+            field.checked = data[field.name];
+          } else {
+            field.value = data[field.name];
+          }
         }
+      });
+    }
+
+    // --- Part B: Auto-save on Input ---
+    formFields.forEach(field => {
+      field.addEventListener('input', () => {
+        const data = {};
+        formFields.forEach(f => {
+          data[f.name] = f.type === 'checkbox' ? f.checked : f.value;
+        });
+        localStorage.setItem('vondern_form_draft', JSON.stringify(data));
       });
     });
 
-    observer.observe(successMsg, { attributes: true, attributeFilter: ['style', 'class'] });
-    observer.observe(errorMsg, { attributes: true, attributeFilter: ['style', 'class'] });
+    // --- Part C: Observer to detect Success state change from Brevo script ---
+    const observer = new MutationObserver((mutations) => {
+      const successMsg = document.getElementById('success-message');
+      if (successMsg && (!successMsg.classList.contains('brevo-hidden') || successMsg.style.display === 'block')) {
+        form.style.display = 'none'; 
+        localStorage.removeItem('vondern_form_draft'); 
+      }
+    });
+
+    if (container) {
+      observer.observe(container, { attributes: true, subtree: true, attributeFilter: ['style', 'class'] });
+    }
   });
 </script>
+
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 <script src="app.js"></script>
 </body>
