@@ -1577,7 +1577,6 @@ section {
   display: inline-block;
   background-color: var(--green-light);
   opacity: 0.9;
-  blur: 4px;
   color: #000;
   text-decoration: none;
   padding: 14px 35px;
