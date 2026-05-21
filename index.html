@@ -43,8 +43,6 @@
     <h1>Scroll less. Explore more.</h1>
     <p>Discover towns, local spots, and experiences worth getting out for.</p>
 <a href="info.html" class="pill-btn">GET THE APP</a>
-<a href="forbusinesses.html" class="pill-btn">VONDERN FOR BUSINESSES</a>
-<a href="fortowns.html" class="pill-btn">VONDERN FOR TOURISM</a>
   </div>
 
 </section>
@@ -55,12 +53,8 @@
 
   <!-- CONTENT CONTAINER-->
 <div class="full-container">
-  <h2>Finding Fun, Should Be Fun</h2>
-  <p>Endless lists, the same recommendations, 
-    and somehow, you still don't know where to go.</p>
-  <p>Meanwhile, great places are right around the corner. 
-    You just don't know they're there.</p>
-  <p>Vondern helps you discover what's actually worth doing.</p>
+  <h2>You scroll. You search. Still nothing.</h2>
+  <h3>Stop searching. Start going. Vondern shows you where.</h3>
   <br></br>
 </div>
 
@@ -71,27 +65,92 @@
       
         <div class="image-card">
         <img src="pics/smalltowns.webp" alt="Small Towns" width="277" height="421">
-        <p class="image-text">SMALL TOWNS</p>
+        <div class="overlay">
+          <p class="image-text">SMALL TOWNS</p>
+          <p class="image-description">Explore charming locations that are worth the drive.</p>
+        </div>
       </div>
 
       <div class="image-card">
         <img src="pics/localbusinesses.webp" alt="Local Businesses" width="277" height="421">
-        <p class="image-text">LOCAL BUSINESSES</p>
+        <div class="overlay">
+          <p class="image-text">LOCAL BUSINESSES</p>
+          <p class="image-description">Support the independent shops that make a place special.</p>
+        </div>
       </div>
 
       <div class="image-card">
         <img src="pics/outdoors.webp" alt="Outdoors" width="277" height="421">
-        <p class="image-text">OUTDOORS</p>
+        <div class="overlay">
+          <p class="image-text">OUTDOORS</p>
+          <p class="image-description">Find unique experiences and hidden trails off the beaten path.</p>
+        </div>
       </div>
 
-    <div class="image-card">
+      <div class="image-card">
         <img src="pics/daytrips.webp" alt="Day Trips" width="277" height="421">
-        <p class="image-text">DAYTRIPS</p>
+        <div class="overlay">
+          <p class="image-text">DAYTRIPS</p>
+          <p class="image-description">Curated weekend getaways and local escapes.</p>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- how it works -->
+<section class="vondern-features">
+  <div class="container">
+    <div class="features-header">
+      <h2>What Vondern Does</h2>
+      <p>Vondern helps you discover what’s actually worth doing.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-item"><h3>Small Towns</h3><p>Explore charming locations that are worth the drive.</p></div>
+      <div class="feature-item"><h3>Local Businesses</h3><p>Support the independent shops that make a place special.</p></div>
+      <div class="feature-item"><h3>Outdoor Adventures</h3><p>Find unique experiences and hidden trails off the beaten path.</p></div>
+      <div class="feature-item"><h3>Day Trips</h3><p>Curated weekend getaways and local escapes.</p></div>
     </div>
   </div>
 </section>
 
-<div class="subscription-section">
+<!-- app preview -->
+<section class="app-preview">
+  <div class="container">
+    <h2 style="margin-bottom: 10px; text-align: center;">Coming to the App Store Soon!</h2>
+    <p style="color: #666; margin-bottom: 40px; text-align: center;">Scroll to see how Vondern brings hidden gems to life.</p>
+  </div>
+
+  <div class="carousel-wrapper" style="position: relative;">
+    <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
+    <div class="carousel-track" id="carousel">
+      <div class="app-card active"><img src="pics/experiences.webp" alt="Experiences"></div>
+      <div class="app-card"><img src="pics/experiences_map.webp" alt="Map View"></div>
+      <div class="app-card"><img src="pics/Interests.webp" alt="Interests Setup"></div>
+      <div class="app-card"><img src="pics/profile.webp" alt="User Profile"></div>
+      <div class="app-card"><img src="pics/profile_business.webp" alt="Business Profile"></div>
+      <div class="app-card"><img src="pics/saved.webp" alt="Saved Gems"></div>
+    </div>
+    <div class="carousel-dots">
+      <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+  </div>
+</section>
+
+<!-- how it works -->
+<section class="grid-wrapper-green">
+  <div class="container">
+    <h2 style="color: white; text-align: center; margin-bottom: 50px;">How It Works</h2>
+    <div class="how-it-works-grid">
+      <div class="step-card"><span class="step-number">01</span><h3>Pick Your Interests</h3><p>Choose what you love.</p></div>
+      <div class="step-card"><span class="step-number">02</span><h3>Discover New Places</h3><p>Browse businesses and experiences tailored to your interests.</p></div>
+      <div class="step-card"><span class="step-number">03</span><h3>Get Out There</h3><p>Explore more snd support local spots along the way.</p></div>
+    </div>
+  </div>
+</section>
+
+<!--<div class="subscription-section">
 
   <h2>How Vondern Helps You Grow</h2>
   <br></br>
@@ -140,20 +199,21 @@
   </div>
 </div>
 
-<!-- WHY IT MATTERS -->
-<div class="split-container">
-  <div class="text-box">
-    <h2>Why It Matters</h2>
-    <h3>When People Explore Locally, Everyone Benefits.</h3>
-    
-    <p>Spend less time searching on your phone, 
-      more time getting out there, experiencing local wonders, 
-      making sure the towns and businesses which charm 
-      our communities are seen.</p>
-    
-  </div>
-</div>
+-->
 
+<!-- WHY IT MATTERS -->
+<section class="why-it-matters">
+  <div class="why-it-matters-overlay">
+    <img src="pics/backgroundC.webp" alt="Background image" class="overlay-bg">
+    <div class="text-content">
+      <h2>Why It Matters</h2>
+      <h3>When People Explore Locally, Everyone Benefits.</h3>
+      <p>Explore more. Support local. Strengthen communities. When People Ask, “Where Should We Go?” Be the Answer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Founder Section -->
 <div class="founder-section">
   <div class="two-column">
     <div class="left">
@@ -248,25 +308,97 @@
       <div class="follow-text">
         <h2>Follow Vondern</h2>
         <p>Follow along for new towns, local spots, and experiences you won't find on a list.</p>
-        <a href="https://www.instagram.com/vondernapp/" target="_blank" class="pill-btn">FOLLOW @VONDERNAPP</a>
       </div>
 
-      <div class="follow-mockup">
-        <div class="insta-post-card">
-          <div class="post-header">
-            <div class="mini-avatar">
-              <img src="pics/circle-logo.png" alt="vondern logo">
+      <div class="mockup-grid">
+        <div class="follow-mockup">
+          <div class="insta-post-card">
+            <div class="post-header">
+              <div class="mini-avatar">
+                <img src="pics/circle-logo.png" alt="vondern logo">
+              </div>
+              <span>vondernapp</span>
             </div>
-            <span>vondernapp</span>
+            <div class="post-image">
+              <img src="pics/vondern-insta.png" alt="vondern instagram link">
+              <a href="https://www.instagram.com/reel/C3i3DVXvK0H/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="post-link" target="_blank">VIEW POST</a>
+            </div>
           </div>
-          <div class="post-image">
-            <img src="pics/vondern-insta.png" alt="vondern instagram link">
-            <a href="https://www.instagram.com/reel/C3i3DVXvK0H/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="post-link" target="_blank">VIEW POST</a>
+        </div>
+
+        <div class="follow-mockup">
+          <div class="insta-post-card">
+            <div class="post-header">
+              <div class="mini-avatar">
+                <img src="pics/circle-logo.png" alt="vondern logo">
+              </div>
+              <span>vondernapp</span>
+            </div>
+            <div class="post-image">
+              <img src="pics/ig-bustrip.png" alt="vondern instagram link">
+              <a href="https://www.instagram.com/p/DX-hRwlDkbZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="post-link" target="_blank">VIEW POST</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="follow-mockup">
+          <div class="insta-post-card">
+            <div class="post-header">
+              <div class="mini-avatar">
+                <img src="pics/circle-logo.png" alt="vondern logo">
+              </div>
+              <span>vondernapp</span>
+            </div>
+            <div class="post-image">
+              <img src="pics/ig-momlife.png" alt="vondern instagram link">
+              <a href="https://www.instagram.com/p/DWfCrDPjr3F/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="post-link" target="_blank">VIEW POST</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="follow-mockup">
+          <div class="insta-post-card">
+            <div class="post-header">
+              <div class="mini-avatar">
+                <img src="pics/circle-logo.png" alt="vondern logo">
+              </div>
+              <span>vondernapp</span>
+            </div>
+            <div class="post-image">
+              <img src="pics/ig-podcast.png" alt="vondern instagram link">
+              <a href="https://www.instagram.com/p/DQY92e9jsyA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="post-link" target="_blank">VIEW POST</a>
+            </div>
           </div>
         </div>
       </div>
 
+      <!-- follow us button -->
+
+      <a href="https://www.instagram.com/vondernapp/" target="_blank" class="pill-btn">FOLLOW @VONDERNAPP</a>
+
     </div>
+  </div>
+</section>
+
+<!-- cta section -->
+<section class="cta-section">
+  <div class="container horizontal-cta">
+    <div class="download-box">
+      <h1>Ready to Explore More?</h1>
+      <p>Sign up to be the first to know when Vondern launches!</p>
+      <div class="cta-benefits">
+        <h3>✓ Get new ideas for places to go and things to do</h3>
+        <h3>✓ Receive local inspiration and experience ideas</h3>
+        <h3>✓ Stay updated on app news and Vondern Bus Trips</h3>
+      </div>
+    </div>
+    <div class="form-column-horizontal">
+      <iframe class="nice-iframe" 
+        src="https://3d59fc52.sibforms.com/serve/MUIFAALsGV-ERz-FDxDOxkHbAWlVxfMMpLKAZxBxrgX70pZFkVkbi4SmLGPW3UPsALHknJ5V8PoVhyAx9YE8n0drm0VgNO1gcUg3NRmHeXmNXocl5qwrU7khLoGJRwvPru9KCLPBh5QxikdJmhOSIT-_Ob8fkpxIie-DZR7OeI0E1It7G72Jn0DCpmOthE435gqQL839NDQo-c76TQ==" 
+        frameborder="0" scrolling="auto" 
+        height="1100px"
+        allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;">
+      </iframe>
   </div>
 </section>
 
