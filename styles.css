@@ -415,12 +415,7 @@ section {
   align-items: center;
   padding: 20px;
   background: rgba(0, 0, 0, 0.555); 
-  opacity: 0; 
   transition: opacity 0.3s ease;
-}
-
-.image-card:hover .overlay {
-  opacity: 1; 
 }
 
 .image-text, .image-description {
@@ -460,25 +455,21 @@ section {
     padding-top: 0;
   }
 
+  @media (max-width: 900px) {
+    .what-youll-find .image-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   .image-description {
-    font-size: 18px;
-    bottom: 40px;
+    font-size: 16px;
+    bottom: 30px;
   }
 }
 
 @media (max-width: 700px) {
   .image-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .image-description {
-    font-size: 12px;
-    bottom: 50px;
-    
-  }
-
-  .image-text {
-    font-size: 14px;
   }
 }
 
@@ -488,12 +479,12 @@ section {
   }
 
   .image-description {
-    font-size: 10px;
-    bottom: 20px;
+    font-size: 16px;
+    bottom: 30px;
   }
 
   .image-text {
-    font-size: 12px;
+    font-size: 1rem;
   }
 }
 
