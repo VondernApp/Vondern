@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Partner with Vondern to help your town attract visitors and showcase its hidden gems.">
   <title>Vondern For Towns Page</title>
-
-<link rel="stylesheet" href="styles.css"></head>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
 <body>
 
@@ -15,17 +15,14 @@
     <img src="pics/vondernlogo.webp" alt="Vondern Logo">
   </a>
   <ul class="nav-links">
-    <!-- <li><a href="info.html">WHAT IS VONDERN</a></li> -->
     <li><a href="explore.html">GUIDES</a></li>
     <li><a href="forbusinesses.html">BUSINESSES</a></li>
     <li><a href="fortowns.html">TOWNS</a></li>
     <li><a href="forcreators.html">CREATORS</a></li>
-    <!-- <li><a href="bustrips.html">TRIPS</a></li> -->
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">CONTACT</a></li>
   </ul>
 
-  <!-- Grouped Icons for Right Side -->
   <div class="nav-actions">
     <a href="https://www.instagram.com/vondernapp/" target="_blank" class="ig-icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -34,15 +31,14 @@
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
         </svg>
     </a>
-    <button class="hamburger" onclick="toggleMenu()">
-      ☰
-    </button>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
   </div>
 </nav>
 
 <section class="town-partner-section">
-    <div class="business-container">
-        <div class="business-info-column">
+    <div class="business-container" style="display: flex; gap: 40px; align-items: flex-start;">
+        
+        <div class="business-info-column" style="flex: 1;">
             <div class="header-group">
                 <h1>Towns & Tourism</h1>
                 <h2>More People Are Looking for Places to Go.</h2>
@@ -91,99 +87,26 @@
             </div>
         </div>
 
-        <!-- BEGIN CLEAN BREVO FORM -->
+        <div class="business-right-column" style="flex: 1;">
+            <iframe class="nice-iframe-business"
+                height="700" 
+                src="https://3d59fc52.sibforms.com/serve/MUIFAFUqw5_BGLso3W1FhLJwNgiaOiie4bIcjywPzPs1kSec2n3OtI3tLKmaYVY9JwGAoPSEu8dpUTxOxibL_r4yPs7YFlhngYj8UsyIL3ke294CkSMVrRKbowbTn1UKJoWc6QC1bwSYnsf_4Ps7eQa-92jqWjodGsxYGLdwSicQDZr9a__h6swLxY4y-lyNoXjlOA6x2NQo1M8jmg==" 
+                frameborder="0" 
+                scrolling="auto" 
+                allowfullscreen style="display: block; width: 100%; border: none;">
+            </iframe>
 
-        <div class="vondern-brevo-form">
-            <div id="sib-form-container" class="brevo-container">
-                
-                <div id="error-message" class="brevo-message-error" style="display:none;">
-                Your submission could not be saved. Please try again.
+            <section class="why-now-section">
+                <div class="whynow-content">
+                    <h2>Why Now</h2>
+                    <p>2026 will bring major attention to the Philadelphia region. Now is the time to make sure visitors discover more than the expected.</p>
+                    <h3>Help More People Discover Your Region.</h3>
+                    <p class="highlight-text">Partner with Vondern.</p>
                 </div>
-                <div id="success-message" class="brevo-message-success" style="display:none;">
-                Welcome to the inner circle! Check your email soon.
-                </div>
-
-                <form id="sib-form" method="POST" action="https://3d59fc52.sibforms.com/serve/..." class="brevo-styled-form">
-                
-                <div class="brevo-input-row">
-                    <div class="brevo-field">
-                    <label class="brevo-label">Full Name</label>
-                    <input type="text" id="FULL_NAME" name="FULL_NAME" placeholder="Name..." required class="brevo-input">
-                    </div>
-
-                    <div class="brevo-field">
-                    <label class="brevo-label">Email Address</label>
-                    <input type="email" id="EMAIL" name="EMAIL" placeholder="abc@example.com" required class="brevo-input">
-                    </div>
-                </div>
-
-                <div class="brevo-field">
-                    <label class="brevo-label">How are you interested in Vondern?</label>
-                    <div class="brevo-select-wrapper">
-                    <select name="USER_TYPE" required class="brevo-select">
-                        <option value="" disabled selected>Select an option...</option>
-                        <option value="1">General User (Discover Gems)</option>
-                        <option value="2">Vondern Bus Trips</option>
-                        <option value="3">Business Owner / Representative</option>
-                        <option value="4">Town / Tourism Organization</option>
-                        <option value="5">Content Creator / Influencer</option>
-                        <option value="6">Sponsorships / Partnerships</option>
-                    </select>
-                    </div>
-                </div>
-
-                <div class="brevo-field">
-                    <label class="brevo-label">Tell us about yourself!</label>
-                    <textarea id="BIO" name="BIO" rows="3" placeholder="Share anything you'd like us to know -- business name, socials, or partnership ideas..." required class="brevo-textarea"></textarea>
-                </div>
-
-                <div class="brevo-footer">
-                    <h3 class="brevo-footer-title">Stay in the loop</h3>
-                    <p class="brevo-footer-text">Get local adventure ideas, app updates, and first access to upcoming Vondern Field Trips!</p>
-                    
-                    <label class="brevo-checkbox-wrapper">
-                        <input type="checkbox" id="RECIEVE_NEWSLETTER" name="RECIEVE_NEWSLETTER" value="1" required>
-                        <span class="brevo-checkbox-label">Yes, keep me in the loop.</span>
-                    </label>
-                    
-                    <button type="submit" class="brevo-submit-button">
-                        JOIN THE ADVENTURE
-                    </button>
-                </div>
-
-                <input type="text" name="email_address_check" value="" class="brevo-hidden">
-                <input type="hidden" name="locale" value="en">
-                </form>
-            </div>
+            </section>
         </div>
+    </div>
 </section>
-
-<!--WHY NOW-->
-<div class="section">
-  <div class="container">
-
-<div class="whynow">
-  <div class="whynowleft">
-    <h2>Why Now</h2>
-
-    <p>2026 will bring major attention to the Philadelphia region.
-Now is the time to make sure visitors discover more than the expected.</p>
-
-  <h3>Help More People Discover Your Region.</h3>
-  <p>Partner with Vondern.</p>
-  
-  </div>
-
-  <div class="whynowright">
-    <img src="pics/whynowT.webp" alt="Town">
-    
-  </div>
-</div>
-  </div>
-</div>
-  </div>
-</div>
-
 
 <!-- FAQ -->
 <div class="faq-container">
