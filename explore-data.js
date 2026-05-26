@@ -445,6 +445,46 @@ const exploreData = [
     "tags": "lehigh family-fun tours-experiences outdoors-nature arts-history date-night"
   },
 
+    {
+    "title": "Official Poconos Mountains Blog",
+    "img": "pics/lehigh2.png",
+    "link": "https://www.poconomountains.com/blog/",
+    "desc": "Official Poconos tourism blog with outdoor adventures and seasonal trips.",
+    "tags": "lehigh family-fun tours-experiences outdoors-nature arts-history date-night"
+  },
+
+  {
+    "title": "An enthusiast's guide to local dining, shopping, arts, and community in Lehigh Valley, Pennsylvania",
+    "img": "pics/lehigh3.png",
+    "link": "https://figlehighvalley.com/",
+    "desc": "Curated local guide to food, events, and small business highlights.",
+    "tags": "lehigh family-fun tours-experiences outdoors-nature arts-history date-night"
+  },
+
+   {
+    "title": "Community-driven stories and local lifestyle features.",
+    "img": "pics/lehigh4.png",
+    "link": "https://lehighvalleywithlovemedia.com/about/",
+    "desc": "Family owned media company priding themselves on telling client's stories in a fun way",
+    "tags": "lehigh family-fun tours-experiences outdoors-nature arts-history date-night"
+  },
+
+    {
+    "title": "Guide With Maryland Activities, Experiences, Nature, & Food",
+    "img": "pics/maryland2.png",
+    "link": "https://www.onlyinyourstate.com/maryland",
+    "desc": "Popular discovery-style site featuring unique and unusual Maryland places.",
+    "tags": "maryland family-fun tours-experiences outdoors-nature"
+  },
+
+
+    {
+    "title": "Wilmington And The Brandywine Official Blog ",
+    "img": "pics/brandywine1.png",
+    "link": "https://www.visitwilmingtonde.com/things-to-do/arts-culture-and-history/",
+    "desc": "Official Brandywine Valley travel blog with attractions and outdoor spots.",
+    "tags": "chester arts-history date-night outdoors-nature"
+  },
 // NEW BLOGS //
 
 ];
