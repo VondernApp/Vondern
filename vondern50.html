@@ -28,8 +28,8 @@
       We hate spam too, so we'll only send the good stuff. 
     </p>
   </div>
-
 </div>
+
 <!-- Begin Brevo Form -->
 
 <!-- START - We recommend to place the below code in head tag of your website html  -->
@@ -156,20 +156,78 @@
   font-size: 24px;
   margin-bottom: 24px;
   font-weight: 400;
-  color: #666;
-  font-family: Helvetica, sans-serif;
+  color: #252939;
+  font-family: Georgia, serif;
 }
 
 .split-right p {
   font-size: 18px;
   line-height: 1.8;
   max-width: 600px;
-  font-family: Helvetica, sans-serif;
+  font-family: Georgia, sans-serif;
   color: #333;
 }
 
+.text-banner {
+  background-color: #e8e8e8;
+  padding: 80px 80px;
+  text-align: center;
+}
+
+.text-banner h1 {
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  font-family: Georgia, serif;
+  color:#28bcd0;
+}
+
+.text-banner h2 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  font-weight: 400;
+  color: #666;
+  font-family: Georgia, serif;
+  line-height: 2rem;
+}
+
+.smaller-image {
+  width: 85% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin: 40px auto;
+}
+
+.split-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vondern-button {
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center; 
+  margin-top: 24px;
+  padding: 12px 24px; 
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  width: max-content; 
+}
+.vondern-button:hover {
+  background-color: #28bcd0;
+  transform: translateY(-2px);
+}
+
+
 /* RESPONSIVE */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
 
   .split-container {
     flex-direction: column;
@@ -227,13 +285,11 @@
 
 </style>
 <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
 <!--  END - We recommend to place the above code in head tag of your website html -->
-
-
-
 <!-- START - We recommend to place the below code where you want the form in your website html  -->
 <div class="sib-form" style="text-align: center;
-         background-color: #d8ecee; 
+         background-color: #f3f3f3;
         
         
         
@@ -263,7 +319,7 @@
         <div style="padding: 8px 0;">
 
 
-          <div class="sib-form-block" style="font-family:Georgia, serif; font-size:32px; font-weight:700; text-align:center; color:#0d8fb2; background-color:transparent; text-align:center">
+          <div class="sib-form-block" style="font-family:Georgia, serif; font-size:32px; font-weight:700; text-align:center; color:#21b6d4; background-color:transparent; text-align:center">
             <p>Stay Connected!</p>
           </div>
 
@@ -1521,6 +1577,40 @@
 </div>
 <!-- END - We recommend to place the above code where you want the form in your website html  -->
 <!-- End Brevo Form -->
+
+<div class="text-banner">
+  <h1>Kick Off Your Next Adventure</h1>
+
+  <h2>Tired of the same old spots? Ready to discover something different—whether 
+    you're planning a fun day with the fam or a little adults-only escape. 
+    Vondern has you covered! Download the Vondern 50. Check off your next adventure!
+</h2>
+</div>
+
+ <div class="split-container">
+  
+  <!-- LEFT SIDE IMAGE -->
+  <div class="split-left">
+<img class="smaller-image" src="pics/ohtheplaces.png" alt="Vondern50 Image">  </div>
+
+  <!-- RIGHT SIDE CONTENT -->
+  <div class="split-right">
+    <h1>Spend less time scrolling and more time living.</h1>
+
+    <h2>50 Things to Do Within 90 Minutes of Philadelphia</h2>
+
+    <p>
+     Meet the social media app that wants you addicted to being off your phone. 
+     Find unique experiences, support businesses that deserve the spotlight, 
+     and explore new places.</p>
+
+     <p>Jump in, get inspired, and become a Vonderer!</p>
+     <a class="vondern-button" href="https://vondern.com/" target="_blank">
+  Visit Our Website
+</a>
+  </div>
+</div>
+
 
 </body>
 </html>
