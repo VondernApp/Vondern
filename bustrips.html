@@ -13,7 +13,6 @@
     <img src="pics/vondernlogo.webp" alt="Vondern Logo">
   </a>
   <ul class="nav-links">
-    <!-- <li><a href="info.html">WHAT IS VONDERN</a></li> -->
     <li><a href="explore.html">GUIDES</a></li>
     <li><a href="forbusinesses.html">BUSINESSES</a></li>
     <li><a href="fortowns.html">TOWNS</a></li>
@@ -50,30 +49,45 @@
     <p>Discover the routes and hidden gems we've uncovered.</p>
   </div>
   
-  <div class="trip-card" 
-     onclick="openModal('Columbia & Lititz', 
-     'Explore the hidden gems of PA!', 
-     [
-       {
-         img: 'pics/ig-bustrip.png', 
-         link: 'https://www.instagram.com/p/DX-hRwlDkbZ/'
-       },
-       {
-         img: 'pics/brit-ig.png', 
-         link: 'https://www.instagram.com/reel/DYVfOMqORsC/',
-         username: 'brittaroundtown + vondernapp' 
-       }
-     ])">
-      
-      <div class="trip-image-container">
-        <img src="pics/bustrip.png" alt="Columbia & Lititz">
+  <div class="trips-grid">
+    <div class="trip-card" 
+       onclick="openModal('Columbia & Lititz', 
+       'Explore the hidden gems of PA!', 
+       [
+         {
+           img: 'pics/ig-bustrip.png', 
+           link: 'https://www.instagram.com/p/DX-hRwlDkbZ/'
+         },
+         {
+           img: 'pics/brit-ig.png', 
+           link: 'https://www.instagram.com/reel/DYVfOMqORsC/',
+           username: 'brittaroundtown + vondernapp' 
+         }
+       ])">
+        
+        <div class="trip-image-container">
+          <img src="pics/bustrip.png" alt="Columbia & Lititz">
+        </div>
+        
+        <div class="trip-content">
+          <h3>Our first trip</h3>
+          <p>Click to see the highlights from this journey!</p>
+        </div>
       </div>
-      
-      <div class="trip-content">
-        <h3>Our first trip</h3>
-        <p>Click to see the highlights from this journey!</p>
+
+      <div class="trip-card coming-soon">
+          <div class="trip-image-container" 
+              style="background: transparent; 
+              display: flex; align-items: center;
+              justify-content: center;">
+              <div class="trip-content">
+                  <h3>Next Adventure</h3>
+                  <p>Coming Soon! Make sure to check our Instagram frequently for any updates on our next trip!</p>
+                  <a href="https://www.instagram.com/vondernapp/" target="_blank" class="pill-btn-blue">FOLLOW @VONDERNAPP</a>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
   </div>
 </section>
 
@@ -97,7 +111,6 @@
     container.innerHTML = ''; 
 
     posts.forEach(post => {
-      // Use the 'username' from the post object, or default to 'vondernapp'
       const displayName = post.username || 'vondernapp';
       
       container.innerHTML += `
@@ -117,13 +130,11 @@
     document.getElementById('tripModal').style.display = 'flex';
   }
 
-  // Use this specific function to close
   function closeModal() {
     document.getElementById('tripModal').style.display = 'none';
   }
 </script>
 
-<!--FOOTER-->
 <footer class="main-footer">
   <div class="footer-container">
     <div class="footer-section footer-left">
