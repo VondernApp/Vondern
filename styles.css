@@ -79,7 +79,6 @@ h3 {
 
 section {
   padding: 80px 5%; 
-  margin-bottom: 80px;
 }
 
 .full-container {
@@ -1020,9 +1019,7 @@ section {
   height: auto;
   display: flex;
   flex-direction: column;
-  background-color: #D8ECEE;
   padding: 20px;
-  border-radius: 35px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -3080,7 +3077,8 @@ li {
 }
 
 .ft-intro-band {
-    padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 .ft-upcoming-band, .ft-cta-band {
@@ -3148,14 +3146,6 @@ li {
 
 .ft-light-text {
     color: var(--white);
-}
-
-.form-column-horizontal {
-    flex: 1.5;
-    background: #DEF3F8;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .ft-why-band {
