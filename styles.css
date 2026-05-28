@@ -726,18 +726,6 @@ section {
   display: none;
 }
 
-/* 
-.app-card {
-  flex: 0 0 250px;
-  scroll-snap-align: start; 
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  opacity: 0.3;
-  box-sizing: border-box;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.355);
-  border-radius: 40px;
-} 
-*/
-
 /* New style for the text container inside the app card */
 .step-text {
     padding: 20px;
@@ -805,6 +793,8 @@ section {
   border-radius: 40px;
   display: block;
   cursor: zoom-in;
+  height: auto;
+  object-fit: cover;
 }
 
 .carousel-dots, .nav-btn {
