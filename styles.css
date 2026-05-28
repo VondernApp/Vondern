@@ -3071,3 +3071,161 @@ li {
     color: var(--aqua);
     margin-top: 15px;
 }
+
+/* --- bus trip info section --- */
+.ft-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ft-intro-band {
+    padding-bottom: 40px;
+}
+
+.ft-upcoming-band, .ft-cta-band {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.ft-why-band {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.ft-intro-band {
+    background-color: var(--white);
+}
+
+.ft-dark-title {
+    color: var(--blue);
+    font-size: 65px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ft-subtitle {
+    font-family: sans-serif;
+    color: var(--aqua);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.ft-flex-row {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.ft-intro-text {
+    flex: 1.5;
+}
+
+.ft-included-col {
+    flex: 1;
+}
+
+.ft-upcoming-band {
+    background-color: var(--aqua);
+}
+
+.horizontal-cta {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.ft-text-side {
+    flex: 1;
+}
+
+.ft-text-side h2 {
+    color: var(--blue);
+    padding-bottom: 20px;
+}
+
+.ft-light-text {
+    color: var(--white);
+}
+
+.form-column-horizontal {
+    flex: 1.5;
+    background: #DEF3F8;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.ft-why-band {
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+}
+
+.ft-why-band h2 {
+  color: var(--aqua-light);
+  padding-bottom: 20px;
+} 
+
+.ft-why-band p {
+    color: var(--white);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.ft-why-band strong {
+    color: var(--aqua-light);
+    line-height: 1.8;
+}
+
+.ft-cta-band {
+    background-color: var(--aqua);
+    color: var(--white);
+    text-align: center;
+}
+
+.ft-cta-band h2 {
+  color: var(--blue);
+  line-height: 1.8;
+  margin-bottom: 25px;
+} 
+
+.ft-cta-band p {
+    color: var(--white);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.ft-included-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ft-included-col li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    font-weight: 600;
+}
+
+.ft-included-col li::before {
+    content: "✦";
+    color: var(--aqua);
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .ft-flex-row, .horizontal-cta {
+        flex-direction: column;
+    }
+    .ft-intro-band, .ft-upcoming-band, .ft-why-band, .ft-cta-band {
+        padding: 40px 0;
+    }
+
+    .nice-iframe {
+      height: 750px;
+    }
+}
