@@ -1011,8 +1011,8 @@ section {
   flex-direction: column;
   padding: 20px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: none;
+  display: block;
 }
 
 .nice-iframe {
@@ -1096,15 +1096,7 @@ section {
 
 .form-sticky-wrapper {
   position: relative; 
-  width: 100%;
   margin: 0 auto;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.85); 
-  backdrop-filter: blur(15px); 
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 35px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
 .form-privacy-note {
@@ -2851,17 +2843,17 @@ li {
     border-radius: 20px;
     padding: 15px; 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
     border: 1px solid rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
     max-width: 550px; 
     margin: 0 auto;
+    transition: all 0.3s ease;
 }
 
 .trip-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
     cursor: pointer;
 }
 
@@ -3036,27 +3028,28 @@ li {
 }
 
 /* Coming Soon Card Style */
-.trip-card.coming-soon {
-    background-color: var(--aqua-soft); 
-    border: 3px dashed var(--aqua);                       
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 25px;
-    border-radius: 25px;
-    opacity: 0.9;
-    transform: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-    cursor: default;
-    max-width: 400px;
-    margin: 0 auto;
+.ft-coming-soon {
+  background: var(--white);
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.247) 0px 5px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-.trip-card.coming-soon h3 {
-    color: var(--aqua);
+.ft-coming-soon h3 {
+    color: var(--blue);
     margin-top: 15px;
+}
+
+.ft-coming-soon p {
+    color: var(--blue);
+    font-size: 15px;
+    font-weight: 1000;
 }
 
 /* --- bus trip info section --- */
@@ -3102,17 +3095,45 @@ li {
 }
 
 .ft-flex-row {
-    display: flex;
     gap: 60px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .ft-intro-text {
-    flex: 1.5;
+    justify-content: center;
+    align-items: center;
 }
 
 .ft-included-col {
-    flex: 1;
+  margin-top: 30px;
+  background: var(--blue);
+  color: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.ft-included-col h3 {
+    color: var(--aqua-light);
+    margin-bottom: 15px;
+}
+
+.ft-included-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ft-included-col li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    font-weight: 600;
+}
+
+.ft-included-col li::before {
+    content: "✦";
+    color: var(--aqua-light);
+    position: absolute;
+    left: 0;
 }
 
 .ft-upcoming-band {
@@ -3178,23 +3199,19 @@ li {
     margin-bottom: 15px;
 }
 
-.ft-included-col ul {
-    list-style: none;
-    padding: 0;
+.ft-upcoming-band .form-sticky-wrapper {
+    background: white; 
+    border: none;     
+    padding: 0;      
+    overflow: hidden; 
+    border-radius: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.ft-included-col li {
-    margin-bottom: 15px;
-    padding-left: 25px;
-    position: relative;
-    font-weight: 600;
-}
-
-.ft-included-col li::before {
-    content: "✦";
-    color: var(--aqua);
-    position: absolute;
-    left: 0;
+.ft-upcoming-band .nice-iframe {
+    width: 100%;
+    display: block;
+    border: none;
 }
 
 @media (max-width: 768px) {
