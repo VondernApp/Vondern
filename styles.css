@@ -79,7 +79,6 @@ h3 {
 
 section {
   padding: 80px 5%; 
-  margin-bottom: 80px;
 }
 
 .full-container {
@@ -727,18 +726,6 @@ section {
   display: none;
 }
 
-/* 
-.app-card {
-  flex: 0 0 250px;
-  scroll-snap-align: start; 
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  opacity: 0.3;
-  box-sizing: border-box;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.355);
-  border-radius: 40px;
-} 
-*/
-
 /* New style for the text container inside the app card */
 .step-text {
     padding: 20px;
@@ -806,6 +793,8 @@ section {
   border-radius: 40px;
   display: block;
   cursor: zoom-in;
+  height: auto;
+  object-fit: cover;
 }
 
 .carousel-dots, .nav-btn {
@@ -1020,12 +1009,10 @@ section {
   height: auto;
   display: flex;
   flex-direction: column;
-  background-color: #D8ECEE;
   padding: 20px;
-  border-radius: 35px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: none;
+  display: block;
 }
 
 .nice-iframe {
@@ -1109,15 +1096,7 @@ section {
 
 .form-sticky-wrapper {
   position: relative; 
-  width: 100%;
   margin: 0 auto;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.85); 
-  backdrop-filter: blur(15px); 
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 35px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
 .form-privacy-note {
@@ -2864,17 +2843,17 @@ li {
     border-radius: 20px;
     padding: 15px; 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
     border: 1px solid rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
     max-width: 550px; 
     margin: 0 auto;
+    transition: all 0.3s ease;
 }
 
 .trip-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
     cursor: pointer;
 }
 
@@ -3049,25 +3028,202 @@ li {
 }
 
 /* Coming Soon Card Style */
-.trip-card.coming-soon {
-    background-color: var(--aqua-soft); 
-    border: 3px dashed var(--aqua);                       
-    display: flex;
-    flex-direction: column;
+.ft-coming-soon {
+  background: var(--white);
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.247) 0px 5px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.ft-coming-soon h3 {
+    color: var(--blue);
+    margin-top: 15px;
+}
+
+.ft-coming-soon p {
+    color: var(--blue);
+    font-size: 15px;
+    font-weight: 1000;
+}
+
+/* --- bus trip info section --- */
+.ft-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ft-intro-band {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.ft-upcoming-band, .ft-cta-band {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.ft-why-band {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.ft-intro-band {
+    background-color: var(--white);
+}
+
+.ft-dark-title {
+    color: var(--blue);
+    font-size: 65px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ft-subtitle {
+    font-family: sans-serif;
+    color: var(--aqua);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ft-flex-row {
+    gap: 60px;
+    align-items: center;
+}
+
+.ft-intro-text {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 25px;
-    border-radius: 25px;
-    opacity: 0.9;
-    transform: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-    cursor: default;
-    max-width: 400px;
-    margin: 0 auto;
 }
 
-.trip-card.coming-soon h3 {
-    color: var(--aqua);
-    margin-top: 15px;
+.ft-included-col {
+  margin-top: 30px;
+  background: var(--blue);
+  color: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.ft-included-col h3 {
+    color: var(--aqua-light);
+    margin-bottom: 15px;
+}
+
+.ft-included-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ft-included-col li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    font-weight: 600;
+}
+
+.ft-included-col li::before {
+    content: "✦";
+    color: var(--aqua-light);
+    position: absolute;
+    left: 0;
+}
+
+.ft-upcoming-band {
+    background-color: var(--aqua);
+}
+
+.horizontal-cta {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.ft-text-side {
+    flex: 1;
+}
+
+.ft-text-side h2 {
+    color: var(--blue);
+    padding-bottom: 20px;
+}
+
+.ft-light-text {
+    color: var(--white);
+}
+
+.ft-why-band {
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+}
+
+.ft-why-band h2 {
+  color: var(--aqua-light);
+  padding-bottom: 20px;
+} 
+
+.ft-why-band p {
+    color: var(--white);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.ft-why-band strong {
+    color: var(--aqua-light);
+    line-height: 1.8;
+}
+
+.ft-cta-band {
+    background-color: var(--aqua);
+    color: var(--white);
+    text-align: center;
+}
+
+.ft-cta-band h2 {
+  color: var(--blue);
+  line-height: 1.8;
+  margin-bottom: 25px;
+} 
+
+.ft-cta-band p {
+    color: var(--white);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.ft-upcoming-band .form-sticky-wrapper {
+    background: white; 
+    border: none;     
+    padding: 0;      
+    overflow: hidden; 
+    border-radius: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ft-upcoming-band .nice-iframe {
+    width: 100%;
+    display: block;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .ft-flex-row, .horizontal-cta {
+        flex-direction: column;
+    }
+    .ft-intro-band, .ft-upcoming-band, .ft-why-band, .ft-cta-band {
+        padding: 40px 0;
+    }
+
+    .nice-iframe {
+      height: 750px;
+    }
 }
