@@ -485,6 +485,14 @@ const exploreData = [
     "desc": "Official Brandywine Valley travel blog with attractions and outdoor spots.",
     "tags": "chester arts-history date-night outdoors-nature"
   },
+
+      {
+    "title": "Guide to West Chester food, events, and local businesses.",
+    "img": "pics/chester1.png",
+    "link": "https://hellowestchesterpa.com/",
+    "desc": "Find local finds from food, parks, retail, and more.",
+    "tags": "chester arts-history date-night outdoors-nature"
+  },
 // NEW BLOGS //
 
 ];
