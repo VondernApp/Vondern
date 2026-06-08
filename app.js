@@ -173,3 +173,38 @@ document.querySelectorAll('.faq-question').forEach(question => {
     observer.observe(successMsg, { attributes: true, attributeFilter: ['style', 'class'] });
     observer.observe(errorMsg, { attributes: true, attributeFilter: ['style', 'class'] });
   });
+
+  //bus trips
+
+// Function to open the modal
+function openModal(title, description, posts) {
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalDescription').innerText = description;
+    
+    const container = document.getElementById('modalPostsContainer');
+    container.innerHTML = ''; 
+
+    posts.forEach(post => {
+      const displayName = post.username || 'vondernapp';
+      
+      container.innerHTML += `
+        <div class="insta-post-card">
+          <div class="post-header">
+            <img src="pics/circle-logo.png" alt="logo">
+            <span>${displayName}</span>
+          </div>
+          <a href="${post.link}" target="_blank" class="post-image">
+            <img src="${post.img}" alt="post">
+            <span class="post-link">VIEW POST</span>
+          </a>
+        </div>
+      `;
+    });
+    
+    document.getElementById('tripModal').style.display = 'flex';
+}
+
+// Function to close the modal
+function closeModal() {
+    document.getElementById('tripModal').style.display = 'none';
+}

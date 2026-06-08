@@ -3138,7 +3138,7 @@ li {
 }
 
 .ft-upcoming-band {
-    background-color: var(--aqua);
+  background-color: var(--aqua);
 }
 
 .horizontal-cta {
@@ -3182,24 +3182,6 @@ li {
     line-height: 1.8;
 }
 
-.ft-cta-band {
-    background-color: var(--aqua);
-    color: var(--white);
-    text-align: center;
-}
-
-.ft-cta-band h2 {
-  color: var(--blue);
-  line-height: 1.8;
-  margin-bottom: 25px;
-} 
-
-.ft-cta-band p {
-    color: var(--white);
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
 .ft-upcoming-band .form-sticky-wrapper {
     background: white; 
     border: none;     
@@ -3215,15 +3197,139 @@ li {
     border: none;
 }
 
+.ft-cta-band {
+    position: relative;
+    padding: 150px 20px;
+    background-image: url('pics/bustrip-collage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.ft-cta-band::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50); 
+    z-index: 1;
+}
+
+.ft-cta-band .ft-container {
+    position: relative;
+    z-index: 2; 
+}
+
+.ft-cta-band h2 {
+    color: var(--green-light); 
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.ft-cta-band p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
 @media (max-width: 768px) {
     .ft-flex-row, .horizontal-cta {
         flex-direction: column;
     }
-    .ft-intro-band, .ft-upcoming-band, .ft-why-band, .ft-cta-band {
+    .ft-intro-band, .ft-upcoming-band, .ft-why-band {
         padding: 40px 0;
+    }
+
+    .ft-cta-band {
+        padding: 80px 20px;
     }
 
     .nice-iframe {
       height: 750px;
+    }
+}
+
+.trip-gallery-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 5%;
+}
+
+.side-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+.middle-content {
+    flex: 2;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .trip-gallery-layout {
+        flex-direction: column;
+    }
+}
+
+.trips-section {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    align-items: stretch;
+}
+
+.side-image {
+    height: 100%;
+    overflow: hidden;
+}
+
+.side-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.middle-content {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.middle-content h2 {
+    color: var(--blue);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.middle-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+@media (max-width: 850px) {
+    .trips-section {
+        display: block;
+    }
+
+    .side-image {
+        display: none;
+    }
+
+    .middle-content {
+        padding: 40px 20px;
+        width: 100%;
     }
 }
