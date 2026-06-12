@@ -925,11 +925,19 @@ section {
 
 .cta-section .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 80px;
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.download-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Specifically centers the button and text within this box */
+  text-align: center;
 }
 
 .download-box h1{
@@ -993,6 +1001,14 @@ section {
 .horizontal-cta .download-box {
   flex: 1;
   text-align: left;
+}
+
+.cta-benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin: 20px auto;       
+  width: fit-content;     
 }
 
 .cta-benefits h3 {
@@ -3138,7 +3154,7 @@ li {
 }
 
 .ft-upcoming-band {
-    background-color: var(--aqua);
+  background-color: var(--aqua);
 }
 
 .horizontal-cta {
@@ -3182,24 +3198,6 @@ li {
     line-height: 1.8;
 }
 
-.ft-cta-band {
-    background-color: var(--aqua);
-    color: var(--white);
-    text-align: center;
-}
-
-.ft-cta-band h2 {
-  color: var(--blue);
-  line-height: 1.8;
-  margin-bottom: 25px;
-} 
-
-.ft-cta-band p {
-    color: var(--white);
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
 .ft-upcoming-band .form-sticky-wrapper {
     background: white; 
     border: none;     
@@ -3215,15 +3213,445 @@ li {
     border: none;
 }
 
+.ft-cta-band {
+    position: relative;
+    padding: 150px 20px;
+    background-image: url('pics/bustrip-collage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.ft-cta-band::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50); 
+    z-index: 1;
+}
+
+.ft-cta-band .ft-container {
+    position: relative;
+    z-index: 2; 
+}
+
+.ft-cta-band h2 {
+    color: var(--green-light); 
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.ft-cta-band p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
 @media (max-width: 768px) {
     .ft-flex-row, .horizontal-cta {
         flex-direction: column;
     }
-    .ft-intro-band, .ft-upcoming-band, .ft-why-band, .ft-cta-band {
+    .ft-intro-band, .ft-upcoming-band, .ft-why-band {
         padding: 40px 0;
+    }
+
+    .ft-cta-band {
+        padding: 80px 20px;
     }
 
     .nice-iframe {
       height: 750px;
     }
 }
+
+.trip-gallery-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 5%;
+}
+
+.side-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+.middle-content {
+    flex: 2;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .trip-gallery-layout {
+        flex-direction: column;
+    }
+}
+
+.trips-section {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    align-items: stretch;
+}
+
+.side-image {
+    height: 100%;
+    overflow: hidden;
+}
+
+.side-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.middle-content {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.middle-content h2 {
+    color: var(--blue);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.middle-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+@media (max-width: 850px) {
+    .trips-section {
+        display: block;
+    }
+
+    .side-image {
+        display: none;
+    }
+
+    .middle-content {
+        padding: 40px 20px;
+        width: 100%;
+    }
+}
+
+/* favorites page */
+.creators-page { padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+.category-header { margin: 50px 10px 20px; color: var(--blue); }
+
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-thumb {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-thumb h3 { 
+  color: var(--blue); 
+  margin-bottom: 10px; 
+  font-weight: bold;
+}
+
+.card-thumb p { font-size: 0.9rem; color: #555; line-height: 1.4; }
+
+.card-thumb:hover { transform: translateY(-5px); }
+.img-thumb { height: 150px; background: #eee; border-radius: 10px; margin-bottom: 15px; }
+.card-thumb .summary { font-size: 0.9rem; color: #666; margin-top: 10px; }
+
+/* Container for the buttons inside the card */
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Base style for the buttons */
+.btn-card {
+    padding: 8px 16px;
+    background-color: var(--aqua);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: var(--blue);
+}
+
+/* Modal Scoping */
+/* --- THE POP-UP MODAL STYLES --- */
+/* Modal Overlay - Deep blurred background */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 41, 72, 0.7); /* Using your brand blue */
+    backdrop-filter: blur(4px); /* Modern frosted-glass effect */
+    display: none;
+    z-index: 9998;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 50px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+    border: none;
+    margin: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-content .subtitle {
+    color: var(--aqua);
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/* Clean List Elements */
+.content-body ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.content-body li {
+    padding-left: 30px;
+    margin-bottom: 15px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.content-body li::before {
+    content: "→"; 
+    color: var(--green);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Button Styling */
+.link-button {
+    display: inline-block;
+    background: var(--aqua);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Inter-bold', sans-serif;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+.link-button:hover {
+    transform: translateY(-2px);
+    background: var(--blue);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.modal-image {
+    width: 100%;
+    height: 300px; 
+    object-fit: contain; 
+    background-color: #f9f9f9; 
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.interview-section {
+    background: var(--aqua-soft);
+    padding: 25px; border-radius: 12px; margin: 30px 0;
+}
+
+/* Full screen overlay for the expanded image */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.thumb-img {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin-bottom: 10px;
+}
+
+#modal-body h1 {
+    color: var(--blue); 
+    margin-bottom: 15px;
+}
+
+#modal-body p {
+    color: #333; 
+    line-height: 1.6; 
+    margin-bottom: 20px;
+}
+
+.content-body h2 {
+    color: var(--blue);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Container for the carousel section */
+.featured-creators {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.featured-carousel-track {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px;
+    padding: 20px 0;
+    overflow-x: visible;
+}
+
+.featured-carousel-track::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+/* Individual Creator Cards */
+.creator-card {
+    flex: 0 1 280px; 
+    background: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.creator-card:hover {
+    transform: translateY(-5px);
+}
+
+.creator-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* The Fixed Arrow Button */
+.nav-btn-card {
+    flex: 0 1 80px; /* Fixed width for the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--aqua-soft);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--blue);
+    transition: all 0.3s ease;
+    border: 2px solid var(--aqua-soft);
+}
+
+.nav-btn-card a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.nav-btn-card:hover {
+    background: var(--aqua);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* The Modal Background */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 9999; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8); /* Dark background */
+  justify-content: center;
+  align-items: center;
+}
+
+/* The Image inside the Modal */
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;     
+  height: auto;   
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+  animation: zoomIn .3s ease;
+  object-fit: contain;
+}
+
+/* The Close Button */
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+

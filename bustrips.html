@@ -14,6 +14,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="explore.html">GUIDES</a></li>
+    <li><a href="favorites.html">FAVORITES</a></li>
     <li><a href="forbusinesses.html">BUSINESSES</a></li>
     <li><a href="fortowns.html">TOWNS</a></li>
     <li><a href="forcreators.html">CREATORS</a></li>
@@ -37,13 +38,12 @@
 </nav>
 
 <section class="hero">
-  <img src="pics/water.jpg" alt="Vondern Hero Image" class="hero-image">
+  <img src="pics/sunbathe.jpg" alt="Vondern Hero Image" class="hero-image">
   <div class="hero-content">
     <h1>Check out our bus trips!</h1>
   </div>
 </section>
 
-<!-- Field Trips Content Sections -->
 <div class="ft-intro-band">
     <div class="ft-container">
         <h1 class="ft-dark-title">Vondern Field Trips</h1>
@@ -98,39 +98,44 @@
     </div>
 </div>
 
-<!-- past bus trips -->
-<div class="trips-section">
-  <div class="trips-header">
-    <h2>Past Bus Trips</h2>
-    <p>Discover the routes and hidden gems we've uncovered.</p>
-  </div>
-  
-  <div class="trips-grid">
-    <div class="trip-card" 
-       onclick="openModal('Columbia & Lititz', 
-       'Explore the hidden gems of PA!', 
-       [
-         {
-           img: 'pics/ig-bustrip.png', 
-           link: 'https://www.instagram.com/p/DX-hRwlDkbZ/'
-         },
-         {
-           img: 'pics/brit-ig.png', 
-           link: 'https://www.instagram.com/reel/DYVfOMqORsC/',
-           username: 'brittaroundtown + vondernapp' 
-         }
-       ])">
+<section class="trips-section trip-gallery-layout">
+    <div class="side-image left-img">
+        <img src="pics/bus-left.jpg" alt="Past Trip Left">
+    </div>
+    
+    <div class="middle-content">
+        <h2>Past Bus Trips</h2>
+        <p>Discover the routes and hidden gems we've uncovered.</p>
         
-        <div class="trip-image-container">
-          <img src="pics/bustrip.png" alt="Columbia & Lititz">
+        <div class="trips-grid">
+            <div class="trip-card" onclick="openModal('Columbia & Lititz', 'Explore the hidden gems of PA!', 
+                [
+                    { img: 'pics/ig-bustrip.png', link: 'https://www.instagram.com/p/DX-hRwlDkbZ/' },
+                    { img: 'pics/brit-ig.png', link: 'https://www.instagram.com/reel/DYVfOMqORsC/', username: 'brittaroundtown + vondernapp' }
+                ])">
+                
+                <div class="trip-image-container">
+                    <img src="pics/bustrip.png" alt="Columbia & Lititz">
+                </div>
+                
+                <div class="trip-content">
+                    <h3>Our first trip</h3>
+                    <p>Click to see the highlights from this journey!</p>
+                </div>
+            </div>
         </div>
-        
-        <div class="trip-content">
-          <h3>Our first trip</h3>
-          <p>Click to see the highlights from this journey!</p>
-        </div>
-      </div>
-  </div>
+    </div>
+    
+    <div class="side-image right-img">
+        <img src="pics/bus-right.jpg" alt="Past Trip Right">
+    </div>
+</section>
+
+<div class="ft-cta-band">
+    <div class="ft-container">
+        <h2>Come Along for the Adventure</h2>
+        <p>Grab a seat, bring a friend, and come along for the next trip.</p>
+    </div>
 </div>
 
 <div class="ft-why-band">
@@ -143,7 +148,6 @@
     </div>
 </div>
 
-<!-- DO NOT TOUCH THIS !!! -->
 <div id="tripModal" class="modal" onclick="closeModal()">
   <div class="modal-content" onclick="event.stopPropagation()">
     <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -153,46 +157,6 @@
     <div id="modalPostsContainer" class="mockup-grid" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
       </div>
   </div>
-</div>
-
-<script>
-  function openModal(title, description, posts) {
-    document.getElementById('modalTitle').innerText = title;
-    document.getElementById('modalDescription').innerText = description;
-    
-    const container = document.getElementById('modalPostsContainer');
-    container.innerHTML = ''; 
-
-    posts.forEach(post => {
-      const displayName = post.username || 'vondernapp';
-      
-      container.innerHTML += `
-        <div class="insta-post-card">
-          <div class="post-header">
-            <img src="pics/circle-logo.png" alt="logo">
-            <span>${displayName}</span>
-          </div>
-          <a href="${post.link}" target="_blank" class="post-image">
-            <img src="${post.img}" alt="post">
-            <span class="post-link">VIEW POST</span>
-          </a>
-        </div>
-      `;
-    });
-    
-    document.getElementById('tripModal').style.display = 'flex';
-  }
-
-  function closeModal() {
-    document.getElementById('tripModal').style.display = 'none';
-  }
-</script>
-
-<div class="ft-cta-band">
-    <div class="ft-container">
-        <h2>Come Along for the Adventure</h2>
-        <p>Grab a seat, bring a friend, and come along for the adventure.</p>
-    </div>
 </div>
 
 <footer class="main-footer">
