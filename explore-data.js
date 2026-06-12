@@ -485,6 +485,48 @@ const exploreData = [
     "desc": "Official Brandywine Valley travel blog with attractions and outdoor spots.",
     "tags": "chester arts-history date-night outdoors-nature"
   },
+
+    {
+    "title": "Guide to West Chester food, events, and local businesses.",
+    "img": "pics/brandywine2.png",
+    "link": "https://hellowestchesterpa.com/",
+    "desc": "Find local finds from food, parks, retail, and more.",
+    "tags": "chester arts-history date-night outdoors-nature"
+  },
+
+    {
+    "title": "Lifestyle and community coverage around Wilmington and nearby suburbs.",
+    "img": "pics/brandywine3.png",
+    "link": "https://inwilmde.com/",
+    "desc": "Find local events, best food around, music and entertainment, and places you don't want to miss",
+    "tags": "chester arts-history date-night outdoors-nature"
+  },
+
+    {
+    "title": "Looking for other ways to celebrate this Father's Day? Explore our roundups!",
+    "img": "pics/brandywine4.png",
+    "link": "https://mainlineparent.com/fathers-day-events-main-line/",
+    "desc": "Curated by the Main Line Parent, find family friendly fun excursions that you and your kids will love",
+    "tags": "chester arts-history date-night family-fun seasonal-holiday food-drink"
+  },
+
+    {
+    "title": "Fun, quirky NJ discoveries from food to hidden attractions.",
+    "img": "pics/centraljersey1.png",
+    "link": "https://newjerseyisntboring.com/",
+    "desc": "Community coverage around Wilmington and nearby suburbs.",
+    "tags": "centraljersey arts-history date-night family-fun seasonal-holiday"
+  },
+
+    {
+    "title": "Parenting-focused NJ site with strong Central Jersey activity coverage.",
+    "img": "pics/centraljersey2.png",
+    "link": "https://newjerseyisntboring.https://njmom.com//",
+    "desc": "NJ Mom collection of the latest events your kids will love this summer!",
+    "tags": "centraljersey arts-history date-night family-fun seasonal-holiday"
+  },
+
+
 // NEW BLOGS //
 
 ];
