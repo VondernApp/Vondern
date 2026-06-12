@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="creators-scoped.css">
+    <title>Vondern | Local Experts</title>
+</head>
+<body class="app-page">
+
+    <nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="pics/vondernlogo.webp" alt="Vondern Logo">
+  </a>
+  <ul class="nav-links">
+    <!-- <li><a href="info.html">WHAT IS VONDERN</a></li> -->
+    <li><a href="explore.html">GUIDES</a></li>
+    <li><a href="favorites.html">FAVORITES</a></li>
+    <li><a href="forbusinesses.html">BUSINESSES</a></li>
+    <li><a href="fortowns.html">TOWNS</a></li>
+    <li><a href="forcreators.html">CREATORS</a></li>
+    <li><a href="bustrips.html">TRIPS</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <a href="https://www.instagram.com/vondernapp/" target="_blank" class="ig-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+    </a>
+    <button class="hamburger" onclick="toggleMenu()">
+      ☰
+    </button>
+  </div>
+</nav>
+
+    <main class="creators-page">
+        <h1 class="category-header">Our Favorite Content Creators</h1>
+        <div class="thumbnail-grid">
+
+            <!-- wild kids wander -->
+            <div class="card-thumb" onclick="openCreatorModal('wild-kids-wander')">
+                <img src="pics/wildkidswander-1.png" alt="Wild Kids Wander" class="thumb-img">
+                <h3>Where the Wild Kids Wander</h3>
+                <p class="summary">Family travel, outdoor hidden gems in PA, and hotel-room gourmet tips.</p>
+            
+                <div class="card-actions" onclick="event.stopPropagation()">
+                    <a href="https://wildkidswander.com" target="_blank" class="link-button">Website</a>
+                    <a href="https://instagram.com/your-handle" target="_blank" class="link-button">Instagram</a>
+                </div>
+            </div>
+
+            <!-- hunter hulbert -->
+            <div class="card-thumb" onclick="openCreatorModal('hunter-hulbert')">
+                <img src="pics/hunterhulbert-1.png" alt="Hunter Hulbert" class="thumb-img">
+                <h3>Hunter Hulbert</h3>
+                <p class="summary">Immersive, narrative-driven travel photography and local exploration.</p>
+            
+                <div class="card-actions" onclick="event.stopPropagation()">
+                    <a href="https://hunterandtraveler.com/" target="_blank" class="link-button">Website</a>
+                    <a href="https://www.instagram.com/hunterhulbert/" target="_blank" class="link-button">Instagram</a>
+                </div>
+            </div>
+
+            <!-- beyond the square -->
+            <div class="card-thumb" onclick="openCreatorModal('beyond-the-square')">
+                <img src="pics/beyondthesquare-1.png" alt="beyond the square" class="thumb-img">
+                <h3>BeyondTheSquare</h3>
+                <p class="summary">NYC expert for custom itineraries, budget tips, and secret neighborhoods.</p>
+            
+                <div class="card-actions" onclick="event.stopPropagation()">
+                    <a href="https://www.gobeyondthesquare.com/" target="_blank" class="link-button">Website</a>
+                    <a href="https://www.instagram.com/beyond.the.square?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="link-button">Instagram</a>
+                </div>
+            </div>
+
+            <!-- britt around town -->
+            <div class="card-thumb" onclick="openCreatorModal('britt-around-town')">
+                <img src="pics/brittaroundtown-1.png" alt="brittaroundtown" class="thumb-img">
+                <h3>BrittAroundTown</h3>
+                <p class="summary">Bucks County expert promoting small businesses, local shops, and unique stays.</p>
+            
+                <div class="card-actions" onclick="event.stopPropagation()">
+                    <a href="https://brittaroundtown.com" target="_blank" class="link-button">Website</a>
+                    <a href="https://instagram.com/brittaroundtown" target="_blank" class="link-button">Instagram</a>
+                </div>
+            </div>
+
+            <!-- with sunshine sol -->
+            <div class="card-thumb" onclick="openCreatorModal('with-sunshine-sol')">
+                <img src="pics/withsunshinesol-1.png" alt="withsunshinesol" class="thumb-img">
+                <h3>WithSunshineSol</h3>
+                <p class="summary">Virginia-based, dog-friendly adventures with cozy stays and great views.</p>
+                
+                <div class="card-actions" onclick="event.stopPropagation()">
+                    <a href="https://withsunshinesol.com" target="_blank" class="link-button">Website</a>
+                    <a href="https://www.instagram.com/withsunshinesol" target="_blank" class="link-button">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="category-header">Our Favorite Towns</h1>
+        <div class="thumbnail-grid">
+            <div class="card-thumb empty"><h3>Coming Soon!</h3></div>
+        </div>
+
+        <h1 class="category-header">Our Favorite Businesses</h1>
+        <div class="thumbnail-grid">
+            <div class="card-thumb empty"><h3>Coming Soon!</h3></div>
+        </div>
+
+        <div id="creator-modal" class="modal-overlay" onclick="closeCreatorModal()">
+            <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeCreatorModal()">&times;</span>
+            <div id="modal-body">
+                </div>
+        </div>
+    </div>
+    </main>
+
+<!-- where the wild kids wander -->
+<div style="display:none;">
+    <div id="content-wild-kids-wander">
+        <img src="pics/wildkidswander-2.png" 
+     alt="Wild Kids Wander" 
+     class="modal-image" 
+     style="cursor: zoom-in;"
+     onclick="openLightbox(this.src)">
+        <h1>Where the Wild Kids Wander</h1>
+        <h3 class="subtitle">Family Travel in the Philadelphia area and beyond with a big emphasis on the outdoors</h3>
+        
+        <div class="content-body">
+            <h2>What We Love</h2>
+            <p>Lauren and her family are always on the go and 
+                on the lookout for hidden gems in their home state of PA 
+                and beyond. If you're a fellow Pennsylvanian or planning 
+                a visit, Wild Kids Wander will give you a ton to choose 
+                from! Check out Lauren’s blog that has carefully crafted
+                itineraries spanning 16 states. With kids at the heart 
+                of their travels, you'll find a ton of tips for family 
+                adventures, including everything from hiking trails to 
+                Disney. She even has tips like how to cook up 15 gourmet
+                meals right in your hotel room (yes, even if it's 
+                equipped with just a fridge and microwave). 
+                So, whether you're exploring Pennsylvania or 
+                venturing beyond, Wild Kids Wander is your 
+                go-to resource for family-friendly adventures and 
+                travel inspiration.</p>
+            <ul>
+                <li>Lauren and her family are always on the go and on the lookout for hidden gems in their home state of PA and beyond.</li>
+                <li>Lauren’s blog that has carefully crafted itineraries spanning 16 states.</li>
+                <li>With kids at the heart of their travels, you'll find a ton of tips for family adventures, including everything from hiking trails to Disney. </li>
+                <li>She even has tips like how to cook up 15 gourmet meals right in your hotel room (yes, even if it's equipped with just a fridge and microwave). </li>
+            </ul>
+        </div>
+        <a href="https://wildkidswander.com" class="link-button" target="_blank">Visit Blog</a>
+        <a href="https://www.instagram.com/wildkidswander?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="link-button" target="_blank">Visit Instagram</a>
+
+    </div>
+</div>
+
+<!-- hunter hulbert -->
+ <div style="display:none;">
+    <div id="content-hunter-hulbert">
+        <img src="pics/hunterhulbert-2.png" 
+     alt="Hunter Hulbert" 
+     class="modal-image" 
+     style="cursor: zoom-in;"
+     onclick="openLightbox(this.src)">
+        <h1>Hunter Hulbert</h1>
+        <h3 class="subtitle">Telling travel stories that shatter stereotypes and build new perspectives.</h3>
+        
+        <div class="content-body">
+            <h2>What We Love</h2>
+            <ul>
+                <li>Everything that Hunter posts, makes you think “what?!  That’s in….. ,that looks amazing! How do I go experience it myself?!”</li>
+                <li>Hunter does an amazing job narrating that you feel like you’re actually there experiencing it yourself. </li>
+                <li>Hunter’s destinations are always spots that I would never know of or think about going.</li>
+                <li>Many posts are linked to a blog post which gives you even more information about the location. </li>
+            </ul>
+        </div>
+        <a href="https://hunterandtraveler.com/" class="link-button" target="_blank">Visit Blog</a>
+        <a href="https://www.instagram.com/hunterhulbert/" class="link-button" target="_blank">Visit Instagram</a>
+
+    </div>
+</div>
+
+<!-- beyond the square -->
+ <div style="display:none;">
+    <div id="content-beyond-the-square">
+        <img src="pics/beyondthesquare-2.png" alt="beyond the square" 
+     class="modal-image" 
+     style="cursor: zoom-in;"
+     onclick="openLightbox(this.src)">
+        <h1>Beyond the Square</h1>
+        <h3 class="subtitle">Lora is your New York City expert giving you insiders tips on how to make the most of your trip to the big city</h3>
+        
+        <div class="content-body">
+            <h2>What We Love</h2>
+            <p>Every time I go to NYC, I have no idea really where 
+                I’m going and I have FOMO because I know there are so 
+                many cool places right under my feet and I end up 
+                going to the same places.  
+                Lora is like having a best friend who is from NYC 
+                that knows all of the best tips and tricks.</p>
+            <ul>
+                <li>You can also hire Lora to create your own custom NYC intinerary. </li>
+                <li>You can feel Lora’s love and passion for the city.</li>
+                <li>Lora has a ton of blog posts to check out… everything from how the best kept secret neighborhood, NYC on a budget, Free things to do, how to be prepared and of course the best places to eat!</li>
+            </ul>
+        </div>
+        <a href="https://www.gobeyondthesquare.com/" class="link-button" target="_blank">Visit Blog</a>
+        <a href="https://www.instagram.com/beyond.the.square/" class="link-button" target="_blank">Visit Instagram</a>
+
+    </div>
+</div>
+
+<!-- britt around town -->
+ <div style="display:none;">
+    <div id="content-britt-around-town">
+        <img src="pics/brittaroundtown-2.png" alt="britt around town" 
+     class="modal-image" 
+     style="cursor: zoom-in;"
+     onclick="openLightbox(this.src)">
+        <h1>BrittAroundTown</h1>
+        <h3 class="subtitle">Brittnany is your Bucks County, PA and beyond expert sharing everything small businesses</h3>
+        
+        <div class="content-body">
+            <h2>What We Love</h2>
+            <p></p>
+            <ul>
+                <li>Britt is the biggest cheerleader for helping local businesses and small towns get the exposure they deserve. </li>
+                <li>She promotes small town travel/ Small Town USA</li>
+                <li>Britt Around Town includes historic sites and attractions, entertainment venues, restaurants, small shops, and treasured natural resources</li>
+                <li>Her posts are firsthand experiences that she would recommend to her closest family and friends</li>
+                <li>Website includes discounts on small businesses</li>
+                <li>Blog posts on places to check out and and unique accommodations</li>
+            </ul>
+        </div>
+        <a href="https://brittaroundtown.com/" class="link-button" target="_blank">Visit Blog</a>
+        <a href="https://www.instagram.com/brittaroundtown/" class="link-button" target="_blank">Visit Instagram</a>
+
+    </div>
+</div>
+
+<!-- with sunshine sol -->
+ <div style="display:none;">
+    <div id="content-with-sunshine-sol">
+        <img src="pics/withsunshinesol-2.png" alt="with sunshine sol" 
+     class="modal-image" 
+     style="cursor: zoom-in;"
+     onclick="openLightbox(this.src)">
+        <h1>WithSunshineSol</h1>
+        <h3 class="subtitle">Sunshine and her pup Sancho are Virginia-based travel enthusiasts on a quest for cozy stays, great views, unique experiences, and dog-friendly adventures.</h3>
+        
+        <div class="content-body">
+            <h2>What We Love</h2>
+            <p></p>
+            <ul>
+                <li>Her doggy Sancho Is the center of her posts and he is adorable! </li>
+                <li>There are a ton of recommendations that are dog friendly.</li>
+                <li>Blog posts on places to check out and unique accommodations</li>
+            </ul>
+        </div>
+        <a href="https://withsunshinesol.com/" class="link-button" target="_blank">Visit Blog</a>
+        <a href="https://www.instagram.com/withsunshinesol/" class="link-button" target="_blank">Visit Instagram</a>
+
+    </div>
+</div>
+
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Expanded View">
+</div>
+
+<!--FOOTER-->
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-section footer-left">
+      <nav class="footer-links">
+        <a href="info.html">GET THE APP</a>
+        <a href="howitworks.html">HOW IT WORKS</a>
+        <a href="explore.html">EXPLORE</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </div>
+    <div class="footer-section footer-center">
+      <img src="pics/footerlogo.webp" alt="Vondern Logo" class="logo-image" width="263" height="60">
+      <h2>Scroll Less. Explore More.</h2>
+      <p>Your next favorite place is closer than you think</p>
+    </div>
+    <div class="footer-section footer-right">
+      <div class="social-box">
+        <a href="https://www.instagram.com/vondernapp" target="_blank">
+          <img src="pics/whiteinstalogo.webp" alt="Instagram" class="social-icon">
+        </a>
+      </div>
+      <nav class="footer-links-alt">
+        <a href="#">GET THE VONDERN APP</a>
+        <a href="#">JOIN OUR NEWSLETTER</a>
+      </nav>
+    </div>
+  </div>
+  <div class="footer-legal">
+    <p>@2026 Vondern | Privacy Policy | Terms</p>
+  </div>
+</footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+<!-- template for pop-up -->
+ <!--
+<div style="display:none;">
+    <div id="content-britt-around-town">
+        <img src="pics/brittaroundtown-2.png" alt="britt around town" 
+     class="modal-image" 
+     style="cursor: zoom-in;"
+     onclick="openLightbox(this.src)">
+        <h1>BrittAroundTown</h1>
+        <h3 class="subtitle"></h3>
+        
+        <div class="content-body">
+            <h2>What We Love</h2>
+            <p></p>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <a href="https://brittaroundtown.com/" class="link-button" target="_blank">Visit Blog</a>
+        <a href="https://www.instagram.com/brittaroundtown/" class="link-button" target="_blank">Visit Instagram</a>
+
+    </div>
+</div>
+-->
+
+<!-- template for thumbnail -->
+ <!-- 
+<div class="card-thumb" onclick="openCreatorModal('wild-kids-wander')">
+    <img src="pics/wildkidswander-1.png" alt="Wild Kids Wander" class="thumb-img">
+    <h3>Where the Wild Kids Wander</h3>
+    <p class="summary"></p>
+            
+        <div class="card-actions" onclick="event.stopPropagation()">
+            <a href="https://wildkidswander.com" target="_blank" class="link-button">Website</a>
+            <a href="https://instagram.com/your-handle" target="_blank" class="link-button">Instagram</a>
+        </div>
+</div>
+-->
