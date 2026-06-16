@@ -688,6 +688,8 @@ section {
 
 .section {
   padding: 120px 0; 
+}
+
 /* carousel */
 .vondern-carousel-section { 
   max-width: 1000px; 
@@ -743,7 +745,7 @@ section {
 .vondern-card p {
   color: #555;
   font-size: 0.9rem;
-  line-height: 1.4;
+  line-height: 1.2;
   padding: 0 15px;
   margin-bottom: 15px;
 }
@@ -787,7 +789,7 @@ section {
 .nav-btn { 
   z-index: 10;
   position: static;
-  height: 60px;
+  height: 750px;
   width: 60px;
   background: rgb(203, 238, 246);
   color: var(--blue);
@@ -811,17 +813,25 @@ section {
 .nav-btn-next { border-radius: 8px 0 0 8px; }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   /* Force 1 card on mobile */
   .vondern-card {
     flex: 0 0 100%; 
   }
+}
+
+@media (max-width: 759px) {
+  .vondern-card {
+    padding: 10px; /* Reduces overall card padding */
+  }
   
-  .nav-btn {
-    width: 40px; 
-    height: 40px;
-    font-size: 16px;
-    padding: 0;
+  .vondern-card h4 {
+    font-size: 18px; /* Slightly smaller header */
+  }
+  
+  .vondern-card p {
+    font-size: 0.85rem; /* Slightly smaller text */
+    padding: 0 10px; /* Adjusted internal padding */
   }
 }
 
@@ -4104,5 +4114,4 @@ li {
 .pill-btn-green {
     margin-top: 40px;
     display: inline-block;
-}
 }
