@@ -665,10 +665,10 @@ section {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.step-number {
+.step-label {
   font-family: Inter-black, sans-serif;
-  font-size: 2.5rem;
-  color: var(--aqua);
+  font-size: 30px;
+  color: var(--green);
   margin-bottom: 10px;
   display: block;
 }
@@ -688,190 +688,160 @@ section {
 
 .section {
   padding: 120px 0; 
+/* carousel */
+.vondern-carousel-section { 
+  max-width: 1000px; 
+  margin: 50px auto; 
+  padding: 20px; 
+  overflow: hidden;
 }
 
-.app-section {
-  text-align: center;
-  padding: 80px 0;
+.carousel-header { 
+  text-align: center; 
+  margin-bottom: 30px; 
+  color: var(--blue);
 }
 
-.app-preview {
-  background: #fdfdfd;
-  padding: 100px 0;
+.carousel-header h1 {
+  color: var(--green);
+}
+
+.carousel-header p {
+  font-size: 20px;
+  margin: 5px;
+}
+
+.carousel-viewport { 
+  overflow: hidden; 
+  width: 100%; 
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel-track { 
+  display: flex; 
+  gap: 20px; 
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 100%; 
+}
+
+/* FIX: This flex property now accounts for 3 cards visible at once */
+.vondern-card { 
+  flex: 0 0 calc(33.33% - 14px);
+  border-radius: 16px; 
+  overflow: hidden; 
+  background: #f9f9f9;  
+}
+
+.vondern-card h4 {
+  font-family: Inter-black, sans-serif;
+  color: var(--aqua);
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.vondern-card p {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding: 0 15px;
+  margin-bottom: 15px;
+}
+
+.vondern-card img { 
+  width: 100%; 
+  object-fit: contain; 
+  padding: 10px;
+  display: block;
+  height: auto;
+}
+
+.card-overlay { 
+  padding: 15px; 
+}
+
+.carousel-controls { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px; 
+  margin-top: 30px; 
 }
 
 .carousel-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.carousel-track {
   display: flex;
-  align-items: center;
-  gap: 30px;
-  padding: 60px 0;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  padding-left: 80px; 
-  padding-right: 80px;
-  justify-content: flex-start;
-}
-
-.carousel-track::-webkit-scrollbar {
-  display: none;
-}
-
-/* New style for the text container inside the app card */
-.step-text {
-    padding: 20px;
-    text-align: center;
-    background: #fff;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-}
-
-.step-text .step-number {
-    font-family: Inter-black, sans-serif;
-    font-size: 1.5rem;
-    color: var(--aqua);
-    margin-bottom: 5px;
-    display: block;
-}
-
-.step-text h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-    color: var(--blue);
-}
-
-.step-text p {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* new app card */
-.app-card {
-  flex: 0 0 280px; 
-  scroll-snap-align: start;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  opacity: 0.5;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 40px;
-  overflow: hidden; 
-}
-
-.app-card:hover {
-  opacity: 1 !important; 
-  transform: scale(1.1) !important; 
-  z-index: 100;
-}
-
-.app-card.active {
-  opacity: 0.5;
-  transform: scale(1.1);
-  z-index: 10;
-}
-
-.carousel-track:not(:hover) .app-card.active {
-  opacity: 1;
-  transform: scale(1.1);
-  z-index: 10;
-}
-
-.carousel-track:hover .app-card.active {
-  opacity: 0.3;
-  transform: scale(1);
-}
-
-.app-card img {
+  align-items: center;     
+  justify-content: center; 
+  gap: 20px;
   width: 100%;
-  border-radius: 40px;
-  display: block;
-  cursor: zoom-in;
-  height: auto;
-  object-fit: cover;
 }
 
-.carousel-dots, .nav-btn {
-  pointer-events: auto; 
-  transition: none; 
-  z-index: 2000;
+.carousel-container-outer {
+  display: flex;
+  align-items: center;    
+  justify-content: center; 
+  gap: 15px;              
+  width: 100%;
 }
 
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100px; 
-  height: 100px;
-  background: rgba(39, 161, 175, 0.303); 
-  color: rgba(255, 255, 255, 0.5); 
-  font-size: 3rem; 
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.551);
+.nav-btn { 
+  z-index: 10;
+  position: static;
+  height: 60px;
+  width: 60px;
+  background: rgb(203, 238, 246);
+  color: var(--blue);
+  border: 2px dashed var(--aqua);
+  border-radius: 50%; /* Adjusted for better visuals */
   cursor: pointer;
-  z-index: 2000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(1px);
-  transition: all 0.3s ease;
+  flex-shrink: 0;    
+  transition: all 0.2s ease;
 }
 
 .nav-btn:hover {
-  background: rgba(164, 194, 74, 0.224);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transform: translateY(-50%) scale(1.1);
+  background-color: var(--aqua);
+  color: white;
 }
 
-.nav-btn:active {
-  transform: translateY(-50%) scale(.95);
+.nav-btn-prev { border-radius: 0 8px 8px 0; }
+.nav-btn-next { border-radius: 8px 0 0 8px; }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  /* Force 1 card on mobile */
+  .vondern-card {
+    flex: 0 0 100%; 
+  }
+  
+  .nav-btn {
+    width: 40px; 
+    height: 40px;
+    font-size: 16px;
+    padding: 0;
+  }
 }
 
-.prev { left: -90px; }
-.next { right: -90px; }
-
-@media (max-width: 1350px) {
-  .prev { left: 10px; }
-  .next { right: 10px; }
-}
-
-.carousel-dots {
-  position: relative;
-  z-index: 2000;
+.dots-container { 
   display: flex;
   justify-content: center;
-  gap: 15px; /* Increased gap for better touch targets */
-  margin: 30px auto 0;
-  width: fit-content; /* Ensures it centers based on its own width */
+  gap: 10px;
+  margin-top: 20px; 
 }
 
-.dot {
-  width: 10px;
-  height: 10px;
-  background: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.dot { 
+  width: 12px; 
+  height: 12px; 
+  background: #ccc; 
+  border-radius: 50%; 
+  cursor: pointer; 
+  transition: 0.3s; 
 }
 
-.dot.active {
-  background: var(--aqua);
-  width: 30px;
-  border-radius: 10px;
-}
-
-@media (max-width: 1300px) {
-  .prev { left: 10px; }
-  .next { right: 10px; }
-}
+.dot.active { background: #2ea6b8; }
 
 .modal {
   display: none;
@@ -1619,73 +1589,77 @@ section {
 
 .pill-btn-blue {
   display: inline-block;
-  background-color: var(--aqua-light);
-  opacity: 0.9;
-  color: #000;
-  text-decoration: none;
-  padding: 14px 35px;
+  padding: 16px 32px;
   border-radius: 100px;
-  border: 2px solid rgba(255, 255, 255, 0.538);
-  font-family: Inter-black, sans-serif;
-  font-size: 12px;
-  letter-spacing: 1px;
-  transition: transform .2s ease, background-color .2s ease;
+  text-decoration: none;
+  transition: var(--transition);
+  font-family: Inter-bold, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  font-weight: 400; 
+  background: var(--aqua-light);
+  color: var(--blue);
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.198);
   margin: 20px;
-  text-shadow: none;
+  border: 2px solid #b7f9ff;
 }
 
 .pill-btn-blue:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px);
   background-color: var(--aqua);
 }
 
 .pill-btn-green {
   display: inline-block;
-  background-color: var(--green-light);
-  opacity: 0.9;
-  color: #000;
-  text-decoration: none;
-  padding: 14px 35px;
+  padding: 16px 32px;
   border-radius: 100px;
-  border: 2px solid rgba(255, 255, 255, 0.538);
-  font-family: Inter-black, sans-serif;
-  font-size: 12px;
-  letter-spacing: 1px;
-  transition: transform .2s ease, background-color .2s ease;
+  text-decoration: none;
+  transition: var(--transition);
+  font-family: Inter-bold, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  font-weight: 400; 
+  background: var(--green-light);
+  color: var(--blue);
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.194);
   margin: 20px;
-  text-shadow: none;
+  border: 2px solid #f4ffae;
 }
 
 .pill-btn-green:hover {
-  transform: scale(1.05);
+  transform:  translateY(-2px);
   background-color: var(--green);
 }
 
 .mockup-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
   max-width: 1200px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   justify-content: center;
 }
 
 .follow-mockup {
-  flex: 0 1 auto
+  flex: 0 1 auto;
 }
 
 @media (max-width:850px) {
   .follow-container {
     flex-direction: column;
     gap: 40px;
-    text-align: center
+    text-align: center;
   }
 
   .follow-text,
   .follow-text h2,
   .follow-text p {
-    text-align: center
+    text-align: center;
   }
 }
 
@@ -1703,7 +1677,7 @@ section {
   background: #fff;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, .05)
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .05);
 }
 
 .town-form-title {
@@ -1754,14 +1728,14 @@ section {
   font-family: Inter-black, sans-serif;
   display: flex;
   align-items: center;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .town-checkbox-label input {
   width: 20px;
   height: 20px;
   margin-right: 10px;
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
 .town-submit-btn {
@@ -1773,11 +1747,11 @@ section {
   font-family: Inter-black, sans-serif;
   font-size: 12px;
   cursor: pointer;
-  transition: background .3s
+  transition: background .3s;
 }
 
 .town-submit-btn:hover {
-  background-color: #444
+  background-color: #444;
 }
 
 .intro-text {
@@ -2318,7 +2292,7 @@ li {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   background: var(--faq-color);
   padding: 50px;
   border-radius: 50px;
@@ -2459,9 +2433,9 @@ li {
 }
 
 .pricing-card h3 { 
-  color: var(--aqua-light); 
+  color: var(--aqua); 
   margin-top: 10px; 
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .pricing-card p {  
@@ -2490,11 +2464,13 @@ li {
   font-size: 0.9rem; 
   opacity: 0.7; 
   margin-top: 10px; 
-  margin-bottom: 0;}
+  padding-bottom: 0;}
   
 .lock-in { 
-  font-weight: bold; 
-  color: var(--aqua-light); }
+  color: var(--aqua);
+  margin-top: 10px;
+  margin-bottom: 0;
+ }
 
 /* FORM COLUMN */
 .business-form-column {
@@ -2889,9 +2865,9 @@ li {
     object-fit: cover;
 }
 
-.trip-content h3 {
-    color: var(--aqua);
-    margin-bottom: 10px;
+.trip-content h2 {
+    color: var(--blue);
+    margin-bottom: 20px;
 }
 
 .trip-content p {
@@ -3023,7 +2999,7 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(67, 201, 250, 0.9);
+  background-color: rgba(67, 201, 250);
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
@@ -3033,13 +3009,16 @@ li {
   white-space: nowrap;
 }
 
+.post-link:hover {
+  background-color:  rgba(40, 149, 189);
+}
+
 .insta-post-card {
     border: 1px solid #e1e1e1;
     border-radius: 15px;
     padding: 10px;
     background: #fff;
     width: 100%;
-    max-width: 300px;
     text-align: left;
 }
 
@@ -3655,3 +3634,475 @@ li {
   cursor: pointer;
 }
 
+.section-title {
+    color: var(--blue);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* --- Business Page Core Styles --- */
+.business-page {
+  padding: 20px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px; 
+  padding-top: 20px;
+  margin-left: 0px;
+}
+
+.page-header {
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 600px 550px; 
+    gap: 40px; 
+    max-width: 1200px; 
+    margin: 0 auto;   
+    padding: 0 20px;
+}
+
+ /* Card Styling for Consistency */
+.card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1); 
+  border-left: 8px solid var(--aqua);   
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+  border-radius: 0 20px 20px 0;
+}
+
+        .featured-card {
+        border: 2px solid var(--aqua);
+        background-color: #fafcfc; /* Subtle tint to differentiate from other cards */
+        box-shadow: 0 15px 35px rgba(46, 166, 184, 0.1); /* Slightly more prominent shadow */
+}
+
+        /* Typography & Lists */
+        .check-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 20px;
+            line-height: 16px;
+        }
+
+        .check-list li {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            color: var(--blue);
+        }
+
+        .note { font-style: italic; color: #666; margin-top: 20px; }
+
+        /* Sticky Pricing Card */
+        .sticky-container {
+            position: static;
+            top: auto;
+        }
+
+  .pricing-card {
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 30px;
+    padding: 40px;
+    margin: 20px auto 10px auto;
+    max-width: 900px; 
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.158);
+    margin-bottom: 60px;
+  }
+
+        .price { 
+          font-size: 32px; 
+          font-weight: 800; 
+          margin: 15px 0; 
+          color: var(--blue)
+        }
+
+        .price span { 
+          font-size: 16px; 
+          font-weight: normal; 
+        }
+
+        .savings-tag { 
+          background: var(--green); 
+          color: var(--blue); 
+          padding: 5px 15px; 
+          border-radius: 20px; 
+          font-weight: 800; 
+          display: inline-block; 
+          margin-bottom: 10px; 
+          margin-top: 10px; 
+        }
+
+        .btn-primary { 
+          background: var(--aqua-light); 
+          color: #000; 
+          padding: 15px 30px; 
+          border-radius: 50px; 
+          text-decoration: none; 
+          display: block; 
+          margin-top: 20px; 
+          font-weight: bold; 
+        }
+
+        /* FAQ Section */
+        .faq-section { margin-top: 60px; padding-top: 40px; border-top: 1px solid #ddd; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 900px) {
+            .content-wrapper { grid-template-columns: 1fr; }
+            .sticky-container { position: static; }
+        }
+
+/* Wide, centered bubble container */
+.wide-bubble {
+  background: var(--blue);
+  color: var(--white);
+    border-radius: 30px;
+    padding: 40px;
+    margin: 20px auto 10px auto;
+    max-width: 900px; /* Adjust this width to make it 'stretched' as much as you want */
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.158);
+    margin-bottom: 60px;
+}
+
+.wide-bubble h2 {
+    color: var(--green-light);
+    margin-bottom: 20px;
+} 
+
+.wide-bubble h1 {
+  background: linear-gradient(135deg, var(--aqua-light) 0%, var(--green) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 45px;
+  line-height: 50px;
+}
+
+.wide-bubble h3 {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: var(--aqua-light);
+}
+/* Ensure the check-list remains readable by centering the block but keeping text left-aligned */
+.wn-check-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 40px;
+  line-height: 16px;
+  margin-bottom: 40px;
+}
+
+.wn-check-list li {
+  font-size: 1.0rem;
+  color: var(--white);
+}
+
+.wide-bubble .lock-in {
+  color: var(--green-light);
+}
+
+/* Center the CTA paragraph */
+.wide-bubble .cta-text {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, var(--aqua-light) 0%, var(--green) 100%);
+    font-family: inter-bold;
+    -webkit-background-clip: text;
+  background-clip: text;
+    color: transparent;
+}
+
+/* Ensure the pill button is centered */
+.wide-bubble .pill-btn-blue {
+    margin: 10px auto;
+    display: inline-block;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 600px) {
+    .wide-bubble {
+        padding: 30px 20px;
+        margin: 20px 10px;
+    }
+}
+
+.ft-upcoming-band .intro-text {
+  color: white;
+  margin-left: 40px;
+  padding: 0px;
+  font-size: 20px;
+  font-family: inter-bold;
+  line-height: 30px;
+}
+
+.ft-upcoming-band .business-left-column h1 {
+  font-family: Inter-black;
+  color: var(--blue);
+  font-size: 60px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/* --- Two Column Layout --- */
+.ft-two-column-band {
+    padding: 60px 20px;
+    background-color: #f4f4f4; /* Subtle background for the page area */
+}
+
+.ft-split-layout {
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- Card Base Styling --- */
+.ft-col {
+    flex: 1;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* Card 1: Light */
+.ft-card-light {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow:rgba(0, 0, 0, 0.883);
+    text-align: center;
+}
+
+.ft-card-light h2 {
+  color: var(--aqua);
+}
+
+/* Card 2: Dark */
+.ft-card-dark {
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow:rgba(0, 0, 0, 0.883);
+}
+
+.ft-card-dark h2 {
+    color: var(--aqua-light);
+    margin-bottom: 20px;
+}
+
+/* --- List Styling (Inside the Cards) --- */
+.ft-check-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.signed {
+  color: var(--green-light);
+}
+
+.ft-check-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding-left: 30px;
+    position: relative;
+}
+
+.ft-check-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    color: var(--aqua);
+    font-weight: bold;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 768px) {
+    .ft-split-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* 1. SECTION & LAYOUT */
+.follow-section {
+  background-color: var(--aqua);
+  color: #fff;
+  padding: 100px 0;
+  width: 100%;
+}
+
+.follow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  max-width: 1200px;
+}
+
+/* 2. HEADER TEXT */
+.follow-text {
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.follow-text h2 {
+  font-family: Inter-black, sans-serif;
+  font-size: 48px;
+  margin: 0 0 10px 0;
+}
+
+.follow-text p {
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+/* 3. THE GRID (Responsive) */
+.mockup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.follow-mockup {
+  min-width: 0; /* Prevents overflow */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* 4. INSTA CARDS */
+.insta-post-card {
+  background: white;
+  color: #333;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.mini-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.mini-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-image {
+  position: relative;
+  width: 100%;
+}
+
+.post-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 850px) {
+  .follow-section {
+    padding: 50px 0;
+  }
+  
+  .follow-text h2 {
+    font-size: 32px;
+  }
+}
+
+/* --- START: Follow Vondern Section Styles --- */
+
+.follow-vondern-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    width: 100%;
+    max-width: 100vw; 
+    margin: 0 auto;   
+    background-color: var(--aqua);
+}
+
+.follow-vondern-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--white);
+    font-size: 16px;
+}
+
+.follow-vondern-header h2 {
+  color: var(--blue);
+  font-size: 58px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Grid Logic */
+.mockup-grid {
+    display: grid;
+    gap: 25px;
+    width: 100%;
+    grid-template-columns: 1fr;
+}
+
+/* Tablet: 2 Columns */
+@media (min-width: 768px) {
+    .mockup-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 4 Columns (Row) */
+@media (min-width: 1280px) {
+    .mockup-grid {
+        grid-template-columns: repeat(4, 290px);
+    }
+}
+
+/* Card & Image Styling */
+.insta-post-card {
+    background: #fff;
+    padding: 10px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Button Alignment */
+.pill-btn-green {
+    margin-top: 40px;
+    display: inline-block;
+}
+}
