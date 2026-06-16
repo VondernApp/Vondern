@@ -19,7 +19,7 @@
     <li><a href="forbusinesses.html">BUSINESSES</a></li>
     <li><a href="fortowns.html">TOWNS</a></li>
     <li><a href="forcreators.html">CREATORS</a></li>
-    <li><a href="bustrips.html">TRIPS</a></li>
+    <li><a href="bustrips.html">BUS TRIPS</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">CONTACT</a></li>
   </ul>
@@ -55,7 +55,7 @@
 <div class="full-container">
   <h2>You scroll. You search. Still nothing.</h2>
   <h3>Stop searching. Start going. Vondern shows you where.</h3>
-  <br></br>
+  <a href="https://3d59fc52.sibforms.com/serve/MUIFAALsGV-ERz-FDxDOxkHbAWlVxfMMpLKAZxBxrgX70pZFkVkbi4SmLGPW3UPsALHknJ5V8PoVhyAx9YE8n0drm0VgNO1gcUg3NRmHeXmNXocl5qwrU7khLoGJRwvPru9KCLPBh5QxikdJmhOSIT-_Ob8fkpxIie-DZR7OeI0E1It7G72Jn0DCpmOthE435gqQL839NDQo-c76TQ==" target="_blank" class="pill-btn-green">Sign up for Vondern today!</a>
 </div>
 
 <section class="what-youll-find">
@@ -97,85 +97,83 @@
   </div>
 </section>
 
-<!-- favorites -->
-<section class="featured-creators">
-  <div class="full-container">
-    <h2 class="section-title">Meet Our Favorite Creators</h2>
-    
-    <div class="featured-carousel-track">
-      <div class="creator-card">
-        <img src="pics/wildkidswander-2.png" alt="Wild Kids Wander">
-        <h3>Wild Kids Wander</h3>
-      </div>
-
-      <div class="creator-card">
-        <img src="pics/hunterhulbert-2.png" alt="Hunter Hulbert">
-        <h3>Hunter Hulbert</h3>
-      </div>
-
-      <div class="creator-card">
-        <img src="pics/brittaroundtown-2.png" alt="Britt Around Town">
-        <h3>Britt Around Town</h3>
-      </div>
-      
-      <a href="favorites.html" class="nav-btn-card">
-        <span style="font-size: 1.5rem;">→</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<div id="imageModal" class="modal">
-  <span class="close-modal">&times;</span>
-  <img class="modal-content" id="expandedImg" alt="Expanded view">
-</div>
-
 <!-- app preview -->
-<section class="app-preview">
-  <div class="container">
-    <h2 style="margin-bottom: 10px; text-align: center;">Coming to the App Store Soon!</h2>
-    <p style="color: #666; margin-bottom: 40px; text-align: center;">Scroll to see how Vondern brings hidden gems to life.</p>
+<section class="vondern-carousel-section">
+  <div class="carousel-header">
+    <h1>Coming Soon</h1>
+    <p>Get a glimpse of the Vondern experience</p>
   </div>
 
-  <div class="carousel-wrapper" style="position: relative;">
-    <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
-    <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
-    <div class="carousel-track" id="carousel">
-  <div class="app-card active">
-    <img src="pics/Interests.webp" alt="Experiences">
-    <div class="step-text">
-        <span class="step-number">01</span>
-        <h3>Pick Your Interests</h3>
-        <p>Choose what you love.</p>
-    </div>
-  </div>
-  
-  <div class="app-card">
-    <img src="pics/experiences_map.webp" alt="Map View">
-    <div class="step-text">
-        <span class="step-number">02</span>
-        <h3>Discover New Places</h3>
-        <p>Browse businesses and experiences tailored to your interests.</p>
-    </div>
+  <div class="carousel-container-outer">
+    
+    <button class="nav-btn nav-btn-prev" onclick="slide(-1)" aria-label="Previous">&lt;</button>
+
+    <div class="carousel-viewport">
+        <div class="carousel-track" id="vondern-track">
+          
+          <div class="vondern-card">
+            <img src="pics/Interests.webp" alt="Pick Interests">
+            <div class="card-overlay">
+              <span class="step-label">01</span>
+              <h4>Pick Your Interests</h4>
+              <p>Choose what you love.</p>
+            </div>
+          </div>
+
+          <div class="vondern-card">
+            <img src="pics/experiences_map.webp" alt="Discover Places">
+            <div class="card-overlay">
+              <span class="step-label">02</span>
+              <h4>Discover New Places</h4>
+              <p>Browse businesses and experiences tailored to your interests.</p>
+            </div>
+          </div>
+
+          <div class="vondern-card">
+            <img src="pics/experiences.webp" alt="Get Out There">
+            <div class="card-overlay">
+              <span class="step-label">03</span>
+              <h4>Get Out There</h4>
+              <p>Explore more and support local spots along the way.</p>
+            </div>
+          </div>
+          
+          <div class="vondern-card">
+            <img src="pics/profile.webp" alt="Profile">
+            <div class="card-overlay">
+              <span class="step-label">04</span>
+              <h4>User Profile</h4>
+              <p>Share your finds and...</p>
+            </div>
+          </div>
+
+          <div class="vondern-card">
+            <img src="pics/profile_business.webp" alt="Social">
+            <div class="card-overlay">
+              <span class="step-label">05</span>
+              <h4>Hidden Gems</h4>
+              <p>...Locate other findings!</p>
+            </div>
+          </div>
+          
+          <div class="vondern-card">
+            <img src="pics/saved.webp" alt="Settings">
+            <div class="card-overlay">
+              <span class="step-label">06</span>
+              <h4>Saved Feature</h4>
+              <p>And make sure to save them for future reference in our upcoming Vondern app!</p>
+            </div>
+          </div>
+
+        </div> 
+    </div> 
+
+    <button class="nav-btn nav-btn-next" onclick="slide(1)" aria-label="Next">&gt;</button>
   </div>
 
-  <div class="app-card">
-    <img src="pics/experiences.webp" alt="Interests Setup">
-    <div class="step-text">
-        <span class="step-number">03</span>
-        <h3>Get Out There</h3>
-        <p>Explore more and support local spots along the way.</p>
-    </div>
-  </div>
+  <div class="dots-container" id="dots-container"></div>
 
-      <div class="app-card"><img src="pics/profile.webp" alt="User Profile"></div>
-      <div class="app-card"><img src="pics/profile_business.webp" alt="Business Profile"></div>
-      <div class="app-card"><img src="pics/saved.webp" alt="Saved Gems"></div>
-    </div>
-    <div class="carousel-dots">
-      <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
-    </div>
-  </div>
+  <a href="https://3d59fc52.sibforms.com/serve/MUIFAALsGV-ERz-FDxDOxkHbAWlVxfMMpLKAZxBxrgX70pZFkVkbi4SmLGPW3UPsALHknJ5V8PoVhyAx9YE8n0drm0VgNO1gcUg3NRmHeXmNXocl5qwrU7khLoGJRwvPru9KCLPBh5QxikdJmhOSIT-_Ob8fkpxIie-DZR7OeI0E1It7G72Jn0DCpmOthE435gqQL839NDQo-c76TQ==" target="_blank" class="pill-btn-green">Don't miss out! Sign up today!</a>
 </section>
 
 <!-- how it works 
@@ -359,85 +357,110 @@
     </div>
 </section>
 
-<!--FOLLOW US-->
-<section class="section follow-section">
-  <div class="content-wrapper">
-    <div class="follow-container">
+<!--follow us-->
+<section class="follow-vondern-container">
+  <div class="follow-vondern-header">
+    <h2>Follow Vondern</h2>
+    <p>Follow along for new towns, local spots, and experiences you won't find on a list.</p>
+  </div>
+
+  <div class="mockup-grid">
+    <div class="follow-mockup">
+      <div class="insta-post-card">
+        <div class="post-header">
+          <div class="mini-avatar">
+            <img src="pics/circle-logo.png" alt="vondern logo">
+          </div>
+          <span>vondernapp</span>
+        </div>
+        <div class="post-image">
+          <img src="pics/vondern-insta.png" alt="vondern instagram link">
+          <a href="https://www.instagram.com/reel/C3i3DVXvK0H/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="post-link" target="_blank">VIEW POST</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="follow-mockup">
+      <div class="insta-post-card">
+        <div class="post-header">
+          <div class="mini-avatar">
+            <img src="pics/circle-logo.png" alt="vondern logo">
+          </div>
+          <span>vondernapp</span>
+        </div>
+        <div class="post-image">
+          <img src="pics/brit-ig.png" alt="vondern instagram link">
+          <a href="https://www.instagram.com/reel/DYVfOMqORsC/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" class="post-link" target="_blank">VIEW POST</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="follow-mockup">
+      <div class="insta-post-card">
+        <div class="post-header">
+          <div class="mini-avatar">
+            <img src="pics/circle-logo.png" alt="vondern logo">
+          </div>
+          <span>vondernapp</span>
+        </div>
+        <div class="post-image">
+          <img src="pics/ig-momlife.png" alt="vondern instagram link">
+          <a href="https://www.instagram.com/p/DWfCrDPjr3F/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="post-link" target="_blank">VIEW POST</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="follow-mockup">
+      <div class="insta-post-card">
+        <div class="post-header">
+          <div class="mini-avatar">
+            <img src="pics/circle-logo.png" alt="vondern logo">
+          </div>
+          <span>vondernapp</span>
+        </div>
+        <div class="post-image">
+          <img src="pics/ig-podcast.png" alt="vondern instagram link">
+          <a href="https://www.instagram.com/p/DQY92e9jsyA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="post-link" target="_blank">VIEW POST</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://www.instagram.com/vondernapp/" target="_blank" class="pill-btn-green">FOLLOW @VONDERNAPP</a>
+</section>
+
+<!-- favorites -->
+<section class="featured-creators">
+  <div class="full-container">
+    <h2 class="section-title">Meet Our Favorite Creators</h2>
+    
+    <div class="featured-carousel-track">
+      <div class="creator-card">
+        <img src="pics/wildkidswander-2.png" alt="Wild Kids Wander">
+        <h3>Wild Kids Wander</h3>
+      </div>
+
+      <div class="creator-card">
+        <img src="pics/hunterhulbert-2.png" alt="Hunter Hulbert">
+        <h3>Hunter Hulbert</h3>
+      </div>
+
+      <div class="creator-card">
+        <img src="pics/brittaroundtown-2.png" alt="Britt Around Town">
+        <h3>Britt Around Town</h3>
+      </div>
       
-      <div class="follow-text">
-        <h2>Follow Vondern</h2>
-        <p>Follow along for new towns, local spots, and experiences you won't find on a list.</p>
-      </div>
-
-      <div class="mockup-grid">
-        <div class="follow-mockup">
-          <div class="insta-post-card">
-            <div class="post-header">
-              <div class="mini-avatar">
-                <img src="pics/circle-logo.png" alt="vondern logo">
-              </div>
-              <span>vondernapp</span>
-            </div>
-            <div class="post-image">
-              <img src="pics/vondern-insta.png" alt="vondern instagram link">
-              <a href="https://www.instagram.com/reel/C3i3DVXvK0H/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="post-link" target="_blank">VIEW POST</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="follow-mockup">
-          <div class="insta-post-card">
-            <div class="post-header">
-              <div class="mini-avatar">
-                <img src="pics/circle-logo.png" alt="vondern logo">
-              </div>
-              <span>vondernapp</span>
-            </div>
-            <div class="post-image">
-              <img src="pics/brit-ig.png" alt="vondern instagram link">
-              <a href="https://www.instagram.com/reel/DYVfOMqORsC/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" class="post-link" target="_blank">VIEW POST</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="follow-mockup">
-          <div class="insta-post-card">
-            <div class="post-header">
-              <div class="mini-avatar">
-                <img src="pics/circle-logo.png" alt="vondern logo">
-              </div>
-              <span>vondernapp</span>
-            </div>
-            <div class="post-image">
-              <img src="pics/ig-momlife.png" alt="vondern instagram link">
-              <a href="https://www.instagram.com/p/DWfCrDPjr3F/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="post-link" target="_blank">VIEW POST</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="follow-mockup">
-          <div class="insta-post-card">
-            <div class="post-header">
-              <div class="mini-avatar">
-                <img src="pics/circle-logo.png" alt="vondern logo">
-              </div>
-              <span>vondernapp</span>
-            </div>
-            <div class="post-image">
-              <img src="pics/ig-podcast.png" alt="vondern instagram link">
-              <a href="https://www.instagram.com/p/DQY92e9jsyA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="post-link" target="_blank">VIEW POST</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- follow us button -->
-
-      <a href="https://www.instagram.com/vondernapp/" target="_blank" class="pill-btn-green">FOLLOW @VONDERNAPP</a>
-
+      <a href="favorites.html" class="nav-btn-card">
+        <span style="font-size: 1.5rem;">→</span>
+      </a>
     </div>
   </div>
 </section>
+
+<div id="imageModal" class="modal">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="expandedImg" alt="Expanded view">
+</div>
 
 <!--FOOTER-->
 <footer class="main-footer">

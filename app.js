@@ -6,74 +6,75 @@ function toggleMenu() {
   }
 }
 
+//carousel
 document.addEventListener('DOMContentLoaded', () => {
-  const track = document.getElementById('carousel');
-  const dots = document.querySelectorAll('.dot');
-  const cards = document.querySelectorAll('.app-card');
-  const modal = document.getElementById('imageModal');
-  const modalImg = document.getElementById('imgFull');
-  const navbar = document.querySelector('.navbar');
-
-  if (!track || cards.length === 0) return;
-
-  let currentIndex = 0;
-  const cardWidth = 250; 
-  const gap = 30;        
-
-  function updateCarousel(index) {
-    cards.forEach(c => c.classList.remove('active'));
-    dots.forEach(d => d.classList.remove('active'));
+    const track = document.getElementById('vondern-track');
+    const cards = document.querySelectorAll('.vondern-card');
+    const dotsContainer = document.getElementById('dots-container');
     
-    if (cards[index]) cards[index].classList.add('active');
-    if (dots[index]) dots[index].classList.add('active');
+    if (!track) return;
 
-    track.scrollTo({
-      left: index * (cardWidth + gap),
-      behavior: 'smooth'
-    });
-  }
+    let currentIndex = 0;
 
-  window.scrollCarousel = function(direction) {
-    currentIndex += direction;
-    if (currentIndex >= cards.length) {
-      currentIndex = 0; 
-    } else if (currentIndex < 0) {
-      currentIndex = cards.length - 1; 
+    // Helper: Determine visible cards
+    function getVisibleCards() {
+        return window.innerWidth > 768 ? 3 : 1;
     }
-    updateCarousel(currentIndex);
-  };
 
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      currentIndex = i;
-      updateCarousel(currentIndex);
-    });
-  });
-
-  track.addEventListener('click', (e) => {
-    const clickedImg = e.target.closest('img');
-    if (clickedImg) {
-      modal.style.display = "flex";
-      modalImg.src = clickedImg.src;
-      if (navbar) {
-        navbar.style.opacity = "0";
-        navbar.style.pointerEvents = "none";
-      }
-    }
-  });
-
-  if (modal) {
-    modal.onclick = () => {
-      modal.style.display = "none";
-      if (navbar) {
-        navbar.style.opacity = "1";
-        navbar.style.pointerEvents = "auto";
-      }
+    // Main slide logic
+    window.slide = (direction) => {
+        const visibleCards = getVisibleCards();
+        const maxIndex = cards.length - visibleCards;
+        
+        currentIndex = Math.max(0, Math.min(currentIndex + direction, maxIndex));
+        updatePosition();
     };
-  }
 
-  updateCarousel(0);
+    // Move the track
+    function updatePosition() {
+        const track = document.getElementById('vondern-track');
+        if (!track) return;
+
+        const visibleCards = getVisibleCards();
+        
+        // Calculate percentage to move (33.33% per shift if 3 are visible)
+        const percentage = (currentIndex / visibleCards) * 100;
+        
+        track.style.transition = 'transform 0.5s ease-in-out';
+        track.style.transform = `translateX(-${percentage}%)`;
+        
+        updateDots();
+    }
+
+    // Dots management
+    function updateDots() {
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = ''; 
+        
+        const visibleCards = getVisibleCards();
+        const maxIndex = cards.length - visibleCards;
+        
+        for (let i = 0; i <= maxIndex; i++) {
+            const dot = document.createElement('span');
+            dot.className = i === currentIndex ? 'dot active' : 'dot';
+            dot.onclick = () => {
+                currentIndex = i;
+                updatePosition();
+            };
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    // Handle Resize
+    window.addEventListener('resize', () => {
+        currentIndex = 0; 
+        updatePosition();
+    });
+
+    // Initial setup
+    updatePosition();
 });
+
 
 // FAQ TOGGLE LOGIC
 document.querySelectorAll('.faq-question').forEach(question => {
