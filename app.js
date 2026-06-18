@@ -194,30 +194,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("expandedImg");
-  const closeBtn = document.querySelector(".close-modal");
-  
-  // Select all creator images
-  const creatorImages = document.querySelectorAll(".creator-card img");
+const modal = document.getElementById("image-modal");
+const modalImg = document.getElementById("modal-img");
+const carousel = document.querySelector(".carousel-container"); // Adjust class name if needed
 
-  creatorImages.forEach(img => {
-    img.addEventListener("click", () => {
-      modal.style.display = "flex";
-      modalImg.src = img.src;
-    });
-  });
-
-  // Close when clicking the 'X'
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  // Close when clicking anywhere on the background
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
+// Listen for clicks inside the carousel
+carousel.addEventListener('click', function(e) {
+  // Check if the clicked element is one of our zoomable images
+  if (e.target.classList.contains('zoomable')) {
+    modal.style.display = "flex"; // Changed to flex for centering
+    modalImg.src = e.target.src;
+  }
 });
+
+// Close modal when clicking the 'x'
+document.querySelector(".close").onclick = () => {
+  modal.style.display = "none";
+};
+
+// Close modal when clicking the background
+modal.onclick = (e) => {
+  if (e.target !== modalImg) {
+    modal.style.display = "none";
+  }
+};
+
