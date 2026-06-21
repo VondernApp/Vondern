@@ -3105,10 +3105,15 @@ li {
 }
 
 .ft-intro-text {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
+.ft-intro-text p {
+  color: var(--blue);
+  
+} 
 
 .ft-included-col {
   margin-top: 30px;
@@ -3203,15 +3208,40 @@ li {
 }
 
 .ft-cta-band {
-    position: relative;
-    padding: 150px 20px;
-    background-image: url('pics/bustrip-collage.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: var(--white);
-    overflow: hidden;
+    padding: 60px 20px;
+  position: relative; 
+  overflow: hidden;
+}
+
+.cta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter:brightness(70%);
+}
+
+.cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 2;
+}
+
+.ft-container {
+  position: relative;
+  z-index: 3;
+  color: white; 
 }
 
 .ft-cta-band::before {
@@ -3228,18 +3258,22 @@ li {
 .ft-cta-band .ft-container {
     position: relative;
     z-index: 2; 
+    text-align: center;
 }
 
 .ft-cta-band h2 {
-    color: var(--green-light); 
+    color: var(--aqua-light); 
     margin-bottom: 15px;
     font-size: 2.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
 }
 
 .ft-cta-band p {
     font-size: 1.2rem;
     margin-bottom: 0;
     opacity: 0.9;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -3914,6 +3948,10 @@ li {
     margin-top: 20px;
 }
 
+.ft-check-list li {
+  color: var(--blue);
+}
+
 .signed {
   color: var(--green-light);
 }
@@ -4144,4 +4182,152 @@ li {
 
 .zoomable:hover {
   transform: scale(1.02);
+}
+
+.upcoming-trips-list {
+    padding: 60px 20px;
+    background-color: #f8faf9;
+}
+
+.upcoming-trips-list h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.trips-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.trip-entry {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid var(--green-light);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.trip-entry h3 {
+    margin: 0;
+    color: var(--blue);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.trip-entry .date {
+    font-family: Inter-bold, sans-serif;
+    color: var(--aqua);
+    margin: 5px 0;
+}
+
+.trip-entry .theme {
+    color: #555;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .trip-entry {
+        padding: 20px;
+    }
+}
+
+.testimonials {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.centered-heading {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--aqua)
+}
+
+.testimonial-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonial-row {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px; /* Space for the persistent scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--aqua) #eee;
+}
+
+/* Force visible scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+.testimonial-row::-webkit-scrollbar {
+    height: 10px;
+    display: block; 
+}
+
+.testimonial-row::-webkit-scrollbar-track {
+    background: #eee;
+    border-radius: 5px;
+}
+
+.testimonial-row::-webkit-scrollbar-thumb {
+    background-color: var(--aqua);
+    border-radius: 5px;
+    border: 2px solid #eee;
+}
+
+/* Individual Testimonial Cards */
+.testimonial-card {
+    background: #f8faf9;
+    padding: 30px;
+    border-radius: 15px;
+    border-top: 5px solid var(--blue);
+    flex: 0 0 300px; /* Fixed width ensures they don't shrink in the row */
+}
+
+.testimonial-card .quote {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Navigation Buttons */
+.scroll-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: var(--blue);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.scroll-btn:hover {
+    background: var(--aqua);
+}
+
+.prev { left: -60px; }
+.next { right: -60px; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .scroll-btn {
+        display: none; /* Hide buttons on mobile where swiping is natural */
+    }
+    .testimonial-row {
+        gap: 15px;
+    }
 }
