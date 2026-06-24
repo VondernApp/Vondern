@@ -7,74 +7,18 @@ function toggleMenu() {
 }
 
 //carousel
-document.addEventListener('DOMContentLoaded', () => {
+function slide(direction) {
     const track = document.getElementById('vondern-track');
-    const cards = document.querySelectorAll('.vondern-card');
-    const dotsContainer = document.getElementById('dots-container');
-    
     if (!track) return;
 
-    let currentIndex = 0;
-
-    // Helper: Determine visible cards
-    function getVisibleCards() {
-        return window.innerWidth > 768 ? 3 : 1;
-    }
-
-    // Main slide logic
-    window.slide = (direction) => {
-        const visibleCards = getVisibleCards();
-        const maxIndex = cards.length - visibleCards;
-        
-        currentIndex = Math.max(0, Math.min(currentIndex + direction, maxIndex));
-        updatePosition();
-    };
-
-    // Move the track
-    function updatePosition() {
-        const track = document.getElementById('vondern-track');
-        if (!track) return;
-
-        const visibleCards = getVisibleCards();
-        
-        // Calculate percentage to move (33.33% per shift if 3 are visible)
-        const percentage = (currentIndex / visibleCards) * 100;
-        
-        track.style.transition = 'transform 0.5s ease-in-out';
-        track.style.transform = `translateX(-${percentage}%)`;
-        
-        updateDots();
-    }
-
-    // Dots management
-    function updateDots() {
-        if (!dotsContainer) return;
-        dotsContainer.innerHTML = ''; 
-        
-        const visibleCards = getVisibleCards();
-        const maxIndex = cards.length - visibleCards;
-        
-        for (let i = 0; i <= maxIndex; i++) {
-            const dot = document.createElement('span');
-            dot.className = i === currentIndex ? 'dot active' : 'dot';
-            dot.onclick = () => {
-                currentIndex = i;
-                updatePosition();
-            };
-            dotsContainer.appendChild(dot);
-        }
-    }
-
-    // Handle Resize
-    window.addEventListener('resize', () => {
-        currentIndex = 0; 
-        updatePosition();
+    // Define the scroll distance (match this to your card width + gap)
+    const cardWidth = 320; 
+    
+    track.scrollBy({
+        left: direction * cardWidth,
+        behavior: 'smooth'
     });
-
-    // Initial setup
-    updatePosition();
-});
-
+}
 
 // FAQ TOGGLE LOGIC
 document.querySelectorAll('.faq-question').forEach(question => {
@@ -180,7 +124,7 @@ function openLightbox(imgSrc) {
 
 // Close the full-screen view
 function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
+    lightbox.style.display = 'none';
 }
 
 // NEW FEATURED CREATORS CAROUSEL
@@ -189,33 +133,54 @@ document.addEventListener('DOMContentLoaded', () => {
   const featuredCards = featuredTrack ? featuredTrack.querySelectorAll('.app-card') : [];
 
   if (featuredTrack && featuredCards.length > 0) {
-    // You can add logic here for auto-sliding or custom controls if needed
     console.log('Featured Creators Carousel Initialized');
   }
 });
 
 const modal = document.getElementById("image-modal");
 const modalImg = document.getElementById("modal-img");
-const carousel = document.querySelector(".carousel-container"); // Adjust class name if needed
+const carousel = document.querySelector(".carousel-container"); 
 
 // Listen for clicks inside the carousel
-carousel.addEventListener('click', function(e) {
-  // Check if the clicked element is one of our zoomable images
-  if (e.target.classList.contains('zoomable')) {
-    modal.style.display = "flex"; // Changed to flex for centering
-    modalImg.src = e.target.src;
-  }
-});
+if (carousel) {
+    carousel.addEventListener('click', function(e) {
+      if (e.target.classList.contains('zoomable')) {
+        modal.style.display = "flex";
+        modalImg.src = e.target.src;
+      }
+    });
+}
 
 // Close modal when clicking the 'x'
-document.querySelector(".close").onclick = () => {
-  modal.style.display = "none";
-};
+const closeButton = document.querySelector(".close");
+if (closeButton) {
+    closeButton.onclick = () => {
+      modal.style.display = "none";
+    };
+}
 
 // Close modal when clicking the background
-modal.onclick = (e) => {
-  if (e.target !== modalImg) {
-    modal.style.display = "none";
-  }
-};
+if (modal) {
+    modal.onclick = (e) => {
+      if (e.target !== modalImg) {
+        modal.style.display = "none";
+      }
+    };
+}
 
+function openTripEntryModal(event) {
+    if (event) {
+        event.stopPropagation();
+    }
+    const modal = document.getElementById('tripEntryModal');
+    if (modal) {
+        modal.style.display = 'flex';
+    }
+}
+
+function closeTripEntryModal() {
+    const modal = document.getElementById('tripEntryModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}

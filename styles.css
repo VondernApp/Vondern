@@ -835,24 +835,6 @@ section {
   }
 }
 
-.dots-container { 
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px; 
-}
-
-.dot { 
-  width: 12px; 
-  height: 12px; 
-  background: #ccc; 
-  border-radius: 50%; 
-  cursor: pointer; 
-  transition: 0.3s; 
-}
-
-.dot.active { background: #2ea6b8; }
-
 .modal {
   display: none;
   position: fixed;
@@ -1638,6 +1620,7 @@ section {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.194);
   margin: 20px;
   border: 2px solid #f4ffae;
+  cursor: pointer;
 }
 
 .pill-btn-green:hover {
@@ -2844,7 +2827,7 @@ li {
     background: #fff;
     border-radius: 20px;
     padding: 15px; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.21);
     border: 1px solid rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
@@ -2854,9 +2837,27 @@ li {
 }
 
 .trip-card:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.351);
+    transform: translateY(-2px);
     cursor: pointer;
+}
+
+.trip-card .trip-content {
+    padding: 20px;
+}
+
+.trip-card .trip-content p {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.trip-title {
+  color: var(--aqua);
 }
 
 .trip-image-container {
@@ -2880,36 +2881,33 @@ li {
     margin-bottom: 20px;
 }
 
-.trip-content p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 20px;
-}
-
 /* Modal Styling */
 .modal {
   display: none; 
-  position: fixed;
+  position: fixed; 
   z-index: 9999; 
   left: 0; top: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.85);
+  background-color: rgba(0,0,0,0.7); 
+  backdrop-filter: blur(8px); 
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  transition: opacity 0.3s ease;
 }
 
 .modal-content {
     background: #fff;
-    padding: 30px;
+    padding: 40px;
     border-radius: 30px;
-    max-width: 1000px; 
-    width: 95%; 
+    max-width: 800px; 
+    width: 100%; 
     text-align: center;
     position: relative;
     max-height: 90vh; 
     overflow-y: auto;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3); 
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .modal-content h2 {
@@ -2928,13 +2926,24 @@ li {
 }
 /* Make sure the close button is visible */
 .close-btn {
-  z-index: 99999;
-  position: absolute;
-  top: 10px; 
-  right: 20px;
-  cursor: pointer;
-  font-size: 2rem;
-  color: #000;
+ position: absolute;
+    top: 25px; 
+    right: 30px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    background: #f0f0f0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.close-btn:hover {
+    background: #e0e0e0;
 }
 
 /* Responsive adjustment for small screens */
@@ -4148,12 +4157,6 @@ li {
     border-radius: 12px;
 }
 
-/* Button Alignment */
-.pill-btn-green {
-    margin-top: 40px;
-    display: inline-block;
-}
-
 /* Modal overlay styling */
 .modal {
   display: none; 
@@ -4184,16 +4187,6 @@ li {
   transform: scale(1.02);
 }
 
-.upcoming-trips-list {
-    padding: 60px 20px;
-    background-color: #f8faf9;
-}
-
-.upcoming-trips-list h2 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
 .trips-list {
     max-width: 800px;
     margin: 0 auto;
@@ -4202,32 +4195,111 @@ li {
     gap: 25px;
 }
 
+/* --- Trip Entry Section --- */
+
 .trip-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
     background: #ffffff;
-    padding: 25px;
-    border-radius: 15px;
-    border-left: 5px solid var(--green-light);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid #e5e5e5;
+    border-left: 8px solid var(--green); /* Uses your existing variable */
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.282);
 }
 
-.trip-entry h3 {
-    margin: 0;
-    color: var(--blue);
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.trip-info {
+    display: flex;
+    flex-direction: column;
 }
 
-.trip-entry .date {
-    font-family: Inter-bold, sans-serif;
-    color: var(--aqua);
-    margin: 5px 0;
+.trip-info h3 {
+  font-family: Inter-bold, sans-serif;
+  color: var(--aqua);
+  margin: 5px 0;
 }
 
-.trip-entry .theme {
-    color: #555;
+.trip-info p {
+  color: #555;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.trip-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.trip-status {
+    color: #666;
     font-size: 0.95rem;
-    font-style: italic;
+    font-weight: 500;
+}
+
+/* --- Modal Styling --- */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--blue);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#modalTitle {
+  background: linear-gradient(135deg, var(--aqua-light) 0%, var(--green) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 40px;
+  text-align: center;
+  font-family: inter-black;
+}
+
+.modal-detail-label {
+  color: var(--aqua-light);
+  font-family: inter-black;
+}
+
+#modalDescription {
+  color: white;
+}
+
+.modal-trip-description {
+  color: white;
+  margin-top: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--aqua);
 }
 
 @media (max-width: 600px) {
@@ -4244,7 +4316,7 @@ li {
 .centered-heading {
     text-align: center;
     margin-bottom: 40px;
-    color: var(--aqua)
+    color: var(--blue)
 }
 
 .testimonial-wrapper {
@@ -4281,10 +4353,10 @@ li {
 
 /* Individual Testimonial Cards */
 .testimonial-card {
-    background: #f8faf9;
+    background: #f7ffe6;
     padding: 30px;
     border-radius: 15px;
-    border-top: 5px solid var(--blue);
+    border-top: 5px solid var(--aqua);
     flex: 0 0 300px; /* Fixed width ensures they don't shrink in the row */
 }
 
@@ -4330,4 +4402,171 @@ li {
     .testimonial-row {
         gap: 15px;
     }
+}
+
+#vondern-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--aqua) #eee;
+}
+
+/* Scrollbar styling for Webkit (Chrome, Safari, Edge) */
+#vondern-track::-webkit-scrollbar {
+    height: 10px;
+    display: block;
+}
+
+#vondern-track::-webkit-scrollbar-track {
+    background: #eee;
+    border-radius: 5px;
+}
+
+#vondern-track::-webkit-scrollbar-thumb {
+    background-color: var(--aqua);
+    border-radius: 5px;
+    border: 2px solid #eee;
+}
+
+.vondern-card {
+    scroll-snap-align: start;
+    flex: 0 0 300px; 
+    background: #f7ffe6;
+    padding: 30px;
+    border-radius: 15px;
+    border-top: 5px solid var(--aqua);
+}
+
+.vondern-card p {
+  font-size: 16px;
+  color: var(--blue);
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.nav-btn {
+    background: var(--blue);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Custom styling for the specific trip entry modal */
+.trip-entry-modal-content {
+    background: var(--blue);
+    padding: 40px;
+    border-radius: 30px;
+    max-width: 650px;
+    width: 90%;
+    position: relative;
+    text-align: center; /* Left align text for readability */
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+.trip-entry-modal-content h3 {
+  margin-top: 45px;
+  margin-bottom: 10px;
+  color: var(--aqua-light);
+  font-size: 35px;
+  font-family: inter-black;
+}
+
+.trip-entry-modal-content ul li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+    font-size: 0.95rem;
+    color: white;
+}
+
+/* --- Trip Entry Modal Specifics --- */
+#tripEntryModal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.trip-entry-modal-content {
+    background: var(--blue);
+    padding: 40px;
+    border-radius: 30px;
+    max-width: 650px;
+    width: 90%;
+    margin: 50px auto; 
+    position: relative;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+.trip-modal-header { 
+  background: linear-gradient(135deg, var(--aqua-light) 0%, var(--green) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+ }
+
+.trip-modal-subheader { 
+  font-family: inter-black; 
+  color: var(--aqua-light);
+  margin-bottom: 20px; 
+}
+
+.trip-modal-info-box {
+    background: var(--green-light);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.trip-modal-content ul { 
+  list-style: none; 
+  margin-bottom: 20px; 
+
+}
+.trip-modal-content ul li { 
+  margin-bottom: 10px; 
+  line-height: 1.4; 
+  font-size: 0.95rem; 
+}
+
+.trip-modal-note {
+    background: var(--aqua);
+    color: var(--blue);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px;
+    font-size: 0.9rem;
+}
+
+.trip-modal-footer-text { 
+  text-align: center; 
+  font-family: inter-black; 
+  margin-top: 20px; 
+  color: var(--aqua-light);
+}
+
+.trip-entry .pill-btn-green {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    cursor: pointer;
 }

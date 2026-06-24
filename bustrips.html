@@ -5,8 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vondern App Page</title>
   <link rel="stylesheet" href="styles.css">
+  
 </head>
 <body class="app-page">
+
+<div id="tripModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <div id="modalPostsContainer"></div>
+    </div>
+</div>
 
 <nav class="navbar">
   <a href="index.html" class="logo">
@@ -54,8 +64,6 @@
                 <p>Show Up. We’ll Handle the Rest.</p>
                 <p>Small Towns. Good Food. Fresh Air. No Planning Required.</p>               
                 <p>Easy Day Trips For Women Who Want to Get Out, Explore, Have Fun and Not Have to Plan a Single Thing.</p>
-
-                <a href="https://3d59fc52.sibforms.com/serve/MUIFAGivzsd8tv7wdywZIY9ZxYoox4T-ZjJNBxDk8d--SyIY0ED9r_0QpVqRvk5bmIQOHINgvc7SUUhK5BybUnLREMZ-YuFtOb38R9C37J7M7I6xjMYXQX3GfARaheTrybkVYG3K8acuFylIduRoKhaC8AE6slIfVRochjPPq7yokfMdO7HhjOlPKHQY5HNWAZUX23TkE0Jb533JBw==" class="pill-btn-blue" target="_blank">Grab Your Spot</a>
             </div>
         </div>
     </div>
@@ -67,46 +75,81 @@
             <div class="header-group" style="margin-bottom: 30px;">
                 <h1>Upcoming Trips</h1>
             </div>
-                <div class="ft-container">
-                    <div class="trips-list">
-                        <div class="trip-entry">
-                            <h3>Tubes, Towns, & Tastes</h3>
-                            <p class="date">Sunday, July 19th</p>
-                            <p class="theme">Details TBA</p>
-                        </div>
+            
+            <div class="ft-container">
+                <div class="trips-list">
+                    
+                    <div class="trip-entry" onclick="openTripEntryModal()">
+    <div class="trip-info">
+        <h3>Tubes, Towns, & Tastes</h3>
+        <p>July 19th</p>
+    </div>
+    <div class="trip-actions">
+        <div class="trip-actions">
+            <button class="pill-btn-green" onclick="openTripEntryModal(event)">View Details</button>
+        </div>
+    </div>
+</div>
 
-                        <div class="trip-entry">
+                    <div class="trip-entry">
+                        <div class="trip-info">
                             <h3>Waterfront Wanderer</h3>
-                            <p class="date">August 22nd or 23rd</p>
-                            <p class="theme">Details TBA</p>
+                            <p>August 22nd or 23rd</p>
                         </div>
-
-                        <div class="trip-entry">
-                            <h3>Havertown Moms Field Trip</h3>
-                            <p class="date">October 3rd or October 17th</p>
-                            <p class="theme">Details TBA</p>
+                        <div class="trip-actions">
+                            <span class="trip-status">Details TBA</span>
                         </div>
-
-                        <div class="trip-entry">
-                            <h3>Delco Uncovered</h3>
-                            <p class="date">October 24th</p>
-                            <p class="theme">Details TBA</p>
-                        </div>
-
-                        <div class="trip-entry">
-                            <h3>Dirt Trails and Detours</h3>
-                            <p class="date">November 7th</p>
-                            <p class="theme">Details TBA</p>
-                        </div>
-
-                        <div class="trip-entry">
-                            <h3>Fa La La La Field Trip </h3>
-                            <p class="date">December 12th</p>
-                            <p class="theme">Details TBA</p>
-                        </div>
-                        
                     </div>
+
+                    <div class="trip-entry">
+                        <div class="trip-info">
+                            <h3>Havertown Moms Gone Vondern</h3>
+                            <p>October 17th</p>
+                        </div>
+                        <div class="trip-actions">
+                            <span class="trip-status">Details TBA</span>
+                           </div>
+                    </div>
+
+                    <div class="trip-entry">
+                        <div class="trip-info">
+                            <h3>Delco Uncovered</h3>
+                            <p>October 24th</p>
+                        </div>
+                        <div class="trip-actions">
+                            <span class="trip-status">Details TBA</span>
+                             </div>
+                    </div>
+
+                    <div class="trip-entry">
+                        <div class="trip-info">
+                            <h3>Dirt Trails and Detours</h3>
+                            <p>November 7th</p>
+                        </div>
+                        <div class="trip-actions">
+                            <span class="trip-status">Details TBA</span>
+                            </div>
+                    </div>
+
+                    <div class="trip-entry">
+                        <div class="trip-info">
+                            <h3>Fa La La La Field Trip</h3>
+                            <p>December 12th</p>
+                        </div>
+                        <div class="trip-actions">
+                            <span class="trip-status">Details TBA</span>
+                             </div>
+                    </div>
+
                 </div>
+            </div>
+        </div>
+
+        <div id="tripDetailModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div id="modalTextContent"></div>
+            </div>
         </div>
 
         <aside class="business-right-column">
@@ -128,19 +171,17 @@
                 </div>
 
                 <div class="ft-coming-soon">
-                <div class="trip-content">
-                    <h2>Adventure Starts With a Little Mystery</h2>
-                    <p>We'll share a few clues along the way, but the destination remains a surprise until the day of the trip.</p>
-                    <p>Follow along for updates on upcoming Vondern Bus Trip Experiences.</p>
-                    <a href="https://www.instagram.com/vondernapp/" target="_blank" class="pill-btn-blue">FOLLOW @VONDERNAPP</a>
+                    <div class="trip-content">
+                        <h2>Adventure Starts With a Little Mystery</h2>
+                        <p>We'll share a few clues along the way, but the destination remains a surprise until the day of the trip.</p>
+                        <p>Follow along for updates on upcoming Vondern Bus Trip Experiences.</p>
+                        <a href="https://www.instagram.com/vondernapp/" target="_blank" class="pill-btn-blue">FOLLOW @VONDERNAPP</a>
+                    </div>
                 </div>
-            </div>
-
             </div>
         </aside>
     </div>
 </div>
-
 
 <section class="trips-section trip-gallery-layout">
     <div class="side-image left-img">
@@ -163,7 +204,7 @@
                 </div>
                 
                 <div class="trip-content">
-                    <h3>Our First Trip</h3>
+                    <h3 class="trip-title">Our First Trip</h3>
                     <p>Click Here to See What Happens When You Say Yes →</p>
                 </div>
             </div>
@@ -180,10 +221,8 @@
         <h2 class="centered-heading">What Our Travelers Are Saying</h2>
         
         <div class="testimonial-wrapper">
-            <!-- Navigation Button: Previous -->
             <button class="scroll-btn prev" onclick="scrollTestimonials(-300)">&#10094;</button>
             
-            <!-- Testimonial Row -->
             <div class="testimonial-row" id="testimonialRow">
                 
                 <div class="testimonial-card">
@@ -196,6 +235,18 @@
                 
                 <div class="testimonial-card">
                     <p class="quote">"I had an amazing experience discovering new places and meeting new people, and I’m definitely planning to return to those spots with my family."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="quote">"Such a great time with good people. The prearranged stops were great and the discounts/gifts were a nice surprise."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="quote">"I enjoyed Kristine’s trip so much. I was able to spend time with old friends, meet new ones, and enjoy all the things I love to do."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="quote">"Kristine planned a great day out! There were a variety of activities, something for everyone! I highly recommend going!"</p>
                 </div>
                 
             </div>
@@ -213,7 +264,6 @@
 
 <section class="ft-two-column-band">
     <div class="ft-container ft-split-layout">
-        <!-- Card 1: The List -->
         <div class="ft-col ft-card-light">
             <h2>Who These Trips Are For</h2>
             <ul class="ft-check-list">
@@ -225,7 +275,6 @@
             </ul>
         </div>
         
-        <!-- Card 2: The Bio -->
         <div class="ft-col ft-card-dark">
             <h2>A Note from Kristine</h2>
             <p>Life gets busy fast. These trips are a chance to step away from the routine, explore somewhere new, and actually enjoy the day without planning every detail.</p>
@@ -238,17 +287,6 @@
         </div>
     </div>
 </section>
-
-<div id="tripModal" class="modal" onclick="closeModal()">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <span class="close-btn" onclick="closeModal()">&times;</span>
-    <h2 id="modalTitle">Trip Title</h2>
-    <p id="modalDescription" style="margin: 10px 0;"></p>
-
-    <div id="modalPostsContainer" class="mockup-grid" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
-      </div>
-  </div>
-</div>
 
 <div class="ft-cta-band">
   <img src="pics/bustrip-collage.png" alt="Background" class="cta-bg">
@@ -296,5 +334,52 @@
 </footer>
 
 <script src="app.js"></script>
+
+<div id="tripEntryModal" class="modal">
+    <div class="trip-entry-modal-content">
+        <span class="close-btn" onclick="closeTripEntryModal()">&times;</span>
+        
+        <div class="trip-modal-content">
+            <h2 class="trip-modal-header">Tubes, Towns, & Tastes</h2>
+            <p class="trip-modal-subheader">Sunday July 19th | 9:30AM - 7:30PM</p>
+            
+            <div class="trip-modal-info-box">
+                <p><strong>Destination:</strong> It’s a Surprise!</p>
+                <p><strong>Leaving From:</strong> Havertown, PA</p>
+                <p><strong>Price:</strong> $99 Early Bird | $119 Regular Price</p>
+            </div>
+
+            <h3>A One-Day Escape</h3>
+            <ul>
+                <li>💦 A little outdoor water fun (nothing extreme, but plan to get a little wet)</li>
+                <li>🍹 Not a water person? No problem. You can relax in a beautiful outdoor setting, enjoy great food and drinks, and soak up the atmosphere.</li>
+                <li>🏘️ Time to explore a charming town with local shops, great eats, and plenty to discover.</li>
+                <li>✨ No planning. No driving. Just show up and enjoy the day.</li>
+            </ul>
+
+            <h3>What's Included</h3>
+            <ul>
+                <li>✦ Round-Trip Transportation (no driving, no logistics)</li>
+                <li>✦ Tubing Adventure</li>
+                <li>✦ Visits to Two Charming Towns</li>
+                <li>✦ Snacks & Drinks on the Bus</li>
+                <li>✦ A Day of Exploring, Laughing, and Making Fun Memories</li>
+                <li>✦ Fun Giveaways</li>
+            </ul>
+
+            <div class="trip-modal-note">
+                <p><strong>Transportation Note:</strong> Due to the short notice and limited bus availability, transportation for this trip will be provided on an air-conditioned school bus. Don't worry—we'll still have all the fun, just with a little more nostalgia. 😉</p>
+            </div>
+
+            <p class="trip-modal-footer-text">Spots are limited. Snag your seat on the bus before it sells out.</p>
+            
+            <!-- 
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="#" class="pill-btn-green">Grab Your Spot</a>
+            </div> -->
+        </div>
+    </div>
+</div>
+</div>
 </body>
 </html>
