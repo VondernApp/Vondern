@@ -4525,12 +4525,13 @@ li {
 
 .trip-modal-subheader { 
   font-family: inter-black; 
-  color: var(--aqua-light);
+  color: var(--green-light);
   margin-bottom: 20px; 
 }
 
 .trip-modal-info-box {
-    background: var(--green-light);
+    background: var(--aqua);
+    color: whitesmoke;
     padding: 20px;
     border-radius: 15px;
     margin-top: 30px;
@@ -4550,7 +4551,7 @@ li {
 }
 
 .trip-modal-note {
-    background: var(--aqua);
+    background: var(--green);
     color: var(--blue);
     padding: 20px;
     border-radius: 15px;
@@ -4569,4 +4570,21 @@ li {
     padding: 8px 16px;
     font-size: 0.85rem;
     cursor: pointer;
+}
+
+/* Layout for the Instagram posts in the modal */
+#modalPostsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Override card width for modal display */
+#modalPostsContainer .insta-post-card {
+    flex: 1 1 300px; /* Grow, shrink, and set base width to 300px */
+    max-width: 400px; /* Prevents cards from becoming too wide */
+    width: auto; 
+    margin: 0; /* Ensures the container's 'gap' property handles spacing */
 }
