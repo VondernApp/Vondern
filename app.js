@@ -184,3 +184,27 @@ function closeTripEntryModal() {
         modal.style.display = 'none';
     }
 }
+
+function openCreatorModal(creatorId) {
+    // 1. Lower the navbar z-index when opening
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        navbar.style.zIndex = "0"; 
+    }
+
+    const template = document.getElementById('content-' + creatorId);
+    if(template) {
+        document.getElementById('modal-body').innerHTML = template.innerHTML;
+        document.getElementById('creator-modal').style.display = 'flex';
+    }
+}
+
+function closeCreatorModal() {
+    // 2. Reset the navbar z-index when closing
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        navbar.style.zIndex = "8000"; // Change this to whatever your original navbar z-index is
+    }
+
+    document.getElementById('creator-modal').style.display = 'none';
+}

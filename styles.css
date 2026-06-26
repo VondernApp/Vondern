@@ -3448,7 +3448,7 @@ li {
     background: rgba(10, 41, 72, 0.7); /* Using your brand blue */
     backdrop-filter: blur(4px); /* Modern frosted-glass effect */
     display: none;
-    z-index: 9998;
+    z-index: 9999;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -3479,6 +3479,7 @@ li {
 .content-body ul {
     list-style-type: none;
     padding-left: 0;
+    color: white;
 }
 
 .content-body li {
@@ -3486,6 +3487,7 @@ li {
     margin-bottom: 15px;
     position: relative;
     line-height: 1.5;
+    color: white;
 }
 
 .content-body li::before {
@@ -3568,18 +3570,18 @@ li {
 }
 
 #modal-body h1 {
-    color: var(--blue); 
+    color: var(--aqua-light); 
     margin-bottom: 15px;
 }
 
 #modal-body p {
-    color: #333; 
+    color: white; 
     line-height: 1.6; 
     margin-bottom: 20px;
 }
 
 .content-body h2 {
-    color: var(--blue);
+    color: var(--green-light);
     margin-top: 30px;
     margin-bottom: 15px;
 }
@@ -4264,6 +4266,12 @@ li {
     position: relative;
     max-height: 80vh;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    /* This ensures your modal doesn't get cut off if the screen is small */
+    max-height: 90vh; 
+    overflow-y: auto; 
+    position: relative;
 }
 
 #modalTitle {
@@ -4291,7 +4299,6 @@ li {
 }
 
 .close-btn {
-    position: absolute;
     right: 15px;
     top: 15px;
     border: none;
@@ -4300,6 +4307,18 @@ li {
     cursor: pointer;
     font-weight: bold;
     color: var(--aqua);
+    align-self: flex-end; /* Aligns to right */
+    order: -1;            /* Forces this to the top of the stack */
+    padding: 10px;
+    margin-bottom: 10px;  /* Adds space between the X and your content */
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+#modal-body {
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 @media (max-width: 600px) {
