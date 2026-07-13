@@ -50,7 +50,7 @@
             
                 <div class="card-actions" onclick="event.stopPropagation()">
                     <a href="https://wildkidswander.com" target="_blank" class="link-button">Website</a>
-                    <a href="https://instagram.com/your-handle" target="_blank" class="link-button">Instagram</a>
+                    <a href="https://instagram.com/wherethewildthingswander" target="_blank" class="link-button">Instagram</a>
                 </div>
             </div>
 
@@ -110,8 +110,44 @@
 
         <h1 class="category-header">Our Favorite Businesses</h1>
         <div class="thumbnail-grid">
-            <div class="card-thumb empty"><h3>Coming Soon!</h3></div>
+            <!-- conshohocken brewing co -->
+            <div class="card-thumb" onclick="openCreatorModal('conshohocken-brewery')">
+                <img src="pics/conshohockenbrewery-1.png" alt="conshohocken brewery" class="thumb-img">
+                <h3>Conshohocken Brewing Company</h3>
+                <p class="summary">A great beer tastes even better after a ride.</p>
+            
+                <div class="card-actions" onclick="event.stopPropagation()">
+                    <a href="https://conshohockenbrewing.com" target="_blank" class="link-button">Website</a>
+                    <a href="https://instagram.com/conshohockenbrewing" target="_blank" class="link-button">Instagram</a>
+                </div>
+            </div>
+
+            <!-- skytop lodge -->
+            <div class="card-thumb" onclick="openCreatorModal('skytop-lodge')">
+                <img src="pics/skytoplodge-1.png" alt="skytop lodge" class="thumb-img">
+                <h3>Skytop Lodge</h3>
+                <p class="summary">Breathtaking surroundings, rich history, unmatched hospitality.</p>
+            
+                <div class="card-actions" onclick="event.stopPropagation()">
+                    <a href="https://skytop.com" target="_blank" class="link-button">Website</a>
+                    <a href="https://instagram.com/skytoplodge/" target="_blank" class="link-button">Instagram</a>
+                </div>
+            </div>
+
+            <!-- the crayola experience -->
+            <div class="card-thumb" onclick="openCreatorModal('crayola-experience')">
+                <img src="pics/crayola-1.png" alt="the crayola experience" class="thumb-img">
+                <h3>The Crayola Experience</h3>
+                <p class="summary">A colorful place made with children's creativity.</p>
+            
+                <div class="card-actions" onclick="event.stopPropagation()">
+                    <a href="https://crayolaexperience.com" target="_blank" class="link-button">Website</a>
+                    <a href="https://instagram.com/visitcrayola/" target="_blank" class="link-button">Instagram</a>
+                </div>
+            </div>
         </div>
+
+        
 
         
     </main>
@@ -266,6 +302,158 @@
     </div>
 </div>
 
+<!-- conshohocken brewery -->
+<div style="display:none;">
+    <div id="content-conshohocken-brewery">
+        <img src="pics/conshohockenbrewery-2.png" alt="conshohocken brewing co"
+     class="modal-image" 
+     style="cursor: zoom-in;"
+     onclick="openLightbox(this.src)">
+        <h1>Conshohocken Brewing Co.</h1>
+        <h3 class="subtitle">A great beer tastes even better after a ride. </h3>
+        
+        <div class="content-body">
+            <h2>What We Love</h2>
+            <p>Conshohocken Brewing sits right along the Schuylkill River Trail, making it the perfect place to pedal, grab a pint, and soak up the riverfront atmosphere.</p>
+        </div>
+        <a href="https://conshohockenbrewing.com/" class="pill-btn-blue" target="_blank">Visit Blog</a>
+        <a href="https://www.instagram.com/conshohockenbrewing/" class="pill-btn-blue" target="_blank">Visit Instagram</a>
+    </div>
+</div>
+
+<!-- skytop lodge -->
+<div style="display:none;">
+    <div id="content-skytop-lodge">
+        <img src="pics/skytoplodge-2.png" alt="skytop lodge"
+     class="modal-image" 
+     style="cursor: zoom-in;"
+     onclick="openLightbox(this.src)">
+        <h1>Skytop Lodge</h1>
+        <h3 class="subtitle">Breathtaking surroundings, rich history, unmatched hospitality.</h3>
+        
+        <div class="content-body">
+            <h2>What We Love</h2>
+            <p>You don't have to stay overnight to experience the charm of Skytop Lodge. Nearly 100 years old, the beautiful stone lodge, peaceful grounds, and cozy pub make it the perfect place to wander, grab a bite, and enjoy a slower pace in the Pocono Mountains.</p>
+        </div>
+        <a href="https://skytop.com/" class="pill-btn-blue" target="_blank">Visit Blog</a>
+        <a href="https://www.instagram.com/skytoplodge/" class="pill-btn-blue" target="_blank">Visit Instagram</a>
+    </div>
+</div>
+
+<!-- the crayola experience -->
+<div style="display:none;">
+    <div id="content-crayola-experience">
+        <img src="pics/crayola-2.png" alt="the crayola experience"
+     class="modal-image" 
+     style="cursor: zoom-in;"
+     onclick="openLightbox(this.src)">
+        <h1>The Crayola Experience</h1>
+        <h3 class="subtitle">A colorful place made with children's creativity.</h3>
+        
+        <div class="content-body">
+            <h2>What We Love</h2>
+            <p>The Crayola Experience is one of those places that never disappoints. It’s colorful, creative, hands-on, and gives kids the freedom to just have fun. And it never feels overwhelming with people. They have great deals on their yearly pass. </p>
+        </div>
+        <a href="https://conshohockenbrewing.com/" class="pill-btn-blue" target="_blank">Visit Blog</a>
+        <a href="https://www.instagram.com/conshohockenbrewing/" class="pill-btn-blue" target="_blank">Visit Instagram</a>
+    </div>
+</div>
+
+<!-- grace winery -->
+<div style="display:none;">
+    <div id="content-conshohocken-brewery">
+        <img src="pics/conshohockenbrewery-2.png" alt="conshohocken brewing co"
+     class="modal-image" 
+     style="cursor: zoom-in;"
+     onclick="openLightbox(this.src)">
+        <h1>Conshohocken Brewing Co.</h1>
+        <h3 class="subtitle">A great beer tastes even better after a ride. </h3>
+        
+        <div class="content-body">
+            <h2>What We Love</h2>
+            <p>Conshohocken Brewing sits right along the Schuylkill River Trail, making it the perfect place to pedal, grab a pint, and soak up the riverfront atmosphere.</p>
+        </div>
+        <a href="https://conshohockenbrewing.com/" class="pill-btn-blue" target="_blank">Visit Blog</a>
+        <a href="https://www.instagram.com/conshohockenbrewing/" class="pill-btn-blue" target="_blank">Visit Instagram</a>
+    </div>
+</div>
+
+<!-- knoebels -->
+<div style="display:none;">
+    <div id="content-conshohocken-brewery">
+        <img src="pics/conshohockenbrewery-2.png" alt="conshohocken brewing co"
+     class="modal-image" 
+     style="cursor: zoom-in;"
+     onclick="openLightbox(this.src)">
+        <h1>Conshohocken Brewing Co.</h1>
+        <h3 class="subtitle">A great beer tastes even better after a ride. </h3>
+        
+        <div class="content-body">
+            <h2>What We Love</h2>
+            <p>Conshohocken Brewing sits right along the Schuylkill River Trail, making it the perfect place to pedal, grab a pint, and soak up the riverfront atmosphere.</p>
+        </div>
+        <a href="https://conshohockenbrewing.com/" class="pill-btn-blue" target="_blank">Visit Blog</a>
+        <a href="https://www.instagram.com/conshohockenbrewing/" class="pill-btn-blue" target="_blank">Visit Instagram</a>
+    </div>
+</div>
+
+<!-- valley green inn -->
+<div style="display:none;">
+    <div id="content-conshohocken-brewery">
+        <img src="pics/conshohockenbrewery-2.png" alt="conshohocken brewing co"
+     class="modal-image" 
+     style="cursor: zoom-in;"
+     onclick="openLightbox(this.src)">
+        <h1>Conshohocken Brewing Co.</h1>
+        <h3 class="subtitle">A great beer tastes even better after a ride. </h3>
+        
+        <div class="content-body">
+            <h2>What We Love</h2>
+            <p>Conshohocken Brewing sits right along the Schuylkill River Trail, making it the perfect place to pedal, grab a pint, and soak up the riverfront atmosphere.</p>
+        </div>
+        <a href="https://conshohockenbrewing.com/" class="pill-btn-blue" target="_blank">Visit Blog</a>
+        <a href="https://www.instagram.com/conshohockenbrewing/" class="pill-btn-blue" target="_blank">Visit Instagram</a>
+    </div>
+</div>
+
+<!-- conshohocken brewery -->
+<div style="display:none;">
+    <div id="content-conshohocken-brewery">
+        <img src="pics/conshohockenbrewery-2.png" alt="conshohocken brewing co"
+     class="modal-image" 
+     style="cursor: zoom-in;"
+     onclick="openLightbox(this.src)">
+        <h1>Conshohocken Brewing Co.</h1>
+        <h3 class="subtitle">A great beer tastes even better after a ride. </h3>
+        
+        <div class="content-body">
+            <h2>What We Love</h2>
+            <p>Conshohocken Brewing sits right along the Schuylkill River Trail, making it the perfect place to pedal, grab a pint, and soak up the riverfront atmosphere.</p>
+        </div>
+        <a href="https://conshohockenbrewing.com/" class="pill-btn-blue" target="_blank">Visit Blog</a>
+        <a href="https://www.instagram.com/conshohockenbrewing/" class="pill-btn-blue" target="_blank">Visit Instagram</a>
+    </div>
+</div>
+
+<!-- conshohocken brewery -->
+<div style="display:none;">
+    <div id="content-conshohocken-brewery">
+        <img src="pics/conshohockenbrewery-2.png" alt="conshohocken brewing co"
+     class="modal-image" 
+     style="cursor: zoom-in;"
+     onclick="openLightbox(this.src)">
+        <h1>Conshohocken Brewing Co.</h1>
+        <h3 class="subtitle">A great beer tastes even better after a ride. </h3>
+        
+        <div class="content-body">
+            <h2>What We Love</h2>
+            <p>Conshohocken Brewing sits right along the Schuylkill River Trail, making it the perfect place to pedal, grab a pint, and soak up the riverfront atmosphere.</p>
+        </div>
+        <a href="https://conshohockenbrewing.com/" class="pill-btn-blue" target="_blank">Visit Blog</a>
+        <a href="https://www.instagram.com/conshohockenbrewing/" class="pill-btn-blue" target="_blank">Visit Instagram</a>
+    </div>
+</div>
+
 <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
     <img id="lightbox-img" src="" alt="Expanded View">
 </div>
@@ -309,8 +497,7 @@
         <div id="creator-modal" class="modal-overlay" onclick="closeCreatorModal()">
             <div class="modal-content" onclick="event.stopPropagation()">
                 <span class="close-btn" onclick="closeCreatorModal()">&times;</span>
-                <div id="modal-body">
-                </div>
+                    <div id="modal-body"></div>
             </div>
         </div>
     
