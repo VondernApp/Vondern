@@ -3399,6 +3399,7 @@ li {
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     cursor: pointer;
     transition: 0.3s;
+    max-width: 500px;
 }
 
 .card-thumb h3 { 
@@ -3493,7 +3494,6 @@ li {
 .content-body li::before {
     content: "→"; 
     color: var(--green);
-    position: absolute;
     left: 0;
     font-weight: bold;
 }

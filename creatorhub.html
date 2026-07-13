@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vondern App Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app-page">
+
+<nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="pics/vondernlogo.webp" alt="Vondern Logo">
+  </a>
+  <ul class="nav-links">
+    <!-- <li><a href="info.html">WHAT IS VONDERN</a></li> -->
+    <li><a href="explore.html">GUIDES</a></li>
+    <li><a href="favorites.html">FAVORITES</a></li>
+    <li><a href="forbusinesses.html">BUSINESSES</a></li>
+    <li><a href="fortowns.html">TOWNS</a></li>
+    <li><a href="forcreators.html">CREATORS</a></li>
+    <li><a href="bustrips.html">BUS TRIPS</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <a href="https://www.instagram.com/vondernapp/" target="_blank" class="ig-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+    </a>
+    <button class="hamburger" onclick="toggleMenu()">
+      ☰
+    </button>
+  </div>
+</nav>
+
+<section class="hero">
+  <img src="pics/hero.png" alt="Vondern Hero Image" class="hero-image">
+  <div class="hero-content">
+    <h1>1-800-CREATOR-HUB</h1>
+    <p>Find the perfect match for your business.</p>
+  </div>
+
+</section>
+
+<!-- example card -->
+    <main class="creators-page">
+        <div class="thumbnail-grid">
+            <div class="card-thumb" onclick="openCreatorModal('wild-kids-wander')">
+                <img src="pics/wildkidswander-1.png" alt="Wild Kids Wander" class="thumb-img">
+                <h3>Where the Wild Kids Wander</h3>
+                <p class="summary">Family travel, outdoor hidden gems in PA, and hotel-room gourmet tips.</p>
+            
+                <div class="card-actions" onclick="event.stopPropagation()">
+                    <a href="https://wildkidswander.com" target="_blank" class="pill-btn-blue">Website</a>
+                    <a href="https://instagram.com/your-handle" target="_blank" class="pill-btn-blue">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div style="display:none;">
+        <div id="content-wild-kids-wander">
+            <img src="pics/wildkidswander-2.png" 
+        alt="Wild Kids Wander" 
+        class="modal-image" 
+        style="cursor: zoom-in;"
+        onclick="openLightbox(this.src)">
+            <h1>Where the Wild Kids Wander</h1>
+            <h3 class="subtitle">Family Travel in the Philadelphia area and beyond with a big emphasis on the outdoors</h3>
+            
+            <div class="content-body">
+                <h2>Information:</h2>
+                <ul>
+                    <li>Rates: $$$</li>
+                    <li>Contact Information: email@woah.com</li>
+                    <a href="https://wildkidswander.com" class="pill-btn-blue" target="_blank">Visit Blog</a> 
+                    <a href="https://www.instagram.com/wildkidswander?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="pill-btn-blue" target="_blank">Visit Instagram</a>
+                    
+                </ul>
+                <p>Lauren and her family are always on the go and 
+                    on the lookout for hidden gems in their home state of PA 
+                    and beyond. If you're a fellow Pennsylvanian or planning 
+                    a visit, Wild Kids Wander will give you a ton to choose 
+                    from! Check out Lauren’s blog that has carefully crafted
+                    itineraries spanning 16 states. With kids at the heart 
+                    of their travels, you'll find a ton of tips for family 
+                    adventures, including everything from hiking trails to 
+                    Disney. She even has tips like how to cook up 15 gourmet
+                    meals right in your hotel room (yes, even if it's 
+                    equipped with just a fridge and microwave). 
+                    So, whether you're exploring Pennsylvania or 
+                    venturing beyond, Wild Kids Wander is your 
+                    go-to resource for family-friendly adventures and 
+                    travel inspiration.</p>
+
+                <h2>Summary</h2>
+                <ul>
+                    <li>Lauren and her family are always on the go and on the lookout for hidden gems in their home state of PA and beyond.</li>
+                    <li>Lauren’s blog that has carefully crafted itineraries spanning 16 states.</li>
+                    <li>With kids at the heart of their travels, you'll find a ton of tips for family adventures, including everything from hiking trails to Disney. </li>
+                    <li>She even has tips like how to cook up 15 gourmet meals right in your hotel room (yes, even if it's equipped with just a fridge and microwave). </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-section footer-left">
+        <nav class="footer-links">
+          <a href="info.html">GET THE APP</a>
+          <a href="info.html#how-it-works">HOW IT WORKS</a>
+          <a href="explore.html">EXPLORE</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">CONTACT</a>
+        </nav>
+      </div>
+
+      <div class="footer-section footer-center">
+        <img src="pics/footerlogo.webp" alt="Vondern Logo" class="logo-image" width="263" height="60">
+        <h2>Scroll Less. Explore More.</h2>
+        <p>Your next favorite place is closer than you think</p>
+      </div>
+     
+      <div class="footer-section footer-right">
+        <div class="social-box">
+          <a href="https://www.instagram.com/vondernapp/" target="_blank">
+            <img src="pics/whiteinstalogo.webp" alt="Instagram" class="social-icon">
+          </a>
+        </div>
+        <nav class="footer-links-alt">
+          <a href="#">GET THE VONDERN APP</a>
+          <a href="#">JOIN OUR NEWSLETTER</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <p>@2026 Vondern | Privacy Policy | Terms</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  
+    <div id="creator-modal" class="modal-overlay" onclick="closeCreatorModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeCreatorModal()">&times;</span>
+                <div id="modal-body"></div>
+        </div>
+    </div>
+</body>
+</html>
