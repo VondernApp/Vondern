@@ -78,26 +78,14 @@
             
             <div class="ft-container">
                 <div class="trips-list">
-                    
-                    <div class="trip-entry" onclick="openTripEntryModal()">
-                        <div class="trip-info">
-                            <h3>Tubes, Towns, & Tastes</h3>
-                            <p>July 19th</p>
-                        </div>
-                        <div class="trip-actions">
-                            <div class="trip-actions">
-                                <span class="trip-status">NO LONGER AVAILABLE</span>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="trip-entry">
+                    <div class="trip-entry" onclick="openTripEntryModal()">
                         <div class="trip-info">
                             <h3>Waterfront Wanderer</h3>
                             <p>August 23rd - Departure from Havertown, PA</p>
                         </div>
                         <div class="trip-actions">
-                            <span class="trip-status">Details TBA</span>
+                            <button class="pill-btn-green" onclick="openTripEntryModal(event)">View Details</button>
                         </div>
                     </div>
 
@@ -341,41 +329,33 @@
         <span class="close-btn" onclick="closeTripEntryModal()">&times;</span>
         
         <div class="trip-modal-content">
-            <h2 class="trip-modal-header">Tubes, Towns, & Tastes</h2>
-            <p class="trip-modal-subheader">Sunday July 19th | 9:30AM - 7:30PM</p>
+            <h2 class="trip-modal-header">Waterfront Wanderer</h2>
+            <p class="trip-modal-subheader">Sunday, August 23rd | 9:30AM - 7:30PM</p>
             
             <div class="trip-modal-info-box">
                 <p><strong>Destination:</strong> It’s a Surprise!</p>
                 <p><strong>Leaving From:</strong> Havertown, PA</p>
-                <p><strong>Price:</strong> $99 Early Bird | $119 Regular Price</p>
+                <p><strong>Price:</strong> $130 Early Bird | $150 Regular Price</p>
             </div>
-
-            <h3>A One-Day Escape</h3>
-            <ul>
-                <li>💦 A little outdoor water fun (nothing extreme, but plan to get a little wet)</li>
-                <li>🍹 Not a water person? No problem. You can relax in a beautiful outdoor setting, enjoy great food and drinks, and soak up the atmosphere.</li>
-                <li>🏘️ Time to explore a charming town with local shops, great eats, and plenty to discover.</li>
-                <li>✨ No planning. No driving. Just show up and enjoy the day.</li>
-            </ul>
 
             <h3>What's Included</h3>
             <ul>
                 <li>✦ Round-Trip Transportation (no driving, no logistics)</li>
-                <li>✦ Tubing Adventure</li>
+                <li>✦ Brunch at a very scenic spot</li>
                 <li>✦ Visits to Two Charming Towns</li>
                 <li>✦ Snacks & Drinks on the Bus</li>
                 <li>✦ A Day of Exploring, Laughing, and Making Fun Memories</li>
                 <li>✦ Fun Giveaways</li>
             </ul>
 
-            <div class="trip-modal-note">
+            <!-- <div class="trip-modal-note">
                 <p><strong>Transportation Note:</strong> Due to the short notice and limited bus availability, transportation for this trip will be provided on an air-conditioned school bus. Don't worry—we'll still have all the fun, just with a little more nostalgia. 😉</p>
-            </div>
+            </div> -->
 
             <p class="trip-modal-footer-text">Spots are limited. Snag your seat on the bus before it sells out.</p>
             
             <div style="text-align: center; margin-top: 20px;">
-                <a href="https://forms.gle/CFrrdQFbP9vwMSPA9" target="_blank" class="pill-btn-blue">Grab Your Spot</a>
+                <a href="https://forms.gle/fZhHtjBnVvkW2SEY9" target="_blank" class="pill-btn-blue">Grab Your Spot</a>
             </div> 
         </div>
     </div>
