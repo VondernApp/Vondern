@@ -208,3 +208,25 @@ function closeCreatorModal() {
 
     document.getElementById('creator-modal').style.display = 'none';
 }
+
+// AMBASSADOR LAUNCH CREW MODAL
+function openLaunchModal() {
+  const modal = document.getElementById('launchCrewModal');
+  if (modal) {
+    modal.style.display = 'flex';
+  }
+}
+
+function closeLaunchModal() {
+  const modal = document.getElementById('launchCrewModal');
+  if (modal) {
+    modal.style.display = 'none';
+  }
+}
+
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById('launchCrewModal');
+  if (event.target === modal) {
+    closeLaunchModal();
+  }
+});
