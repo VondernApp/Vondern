@@ -14,8 +14,8 @@
   </a>
   <ul class="nav-links">
     <!-- <li><a href="info.html">WHAT IS VONDERN</a></li> -->
-    <li><a href="explore.html">GUIDES</a></li>
-    <li><a href="favorites.html">FAVORITES</a></li>
+   <!--- <li><a href="explore.html">GUIDES</a></li> 
+    <li><a href="favorites.html">FAVORITES</a></li> -->
     <li><a href="forbusinesses.html">BUSINESSES</a></li>
     <li><a href="fortowns.html">TOWNS</a></li>
     <li><a href="forcreators.html">CREATORS</a></li>
@@ -55,19 +55,8 @@
 <div class="full-container">
   <h2>You scroll. You search. Still nothing.</h2>
   <h3>Stop searching. Start going. Vondern shows you where.</h3>
-  <a href="https://3d59fc52.sibforms.com/serve/MUIFAALsGV-ERz-FDxDOxkHbAWlVxfMMpLKAZxBxrgX70pZFkVkbi4SmLGPW3UPsALHknJ5V8PoVhyAx9YE8n0drm0VgNO1gcUg3NRmHeXmNXocl5qwrU7khLoGJRwvPru9KCLPBh5QxikdJmhOSIT-_Ob8fkpxIie-DZR7OeI0E1It7G72Jn0DCpmOthE435gqQL839NDQo-c76TQ==" target="_blank" class="pill-btn-green">Sign up for Vondern today!</a>
+  <a href="https://3d59fc52.sibforms.com/serve/MUIFAALsGV-ERz-FDxDOxkHbAWlVxfMMpLKAZxBxrgX70pZFkVkbi4SmLGPW3UPsALHknJ5V8PoVhyAx9YE8n0drm0VgNO1gcUg3NRmHeXmNXocl5qwrU7khLoGJRwvPru9KCLPBh5QxikdJmhOSIT-_Ob8fkpxIie-DZR7OeI0E1It7G72Jn0DCpmOthE435gqQL839NDQo-c76TQ==" target="_blank" class="pill-btn-green">Sign up for the Vondern waitlist today!</a>
 </div>
-
-<section class="ambassador-section">
-  <div class="ambassador-container">
-    <h2>Help Us Get Vondern Off the Ground</h2>
-    <p>Vondern is almost here, and we’re looking for 100 people to help us spread the word.</p>
-    <p>Join the original Vondern Launch Crew and complete a few simple missions during launch week—from downloading the app and sharing a post to adding a favorite local place.</p>
-    <p>It’s not a big commitment. It’s just a group of people who believe in supporting local businesses, exploring more, and spending a little less time scrolling.</p>
-    
-    <button class="pill-btn-blue" onclick="openLaunchModal()">Join the Launch Crew</button>
-  </div>
-</section>
 
 <section class="what-youll-find">
   <div class="find-wrapper">
@@ -105,6 +94,15 @@
           <p class="image-description">Find local escapes perfect for a day or weekend away.</p>
         </div>
       </div>
+  </div>
+</section>
+
+<section class="ambassador-section">
+  <div class="ambassador-container">
+    <h2>Help Us Get Vondern Off the Ground</h2>
+    <p>We’re looking for 100 people to join the original Vondern Launch Crew! You’ll help by downloading the app, add a few favorite places and help spread the word. (Together, we can support local businesses, inspire more exploring, and spend a little less time scrolling.)</p>
+    
+    <button class="pill-btn-blue" onclick="openLaunchModal()">Join the Launch Crew</button>
   </div>
 </section>
 
@@ -154,7 +152,7 @@
             <div class="card-overlay">
               <span class="step-label">04</span>
               <h4>User Profile</h4>
-              <p>Share your finds and...</p>
+              <p>Share your finds</p>
             </div>
           </div>
 
@@ -163,7 +161,7 @@
             <div class="card-overlay">
               <span class="step-label">05</span>
               <h4>Hidden Gems</h4>
-              <p>...Locate other findings!</p>
+              <p>Locate hidden gems</p>
             </div>
           </div>
           
@@ -182,8 +180,27 @@
     <button class="nav-btn nav-btn-next" onclick="slide(1)" aria-label="Next">&gt;</button>
   </div>
 
-  <a href="https://3d59fc52.sibforms.com/serve/MUIFAALsGV-ERz-FDxDOxkHbAWlVxfMMpLKAZxBxrgX70pZFkVkbi4SmLGPW3UPsALHknJ5V8PoVhyAx9YE8n0drm0VgNO1gcUg3NRmHeXmNXocl5qwrU7khLoGJRwvPru9KCLPBh5QxikdJmhOSIT-_Ob8fkpxIie-DZR7OeI0E1It7G72Jn0DCpmOthE435gqQL839NDQo-c76TQ==" target="_blank" class="pill-btn-green">Don't miss out! Sign up today!</a>
+  <a href="https://3d59fc52.sibforms.com/serve/MUIFAALsGV-ERz-FDxDOxkHbAWlVxfMMpLKAZxBxrgX70pZFkVkbi4SmLGPW3UPsALHknJ5V8PoVhyAx9YE8n0drm0VgNO1gcUg3NRmHeXmNXocl5qwrU7khLoGJRwvPru9KCLPBh5QxikdJmhOSIT-_Ob8fkpxIie-DZR7OeI0E1It7G72Jn0DCpmOthE435gqQL839NDQo-c76TQ==" target="_blank" class="pill-btn-green">Don't miss out! Sign up for the waitlist today!</a>
 </section>
+
+<!-- Bus Trips Promo Section -->
+<section class="bt-promo-banner">
+  <div class="bt-promo-container">
+    <h2 class="bt-promo-heading">Want to Go Vondern With Us?</h2>
+    <p class="bt-promo-text">Get first dibs on upcoming surprise field trips.</p>
+    <button class="bt-popup-trigger-btn" onclick="openBtPromoModal()">Learn About Bus Trips</button>
+  </div>
+</section>
+
+<!-- Bus Trips Pop-Up Modal -->
+<div id="btPromoModal" class="bt-modal-backdrop">
+  <div class="bt-modal-box">
+    <span class="bt-modal-close-icon" onclick="closeBtPromoModal()">&times;</span>
+    <h2 class="bt-modal-title">Vondern Bus Trips</h2>
+    <p class="bt-modal-description">Join us for small towns, good food, fresh air, and zero planning required. Half the fun is not knowing exactly where the day will take you!</p>
+    <a href="bustrips.html" class="bt-modal-action-link">Explore Bus Trips Page →</a>
+  </div>
+</div>
 
 <!-- how it works 
 <section class="grid-wrapper-green">
@@ -443,7 +460,7 @@
   <a href="https://www.instagram.com/vondernapp/" target="_blank" class="pill-btn-green">FOLLOW @VONDERNAPP</a>
 </section>
 
-<!-- favorites -->
+<!-- favorites 
 <section class="featured-creators">
   <div class="full-container">
     <h2 class="section-title">Meet Our Favorite Creators</h2>
@@ -474,7 +491,7 @@
 <div id="imageModal" class="modal">
   <span class="close-modal">&times;</span>
   <img class="modal-content" id="expandedImg" alt="Expanded view">
-</div>
+</div> -->
 
 <!--FOOTER-->
 <footer class="main-footer">

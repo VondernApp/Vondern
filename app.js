@@ -230,3 +230,18 @@ window.addEventListener('click', function(event) {
     closeLaunchModal();
   }
 });
+
+function openBtPromoModal() {
+  document.getElementById('btPromoModal').style.display = 'flex';
+}
+
+function closeBtPromoModal() {
+  document.getElementById('btPromoModal').style.display = 'none';
+}
+
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById('btPromoModal');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
